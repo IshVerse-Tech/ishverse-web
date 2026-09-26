@@ -99,3 +99,9 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Workout keyboard focus: keep the shared brand ring visible on all links. */
+.workout-site :is(a, button, summary):focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 4px;
+}

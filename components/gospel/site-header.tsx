@@ -7,6 +7,7 @@
  *   GospelSiteHeader — server component (switcher + toggle are client islands)
  */
 
+import { MobileMenu } from "../mobile-menu";
 import { useTranslations } from "next-intl";
 import { Smartphone } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -17,6 +18,7 @@ import { gospelConfig } from "@/lib/gospel";
 
 export function GospelSiteHeader() {
   const t = useTranslations("gospel");
+  const common = useTranslations("company.nav");
 
   const links = [
     { href: "#features", label: t("nav.features") },
@@ -27,7 +29,7 @@ export function GospelSiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-divider bg-bg/70 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+      <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8">
         <Link href="/" aria-label={gospelConfig.name}>
           <GospelLogo />
         </Link>
@@ -44,13 +46,13 @@ export function GospelSiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="hidden items-center gap-2 md:flex sm:gap-3">
           <div className="hidden sm:block">
             <LanguageSwitcher />
           </div>
           <ThemeToggle />
           <a
-            href={gospelConfig.store.appStore}
+            href="#waitlist"
             className="inline-flex items-center gap-2 rounded-[10px] bg-fg px-4 py-2.5 text-[13px] font-medium text-bg transition-opacity hover:opacity-90"
           >
             <Smartphone className="h-4 w-4" aria-hidden />
@@ -58,6 +60,25 @@ export function GospelSiteHeader() {
             <span className="sm:hidden">{t("nav.getAppShort")}</span>
           </a>
         </div>
+        <MobileMenu label={common("menu")}>
+          <nav className="grid gap-2" aria-label={common("menu")}>
+            {links.map((link) => (
+              <a key={link.href} href={link.href} className="py-3">
+                {link.label}
+              </a>
+            ))}
+            <a href="https://ishverse.com/#products" className="py-3">
+              {common("explore")}
+            </a>
+            <a href="mailto:support@ishverse.com" className="break-words py-3">
+              support@ishverse.com
+            </a>
+          </nav>
+          <div className="mt-4 flex items-center justify-between border-t border-divider pt-4">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
+        </MobileMenu>
       </div>
     </header>
   );

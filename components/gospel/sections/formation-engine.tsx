@@ -8,7 +8,7 @@
  */
 
 import { useTranslations } from "next-intl";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Reveal } from "../../reveal";
 
@@ -23,7 +23,7 @@ export function GospelFormationEngine() {
 
   return (
     <Section className="py-16 sm:py-24">
-      <div className="grid items-center gap-12 rounded-3xl border border-divider bg-surface p-8 sm:p-12 lg:grid-cols-2">
+      <div className="grid items-center gap-6 rounded-2xl border border-divider bg-surface p-5 sm:gap-12 sm:p-12 lg:grid-cols-2">
         <Reveal>
           <p className="text-[13px] font-medium uppercase tracking-wide text-gold-text">
             {t("eyebrow")}
@@ -38,12 +38,8 @@ export function GospelFormationEngine() {
           <ul className="space-y-3">
             {contrasts.map((c) => (
               <li key={c.but} className="rounded-2xl border border-divider bg-bg p-4">
-                <p className="flex items-center gap-2 text-[13px] text-fg-secondary line-through decoration-fg-secondary/40">
-                  <X className="h-4 w-4 shrink-0 text-error" aria-hidden />
-                  {c.not}
-                </p>
-                <p className="mt-2 flex items-center gap-2 text-[14px] font-medium text-fg">
-                  <Check className="h-4 w-4 shrink-0 text-success" aria-hidden />
+                <p className="flex items-start gap-3 text-[14px] font-medium text-fg">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-text" aria-hidden />
                   {c.but}
                 </p>
               </li>

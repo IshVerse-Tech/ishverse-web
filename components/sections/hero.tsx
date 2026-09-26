@@ -19,7 +19,7 @@ export function Hero() {
 
   return (
     <div className="relative overflow-hidden">
-      <Section className="grid min-h-[88svh] items-center gap-10 py-20 md:grid-cols-2 md:gap-6">
+      <Section className="grid items-center gap-8 py-12 sm:py-20 md:min-h-[80svh] md:grid-cols-2 md:gap-6">
         <div>
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
@@ -27,7 +27,7 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal delay={60}>
-            <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">
+            <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl">
               {t("meta.title")}
             </h1>
           </Reveal>
@@ -39,23 +39,23 @@ export function Hero() {
           <Reveal delay={180}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href={siteConfig.products[0].href}
-                className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 text-[14px] font-medium text-accent-on transition-colors hover:bg-accent-dark"
+                href="#products"
+                className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-accent-on hover:bg-accent-dark"
               >
                 {t("nav.explore")}
-                <ArrowUpRight className="h-4 w-4" aria-hidden />
+                <ArrowUpRight size={16} aria-hidden />
               </a>
               <a
-                href={siteConfig.products[1].href}
-                className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
+                href="#contact"
+                className="inline-flex min-h-11 items-center rounded-xl border border-divider px-5 py-3 text-sm"
               >
-                {t("hero.rize")} <span className="text-gold-text">· {t("hero.live")}</span>
+                {t("nav.contact")}
               </a>
             </div>
           </Reveal>
         </div>
 
-        <div className="relative h-[320px] sm:h-[420px] md:h-[560px]" aria-hidden="true">
+        <div className="relative h-64 sm:h-[420px] md:h-[560px]" aria-hidden="true">
           <VerseGlobe />
         </div>
       </Section>

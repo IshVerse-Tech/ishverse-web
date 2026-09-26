@@ -17,6 +17,7 @@ export type Product = {
   domain: string;
   oneLiner: string;
   href: string;
+  path: string;
   status: "live" | "soon";
 };
 
@@ -27,7 +28,7 @@ export const siteConfig = {
   description:
     "IshVerse builds discipline systems — one for each domain of life. A man, in command of his world.",
   url: "https://ishverse.com",
-  contactEmail: "contact@ishverse.com",
+  contactEmail: "support@ishverse.com",
   supportEmail: "support@ishverse.com",
   products: [
     {
@@ -36,6 +37,7 @@ export const siteConfig = {
       domain: "Spiritual discipline",
       oneLiner: "A structured system for spiritual formation.",
       href: "https://gospel.ishverse.com",
+      path: "/gospel",
       status: "live",
     },
     {
@@ -44,7 +46,17 @@ export const siteConfig = {
       domain: "Scheduling & attendance",
       oneLiner: "Live, clash-free timetables and QR attendance for institutions.",
       href: "https://rize.ishverse.com",
+      path: "/rize",
       status: "live",
+    },
+    {
+      name: "ISH Workout",
+      wordmark: { strong: "ISH", light: "WORKOUT" },
+      domain: "Physical discipline",
+      oneLiner: "A daily system for movement, fitness, and personal habits.",
+      href: "https://workout.ishverse.com",
+      path: "/workout",
+      status: "soon",
     },
   ] as Product[],
 } as const;
