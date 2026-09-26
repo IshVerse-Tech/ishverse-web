@@ -27,7 +27,7 @@ import { routing, locales, defaultLocale, type Locale } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware({ ...routing, localeDetection: false });
 
-const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
+const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout"]);
 // gospel has its own /privacy, /terms, /about pages — only redirect rize
 const RIZE_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
 
@@ -44,14 +44,18 @@ export function middleware(req: NextRequest) {
   const locale = hasLocale ? (segments[1] as Locale) : null;
   const rest = "/" + segments.slice(hasLocale ? 2 : 1).join("/");
 
-  if (sub !== "gospel" && RIZE_LEGAL_PATHS.has(rest)) {
+  if (sub === "rize" && RIZE_LEGAL_PATHS.has(rest)) {
     return NextResponse.redirect(`https://ishverse.com${rest}`, 308);
   }
 
   // Tolerate paths that already carry the product segment.
   const needsSegment = rest !== `/${sub}` && !rest.startsWith(`/${sub}/`);
+  // Always include the locale segment so Next.js App Router [locale] param
+  // resolves correctly. Without it, /gospel is matched as locale="gospel"
+  // which fails hasLocale() and returns 404 for the default-locale route.
+  const resolvedLocale = locale ?? defaultLocale;
   const internal =
-    (locale ? `/${locale}` : "") + (needsSegment ? `/${sub}${rest === "/" ? "" : rest}` : rest);
+    `/${resolvedLocale}` + (needsSegment ? `/${sub}${rest === "/" ? "" : rest}` : rest);
 
   // Rewrite directly. Passing the rewritten request through handleI18nRouting
   // caused it to strip the product path segment and serve the wrong page.
@@ -61,7 +65,6 @@ export function middleware(req: NextRequest) {
 
   // Mirror the NEXT_LOCALE cookie that next-intl normally sets so that
   // useLocale() and getLocale() in client components stay consistent.
-  const resolvedLocale = locale ?? defaultLocale;
   response.cookies.set("NEXT_LOCALE", resolvedLocale, {
     path: "/",
     maxAge: 60 * 60 * 24 * 365,

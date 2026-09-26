@@ -37,8 +37,8 @@
     },
     "formationEngine": {
       "eyebrow": "The difference",
-      "title": "This isn't a Bible app. It's a formation engine.",
-      "body": "Faith doesn't grow by accident — it's formed, one disciplined day at a time. IshGospel gives you the structure that turns intention into formation. No noise. No gimmicks.",
+      "title": "A daily practice for spiritual growth.",
+      "body": "Build a steady rhythm of reading, reflection, and purposeful action.",
       "not1": "A content feed to scroll",
       "but1": "A daily system to practice",
       "not2": "Points, badges, leaderboards",
@@ -219,19 +219,20 @@
       "q5": "How do subscriptions work?",
       "a5": "Premium is purchased inside the app through your store's billing (Google Play or the App Store) and can be cancelled there any time.",
       "q6": "Can my church or small group use it?",
-      "a6": "Yes. Church Lite and Church Pro add an admin dashboard, leader tools, and member progress tracking. Write to contact@ishverse.com and we'll set you up."
+      "a6": "Yes. Church Lite and Church Pro add an admin dashboard, leader tools, and member progress tracking. Write to support@ishverse.com and we'll set you up."
     }
   },
   "company": {
     "meta": {
       "title": "Systems for Intentional Growth.",
-      "description": "IshVerse builds discipline systems — one for each domain of life. A man, in command of his world."
+      "description": "Tools for spiritual formation, institutional scheduling, and daily fitness. Explore IshGospel, IshRize, and ISH Workout — each built for a different part of life."
     },
     "nav": {
       "products": "Products",
       "story": "Story",
       "contact": "Contact",
-      "explore": "Explore IshGospel"
+      "explore": "Explore products",
+      "menu": "Menu"
     },
     "hero": {
       "rize": "IshRize",
@@ -240,15 +241,20 @@
     },
     "products": {
       "eyebrow": "Products",
-      "heading": "One system per domain of life.",
-      "sub": "Same philosophy. Same design rigor. Different domains.",
+      "heading": "Find the system for your day.",
+      "sub": "Three products. Different purposes. Choose a product to explore its features and current availability.",
       "visit": "Visit {name}",
       "live": "Live",
       "soon": "Coming soon",
-      "gospelDomain": "Spiritual discipline",
+      "gospelDomain": "Spiritual formation",
       "gospelLine": "A structured system for spiritual formation.",
-      "rizeDomain": "Academic discipline",
-      "rizeLine": "A structured system for academic discipline."
+      "rizeDomain": "Scheduling & attendance",
+      "rizeLine": "Timetables, clash detection, and attendance for institutions.",
+      "workoutDomain": "Fitness & daily habits",
+      "workoutLine": "A daily system for movement, fitness, and personal habits.",
+      "gospelAvailability": "Android first · iOS planned",
+      "rizeAvailability": "Web platform available",
+      "workoutAvailability": "iOS app · release pending"
     },
     "philosophy": {
       "eyebrow": "The name",
@@ -399,5 +405,110 @@
       "linkSupport": "Support",
       "rights": "All rights reserved."
     }
+  },
+  "workout": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "footer": "Footer navigation",
+    "family": "Part of the IshVerse ecosystem",
+    "features": "Features",
+    "support": "Support",
+    "privacy": "Privacy policy",
+    "title": "Make movement a daily practice.",
+    "description": "Bring your runs, workouts, and everyday habits into one place. ISH Workout gives your physical discipline a simple daily structure.",
+    "availability": "For iPhone and iPad. Public App Store availability is pending.",
+    "trust1": "iOS: no account required",
+    "trust2": "Daily habits, together",
+    "trust3": "Optional Apple Health",
+    "screenAlt": "ISH Workout dashboard with daily fitness and habit tiles",
+    "screenCaption": "Actual iOS app · shown in light mode",
+    "featuresTitle": "One place for the habits that add up.",
+    "nativeNote": "Built for iOS, with optional Apple Health integration.",
+    "cards": [
+      {
+        "title": "Runs",
+        "body": "Set a distance and time goal. Track your run with GPS, pace, and a live map."
+      },
+      {
+        "title": "Push-ups",
+        "body": "Record your sets and follow your progress toward a daily goal."
+      },
+      {
+        "title": "Weight",
+        "body": "Log weigh-ins and see how your weight changes over time."
+      },
+      {
+        "title": "Water",
+        "body": "Track cups of water against your daily target."
+      },
+      {
+        "title": "Meals",
+        "body": "Keep a simple record of what you eat throughout the day."
+      },
+      {
+        "title": "Daily tasks",
+        "body": "Plan your day and carry unfinished tasks forward."
+      }
+    ],
+    "runAlt": "iOS run setup with distance and time goals",
+    "weightAlt": "iOS weight history with a sample weigh-in",
+    "routineLabel": "A repeatable rhythm",
+    "routineTitle": "Set your intention. Record the work.",
+    "steps": [
+      {
+        "title": "Choose your goals",
+        "body": "Set targets that fit your day and your current routine."
+      },
+      {
+        "title": "Log as you go",
+        "body": "Record a set, a meal, a cup of water, or a completed run."
+      },
+      {
+        "title": "Review your progress",
+        "body": "Look back at your entries and adjust your next day."
+      }
+    ],
+    "privacyTitle": "Your routine stays personal.",
+    "privacyBody": "The iOS app stores your records on your device. No account is required. Location supports run tracking, and Apple Health integration is optional and permission-based.",
+    "faqTitle": "Before you start",
+    "faq": [
+      {
+        "q": "Can I download the iOS app now?",
+        "a": "The iOS app is currently in testing. We will add the App Store link here when it is publicly available."
+      },
+      {
+        "q": "Do I need an account?",
+        "a": "No. Your records are stored locally on your device; no account is required."
+      },
+      {
+        "q": "Is this medical advice?",
+        "a": "ISH Workout is a personal fitness and habit tracker. It does not provide medical diagnosis or treatment."
+      }
+    ],
+    "ctaTitle": "Give your day some structure.",
+    "ctaBody": "Find ISH Workout on the Apple App Store when the release becomes available.",
+    "supportTitle": "How can we help?",
+    "supportIntro": "For app questions or a technical issue, contact our support team.",
+    "emailAction": "Email support",
+    "include": "Tell us your device, iOS version, app version, and what happened. Please do not send health records, precise routes, passwords, or other sensitive information.",
+    "help": [
+      {
+        "title": "Your records",
+        "body": "The app stores entries locally on your device. Keep exported files somewhere secure."
+      },
+      {
+        "title": "Location and Apple Health",
+        "body": "Check the app permissions in iPhone Settings if run tracking is unavailable. Apple Health permissions can be managed in the Health app."
+      },
+      {
+        "title": "Removing data",
+        "body": "Deleting the iOS app removes its local app data. Delete any exported files separately. Records previously saved to Apple Health must be managed in Health."
+      }
+    ],
+    "workoutDomain": "Physical discipline",
+    "workoutLine": "A daily system for movement, fitness, and personal habits.",
+    "menu": "Menu",
+    "allProducts": "All IshVerse products",
+    "appStore": "View on the App Store"
   }
 }

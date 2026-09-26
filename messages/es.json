@@ -37,8 +37,8 @@
     },
     "formationEngine": {
       "eyebrow": "La diferencia",
-      "title": "Esto no es una app de la Biblia. Es un motor de formación.",
-      "body": "La fe no crece por accidente: se forja, un día disciplinado a la vez. IshGospel te da la estructura que convierte la intención en formación. Sin ruido. Sin trucos.",
+      "title": "Una práctica diaria para crecer espiritualmente.",
+      "body": "Crea un ritmo constante de lectura, reflexión y acción consciente.",
       "not1": "Un feed de contenido para desplazar",
       "but1": "Un sistema diario para practicar",
       "not2": "Puntos, insignias, clasificaciones",
@@ -219,35 +219,42 @@
       "q5": "¿Cómo funcionan las suscripciones?",
       "a5": "Premium se compra dentro de la app a través de la facturación de tu tienda (Google Play o App Store) y puede cancelarse allí en cualquier momento.",
       "q6": "¿Puede usarla mi iglesia o grupo pequeño?",
-      "a6": "Sí. Church Lite y Church Pro añaden panel de administración, herramientas para líderes y seguimiento del progreso. Escríbenos a contact@ishverse.com y te lo preparamos."
+      "a6": "Sí. Church Lite y Church Pro añaden panel de administración, herramientas para líderes y seguimiento del progreso. Escríbenos a support@ishverse.com y te lo preparamos."
     }
   },
   "company": {
     "meta": {
       "title": "Sistemas para el crecimiento intencional.",
-      "description": "IshVerse construye sistemas de disciplina, uno para cada dominio de la vida. Un hombre al mando de su mundo."
+      "description": "Herramientas para la formación espiritual, la planificación institucional y el ejercicio diario. Explora IshGospel, IshRize e ISH Workout: cada uno responde a una parte de la vida."
     },
     "nav": {
       "products": "Productos",
       "story": "Historia",
       "contact": "Contacto",
-      "explore": "Explora IshGospel"
+      "explore": "Explorar productos",
+      "menu": "Menú"
     },
     "hero": {
       "rize": "IshRize",
-      "comingSoon": "próximamente"
+      "comingSoon": "próximamente",
+      "live": "Disponible"
     },
     "products": {
       "eyebrow": "Productos",
-      "heading": "Un sistema por cada dominio de la vida.",
-      "sub": "La misma filosofía. El mismo rigor de diseño. Dominios distintos.",
+      "heading": "Encuentra el sistema para tu día.",
+      "sub": "Tres productos con propósitos distintos. Explora sus funciones y disponibilidad actual.",
       "visit": "Visitar {name}",
       "live": "Disponible",
       "soon": "Próximamente",
-      "gospelDomain": "Disciplina espiritual",
+      "gospelDomain": "Formación espiritual",
       "gospelLine": "Un sistema estructurado de formación espiritual.",
-      "rizeDomain": "Disciplina académica",
-      "rizeLine": "Un sistema estructurado de disciplina académica."
+      "rizeDomain": "Horarios y asistencia",
+      "rizeLine": "Horarios, detección de conflictos y asistencia para instituciones.",
+      "workoutDomain": "Ejercicio y hábitos diarios",
+      "workoutLine": "Un sistema diario para el movimiento, el ejercicio y los hábitos personales.",
+      "gospelAvailability": "Android primero · iOS previsto",
+      "rizeAvailability": "Plataforma web disponible",
+      "workoutAvailability": "App para iOS · lanzamiento pendiente"
     },
     "philosophy": {
       "eyebrow": "El nombre",
@@ -398,5 +405,110 @@
       "linkSupport": "Soporte",
       "rights": "Todos los derechos reservados."
     }
+  },
+  "workout": {
+    "skip": "Saltar al contenido",
+    "navigation": "Navegación principal",
+    "footer": "Navegación del pie",
+    "family": "Parte del ecosistema IshVerse",
+    "features": "Funciones",
+    "support": "Ayuda",
+    "privacy": "Política de privacidad",
+    "title": "Haz del movimiento una práctica diaria.",
+    "description": "Reúne tus carreras, entrenamientos y hábitos cotidianos en un solo lugar. ISH Workout aporta una estructura sencilla a tu disciplina física.",
+    "availability": "Para iPhone y iPad. Pendiente de disponibilidad pública en App Store.",
+    "trust1": "iOS: sin cuenta",
+    "trust2": "Tus hábitos, juntos",
+    "trust3": "Apple Health opcional",
+    "screenAlt": "Panel de ISH Workout con hábitos y actividad diaria",
+    "screenCaption": "App real de iOS · modo claro",
+    "featuresTitle": "Un lugar para los hábitos que suman.",
+    "nativeNote": "Diseñada para iOS, con integración opcional con Apple Health.",
+    "cards": [
+      {
+        "title": "Carreras",
+        "body": "Define una distancia y un tiempo. Registra tu carrera con GPS, ritmo y mapa."
+      },
+      {
+        "title": "Flexiones",
+        "body": "Registra tus series y sigue tu progreso hacia una meta diaria."
+      },
+      {
+        "title": "Peso",
+        "body": "Registra tu peso y observa los cambios con el tiempo."
+      },
+      {
+        "title": "Agua",
+        "body": "Registra vasos de agua y tu objetivo diario."
+      },
+      {
+        "title": "Comidas",
+        "body": "Lleva un registro sencillo de lo que comes."
+      },
+      {
+        "title": "Tareas diarias",
+        "body": "Organiza el día y conserva las tareas pendientes."
+      }
+    ],
+    "runAlt": "Preparación de una carrera en iOS",
+    "weightAlt": "Historial de peso en iOS con un registro de ejemplo",
+    "routineLabel": "Un ritmo constante",
+    "routineTitle": "Define tu intención. Registra tu esfuerzo.",
+    "steps": [
+      {
+        "title": "Elige tus objetivos",
+        "body": "Define metas acordes con tu rutina."
+      },
+      {
+        "title": "Registra sobre la marcha",
+        "body": "Anota una serie, comida, vaso de agua o carrera."
+      },
+      {
+        "title": "Revisa tu progreso",
+        "body": "Consulta tus registros y ajusta el día siguiente."
+      }
+    ],
+    "privacyTitle": "Tu rutina es personal.",
+    "privacyBody": "La app para iOS guarda tus registros en tu dispositivo. No necesitas una cuenta. La ubicación permite registrar carreras; la integración con Apple Health es opcional y requiere permiso.",
+    "faqTitle": "Antes de empezar",
+    "faq": [
+      {
+        "q": "¿Puedo descargar la app para iOS?",
+        "a": "Está en pruebas. Añadiremos el enlace a App Store cuando esté disponible públicamente."
+      },
+      {
+        "q": "¿Necesito una cuenta?",
+        "a": "No. Tus registros se guardan en tu dispositivo; no necesitas una cuenta."
+      },
+      {
+        "q": "¿Ofrece consejos médicos?",
+        "a": "ISH Workout es un registro personal de ejercicio y hábitos. No ofrece diagnósticos ni tratamientos."
+      }
+    ],
+    "ctaTitle": "Dale estructura a tu día.",
+    "ctaBody": "Encuentra ISH Workout en App Store cuando esté disponible.",
+    "supportTitle": "¿Cómo podemos ayudarte?",
+    "supportIntro": "Si tienes preguntas o un problema técnico, contacta con nuestro equipo.",
+    "emailAction": "Contactar por correo",
+    "include": "Indica tu dispositivo, versión de iOS, versión de la app y lo que ocurrió. No envíes datos de salud, rutas precisas, contraseñas ni información sensible.",
+    "help": [
+      {
+        "title": "Tus registros",
+        "body": "La app guarda los datos en tu dispositivo. Conserva los archivos exportados en un lugar seguro."
+      },
+      {
+        "title": "Ubicación y Apple Health",
+        "body": "Revisa los permisos en Ajustes del iPhone si no puedes registrar carreras. Gestiona los permisos de Apple Health en Salud."
+      },
+      {
+        "title": "Eliminar datos",
+        "body": "Eliminar la app de iOS borra sus datos locales. Elimina los archivos exportados por separado. Los registros guardados en Apple Health se gestionan en Salud."
+      }
+    ],
+    "workoutDomain": "Disciplina física",
+    "workoutLine": "Un sistema diario para el movimiento, el ejercicio y los hábitos personales.",
+    "menu": "Menú",
+    "allProducts": "Todos los productos IshVerse",
+    "appStore": "Ver en App Store"
   }
 }

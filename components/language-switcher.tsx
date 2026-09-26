@@ -32,7 +32,7 @@ const LANGUAGES: LangMeta[] = [
   { code: "pt", flag: "🇵🇹", nativeName: "Português", englishName: "Portuguese" },
 ];
 
-const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
+const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout"]);
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
@@ -70,7 +70,9 @@ export function LanguageSwitcher() {
     // /es/gospel (etc.) internally. On the main domain preserve the path.
     let publicPath: string;
     if (isProduct) {
-      publicPath = next === routing.defaultLocale ? "/" : `/${next}`;
+      const rest = window.location.pathname.replace(/^\/(en|es|fr|pt)(?=\/|$)/, "");
+      publicPath =
+        (next === routing.defaultLocale ? "" : `/${next}`) + (rest === "/" ? "" : rest) || "/";
     } else {
       // Strip the current locale prefix from window.location.pathname manually
       // (usePathname from next-intl can lag behind during navigation).

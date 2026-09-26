@@ -24,12 +24,14 @@ export function Principles() {
   }));
 
   return (
-    <Section id="principles" className="py-24 md:py-32">
+    <Section id="principles" className="py-14 sm:py-24 md:py-32">
       <Reveal>
         <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
           {t("eyebrow")}
         </p>
-        <h2 className="mt-3 max-w-2xl text-4xl font-bold md:text-5xl">{t("heading")}</h2>
+        <h2 className="mt-3 max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl">
+          {t("heading")}
+        </h2>
       </Reveal>
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {principles.map((p, i) => (
