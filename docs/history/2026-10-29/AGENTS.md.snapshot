@@ -1,0 +1,28 @@
+> Historical snapshot captured 2026-10-29. Not current instructions or implementation status. [Current file](../../../AGENTS.md). Original SHA-256: `b81054221a6ea81467c7a4c484dbeeb612a41c403e3ccad06c10eeac74fdd754`. Only relative Markdown link destinations were relocated.
+
+# IshVerse Web — agent context
+
+## Read only what the task needs
+
+1. Read `docs/README.md` and the relevant product/feature document.
+2. Read architecture for ownership/boundaries.
+3. Read design system for UI work; security for identity/data/permissions.
+4. Inspect the actual implementation before editing.
+
+## Repository purpose
+
+Corporate website and public front door for IshVerse. It explains the company, routes visitors to products, and provides stable public company/legal/contact surfaces.
+
+## Stack constraints
+
+Next.js + React + TypeScript + Tailwind CSS + npm.
+
+Do not introduce unapproved framework/database/infrastructure dependencies. npm only for JavaScript/TypeScript repositories. Roadmap entries are not implementation permission.
+
+## Git
+
+Use short-lived branches (`feature/`, `fix/`, `docs/`, `refactor/`, `security/`, `chore/`). Do not use AI assistant names as branch prefixes. Never add Claude, Codex, OpenAI, or other AI assistants as commit co-authors.
+
+## Working agreement
+
+Keep changes focused. Preserve unrelated edits. Never expose secrets or private customer/source data in logs, fixtures, screenshots, issues, or PRs. Report checks run and remaining uncertainty. Update specifications when behavior changes.
