@@ -27,7 +27,7 @@ import { routing, locales, defaultLocale, type Locale } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware({ ...routing, localeDetection: false });
 
-const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout"]);
+const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout", "bloom"]);
 // gospel has its own /privacy, /terms, /about pages — only redirect rize
 const RIZE_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
 
