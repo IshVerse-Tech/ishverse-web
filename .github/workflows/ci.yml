@@ -6,14 +6,29 @@ on:
   pull_request:
     branches: [dev, main]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     name: typecheck · lint · build
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Reject data, secrets and generated files in Git
+        run: python scripts/check-publication.py
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -21,14 +36,33 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Classify changes conservatively
+        id: scope
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          GITHUB_HEAD_SHA: ${{ github.sha }}
+        run: node scripts/change-scope.mjs --ci
+
+      - name: Documentation-only applicability
+        if: steps.scope.outputs.code == 'false'
+        run: echo 'Reviewed documentation paths only; application checks are not applicable. Required check remains present.'
+
       - name: Install dependencies
+        if: steps.scope.outputs.code == 'true'
         run: npm ci
 
+      - name: Validate change-scope guards
+        if: steps.scope.outputs.code == 'true'
+        run: npm run test:scope
+
       - name: Type check
+        if: steps.scope.outputs.code == 'true'
         run: npm run typecheck
 
       - name: Lint
+        if: steps.scope.outputs.code == 'true'
         run: npm run lint
 
       - name: Build
+        if: steps.scope.outputs.code == 'true'
         run: npm run build

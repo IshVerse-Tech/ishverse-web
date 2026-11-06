@@ -1,49 +1,9 @@
 # IshVerse Web
 
-**The company site for IshVerse — Systems for Intentional Growth.**
+Corporate website and public front door for IshVerse. Product availability and company/legal/contact copy must remain accurate.
 
-Deployed at [ishverse.com](https://ishverse.com). Presents the Ish ecosystem — [IshGospel](https://gospel.ishverse.com) (spiritual discipline) and IshRize (academic discipline, coming soon) — and hosts company-wide legal pages.
+Stack: Next.js, React, TypeScript, Tailwind CSS and npm. Follow [scoped instructions](AGENTS.md). [Documentation](docs/README.md), [current corporate design authority](docs/design/DESIGN-SYSTEM.md), [testing](docs/runbooks/TESTING.md). Legacy design/implementation documents are compatibility pointers.
 
----
+[Current implementation and remaining work](../CURRENT_FOCUS_IMPLEMENTATION.md) is the shared status owner; [continuation](CONTINUATION.md) routes resume work. Historical milestones are [preserved](docs/history/2026-10-29/README.md). These links assume the multi-repository workspace; a standalone checkout retains local contracts and its own historical snapshots.
 
-## Stack
-
-| Layer     | Technology                                          |
-| --------- | --------------------------------------------------- |
-| Framework | Next.js 16 (App Router) · React 19                  |
-| Language  | TypeScript (strict)                                 |
-| Styling   | Tailwind CSS v4 (design tokens via `@theme inline`) |
-| Theming   | `next-themes` — pure black / pure white, OS default |
-| Icons     | `lucide-react`                                      |
-| Animation | Canvas 2D + CSS only (no animation libraries)       |
-| Hosting   | Vercel                                              |
-
-## Documentation
-
-| File                                             | Purpose                                                     |
-| ------------------------------------------------ | ----------------------------------------------------------- |
-| [DESIGN.md](DESIGN.md)                           | The design specification — read before building any UI      |
-| [implementation_plan.md](implementation_plan.md) | Phased plan, tech decisions, domains                        |
-| [AGENTS.md](AGENTS.md)                           | AI agent / developer context                                |
-| `../ishgospel-docs/`                             | Ecosystem source of truth (brand, workflow, infrastructure) |
-
-## Getting started
-
-```bash
-npm install
-npm run dev        # http://localhost:3000
-```
-
-```bash
-npm run typecheck  # tsc --noEmit
-npm run lint       # eslint
-npm run build      # production build
-```
-
-## Workflow
-
-Branches follow `ishgospel-docs/CONTRIBUTING.md`: `feature/*` from `dev` → PR → squash merge → delete. `main` and `dev` are protected; CI runs typecheck · lint · build on every PR.
-
----
-
-© IshVerse. All rights reserved.
+No code publication or external service activation is implied by these documents. Use [proportionate validation](../VALIDATION.md); keep behavior, security and API documentation current without copying test logs into this README.

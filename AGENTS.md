@@ -1,68 +1,26 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# IshVerse Web — agent context
 
-# This is NOT the Next.js you know
+## Read only what the task needs
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+1. For a continuation, read `CONTINUATION.md`; otherwise use `docs/README.md` to locate only the relevant feature contract.
+2. Read architecture for boundary changes; design for UI; security for identity/private data/permissions.
+3. Inspect the affected implementation. Historical checkpoints and generated OpenAPI are reference material; query selected sections/paths instead of loading them wholesale.
+4. Choose checks with [the workspace validation matrix](../VALIDATION.md). Keep required security, database and recovery checks; do not repeat unrelated suites or completed checks without a new reason. If this repo is checked out alone, use its own testing runbook.
 
-<!-- END:nextjs-agent-rules -->
+## Repository purpose
 
----
+Corporate website and public front door for IshVerse. It explains the company, routes visitors to products, and provides stable public company/legal/contact surfaces.
 
-# IshVerse Web — Agent Context
+## Stack constraints
 
-The **company site** for IshVerse — the parent brand behind IshGospel and IshRize — deployed at `ishverse.com` (plus the `rize.ishverse.com` coming-soon page via subdomain rewrite).
+Next.js + React + TypeScript + Tailwind CSS + npm.
 
-## Read these first, in order
+Do not introduce unapproved framework/database/infrastructure dependencies. npm only for JavaScript/TypeScript repositories. Roadmap entries are not implementation permission.
 
-1. **[DESIGN.md](DESIGN.md)** — the design specification. Every UI decision (colors, type, motion, the VerseGlobe motif, do/don't) is defined there. Do not invent design values.
-2. **[implementation_plan.md](implementation_plan.md)** — phased plan, tech decisions, domain/repo layout.
-3. `../ishgospel-docs/` — ecosystem source of truth: `BRAND.md`, `CONTRIBUTING.md` (workflow), `INFRASTRUCTURE.md` (domains/emails).
+## Git
 
-## Sibling repos (GitHub org: IshVerseOfficial)
+Use short-lived branches (`feature/`, `fix/`, `docs/`, `refactor/`, `security/`, `chore/`). Do not use AI assistant names as branch prefixes. Never add Claude, Codex, OpenAI, or other AI assistants as commit co-authors.
 
-| Repo                                       | What                                                                                                                                                                       |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Ishverse`                                 | **This repo** — company site (`ishverse.com`) + ALL product landing pages via subdomain rewrites: `gospel.ishverse.com` (`app/gospel/`), `rize.ishverse.com` (`app/rize/`) |
-| `ishgospel-web`                            | **Retired** — its landing page was ported into `components/gospel/` here. Do not deploy or extend it                                                                       |
-| `ishgospel-backend` / `ishgospel-frontend` | IshGospel API + mobile app                                                                                                                                                 |
-| `ishgospel-docs`                           | Documentation source of truth                                                                                                                                              |
+## Working agreement
 
-## What this repo is (and is not)
-
-- **Is:** the company profile — brand story, product ecosystem, company-wide legal pages (`/privacy`, `/terms`), contact — plus every product's marketing landing page, routed by subdomain in `middleware.ts`.
-- **Is not:** a logged-in product. No auth. The only backend call is the gospel waitlist forward (`app/api/waitlist/` → Railway). Static, fast, SEO-first.
-
-## Stack
-
-- Next.js 16 (App Router) · React 19 · TypeScript (strict)
-- Tailwind CSS v4 (tokens in `app/globals.css` via `@theme inline`; `dark:` is class-based via `@custom-variant`)
-- `next-themes` for system-auto + manual light/dark
-- `lucide-react` icons
-- **No animation libraries** — Canvas 2D + CSS only (DESIGN.md §11)
-- i18n: `next-intl` — en/es/fr/pt, `as-needed` prefix (`/` = en, `/es`…), catalogs in `messages/`; routes live under `app/[locale]/`; legal pages stay English
-
-## Hard rules
-
-- The one color metaphor: **the system is blue (`#0052FF`), the man is gold (`#A68A4C`)** — every visualization follows it.
-- Two themes only: pure white `#FFFFFF` / pure black `#000000`. Tokens are Tailwind utilities (`bg-bg`, `text-fg`, `text-accent`, `text-gold`, …) — never hex literals in JSX.
-- All motion respects `prefers-reduced-motion`. Canvas layers pause off-screen, DPR capped at 2 (see `components/neural-field.tsx` for the reference implementation).
-- Voice: calm, direct, sentence case. No hype, no emojis, no exclamation marks (DESIGN.md §9).
-- Mobile-first responsive; Lighthouse ≥ 95 is the release gate.
-
-## File header convention (required on every source file)
-
-```ts
-/**
- * Module: <name>
- * Context: See DESIGN.md §<n> — <what this implements>.
- *
- * <1–3 lines on what the file does and any non-obvious behavior.>
- *
- * Exports:
- *   <name> — <one-line description>
- */
-```
-
-## Workflow
-
-Per `ishgospel-docs/CONTRIBUTING.md`: issue → `feature/*` branch from `dev` → PR (`Closes #N`) → squash merge → delete branch. `main` and `dev` are protected; CI runs `typecheck · lint · build`.
+Keep changes focused. Preserve unrelated edits. Never expose secrets or private customer/source data in logs, fixtures, screenshots, issues, or PRs. Report checks run and remaining uncertainty. Update specifications when behavior changes.

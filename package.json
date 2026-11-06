@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:scope": "node --test tests/change-scope.test.mjs"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
