@@ -27,7 +27,7 @@ import { routing, locales, defaultLocale, type Locale } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware({ ...routing, localeDetection: false });
 
-const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
+const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "bloom"]);
 // gospel has its own /privacy, /terms, /about pages — only redirect rize
 const RIZE_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
 
@@ -44,7 +44,7 @@ export function middleware(req: NextRequest) {
   const locale = hasLocale ? (segments[1] as Locale) : null;
   const rest = "/" + segments.slice(hasLocale ? 2 : 1).join("/");
 
-  if (sub !== "gospel" && RIZE_LEGAL_PATHS.has(rest)) {
+  if (sub === "rize" && RIZE_LEGAL_PATHS.has(rest)) {
     return NextResponse.redirect(`https://ishverse.com${rest}`, 308);
   }
 
