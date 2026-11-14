@@ -8,7 +8,7 @@ Read the local `AGENTS.md`, relevant feature/security contract and testing runbo
 
 ## Branches and issues
 
-Use the repository's actual integration branch: **dev** for **ishverse-web**. Check `gh repo view --json defaultBranchRef` before starting; do not invent an integration branch or assume branch protection is configured. `ishverse-web` uses `dev`; the foundation repositories use `main`.
+Every IshVerse repository has two long-lived branches: **dev**, the default integration branch, and **main**, the release branch. Start every change from an up-to-date `dev` (`git switch dev && git pull --ff-only && git switch -c feature/<kebab-description>`). Never commit directly to `dev` or `main`; `main` only moves through a reviewed `dev` → `main` release PR. Branch rules enforce this where the GitHub plan allows; follow it everywhere else.
 
 Create or reference an issue with the problem, intended behavior, acceptance criteria, exclusions and affected repositories. Use one fresh disposable branch per coherent PR: `feature/`, `fix/`, `docs/`, `refactor/`, `security/` or `chore/`, followed by a kebab-case description. Never reuse a merged branch. Start from an up-to-date integration branch without discarding local changes.
 
@@ -16,13 +16,13 @@ An entirely empty remote needs a base before GitHub can compare a PR. Its initia
 
 ## Commits and review
 
-Use focused conventional messages: `<type>(<optional-scope>): <specific change>`. Types include `feat`, `fix`, `docs`, `refactor`, `test`, `perf`, `security` and `chore`. Keep related source, tests and contracts together; separate governance-only changes where practical. Add `Refs: #N` for the issue. Put `Closes #N` in the PR description when that PR actually completes the issue; do not add a misleading closing footer to every intermediate commit. GitHub issue closing depends on the repository's default-branch behavior, not a blanket promise about every merge.
+Use focused conventional messages: `<type>(<optional-scope>): <specific change>`. Types include `feat`, `fix`, `docs`, `refactor`, `test`, `perf`, `security` and `chore`. Keep related source, tests and contracts together; separate governance-only changes where practical. Add `Refs: #N` for the issue. Put `Closes #N` in the PR description when that PR completes the issue. Squash merges use the PR title as the commit subject and the PR description as the commit body, so the closing keyword lands in the commit on `dev` (the default branch) and GitHub closes the issue on merge. Use `Refs: #N` for partial work, and do not add closing footers to intermediate commits.
 
 Stage explicit reviewed paths. Inspect staged names, sizes, diff and secret/data checks before committing; `.gitignore` does not remove files already tracked. Do not add AI co-author attribution. Never rewrite existing history simply to remove generated files from the next commit; review exposure separately if sensitive material was previously published.
 
 Open a PR into **dev**, with concrete behavior, scope, actual validation results/skips/failures, compatibility/migration and recovery implications, security/privacy impact, and linked companion PRs. Identify integration dependencies and a sensible merge order. Use a focused follow-up comment for material new results rather than repeated status noise. Draft PRs are appropriate for honest incomplete validation or decisions. Do not claim hosted/customer acceptance from local tests.
 
-The founder reviews and chooses when to approve, squash-merge and delete branches. Leave PRs open: no self-approval, auto-merge, release tag, deployment or branch deletion is implied by creating them. Repository protection/ruleset and merge settings are separate reviewed administration; do not silently alter them. Independent approval is useful when a reviewer exists; do not invent approval or install hooks/dependencies merely for appearance.
+Merge feature PRs into `dev` with **squash merge only**; the result is one conventional commit such as `feat(core): add task export (#12)` whose body carries `Closes #N`. GitHub deletes the feature branch automatically after merge; delete your local copy and never reuse a merged branch. Release by opening a `dev` → `main` PR and merging it with a **merge commit** (not squash) so `main` stays an ancestor of `dev`. The founder approves merges and releases; contributors and agents do not self-approve, auto-merge, tag, deploy or change repository rules without explicit founder authorization. Independent approval is useful when a reviewer exists; do not invent approval.
 
 ## Checks and API changes
 
