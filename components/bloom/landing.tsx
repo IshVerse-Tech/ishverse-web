@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { ProductLink } from "@/components/product-link";
-import { BloomScreen as Screen } from "./screen";
+import { WorkoutScreen as Screen } from "@/components/workout/screen";
 import { bloomConfig } from "@/lib/bloom";
 
 const icons = [Hexagon, InfinityIcon, Map, Gem, Trophy, WifiOff];

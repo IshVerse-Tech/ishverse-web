@@ -58,25 +58,21 @@ export function ProductCard({ product }: { product: LocalizedProduct }) {
       <p className="mt-4 max-w-sm text-base leading-relaxed text-fg-secondary">
         {product.oneLiner}
       </p>
+      {/* Every product has a landing page, so the link shows regardless of
+          release status; the badge carries live vs coming soon. */}
       <div className="mt-6 flex items-center gap-4">
-        {live ? (
-          <>
-            <a
-              href={product.href}
-              className="inline-flex items-center gap-1.5 text-[14px] font-medium text-accent transition-colors hover:text-accent-dark"
-            >
-              {product.labels.visit}
-              <ArrowUpRight className="h-4 w-4" aria-hidden />
-            </a>
-            <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-fg-secondary">
-              {product.labels.live}
-            </span>
-          </>
-        ) : (
-          <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-gold-text">
-            {product.labels.soon}
-          </span>
-        )}
+        <a
+          href={product.href}
+          className="inline-flex items-center gap-1.5 text-[14px] font-medium text-accent transition-colors hover:text-accent-dark"
+        >
+          {product.labels.visit}
+          <ArrowUpRight className="h-4 w-4" aria-hidden />
+        </a>
+        <span
+          className={`rounded-full border border-divider px-3 py-1 text-[12px] ${live ? "text-fg-secondary" : "text-gold-text"}`}
+        >
+          {live ? product.labels.live : product.labels.soon}
+        </span>
       </div>
     </article>
   );

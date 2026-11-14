@@ -252,7 +252,9 @@
       "rizeDomain": "Disciplina acadêmica",
       "rizeLine": "Horários sem conflitos e controlo de presenças, em tempo real em cada departamento.",
       "bloomDomain": "Quebra-cabeça tranquilo",
-      "bloomLine": "Um jogo de quebra-cabeça hexagonal para foco e calma."
+      "bloomLine": "Um jogo de quebra-cabeça hexagonal para foco e calma.",
+      "workoutDomain": "Atividade física e hábitos",
+      "workoutLine": "Um sistema diário para movimento, atividade física e hábitos pessoais."
     },
     "philosophy": {
       "eyebrow": "O nome",
@@ -641,5 +643,110 @@
         "body": "A versão 1.1 exibe anúncios do Google. Quando exigido, você pode revisar suas opções de privacidade no app. Consulte a política de privacidade para mais detalhes."
       }
     ]
+  },
+  "workout": {
+    "skip": "Ir para o conteúdo",
+    "navigation": "Navegação principal",
+    "footer": "Navegação do rodapé",
+    "family": "Parte do ecossistema IshVerse",
+    "features": "Funcionalidades",
+    "support": "Suporte",
+    "privacy": "Política de privacidade",
+    "title": "Faça do movimento uma prática diária.",
+    "description": "Reúna suas corridas, exercícios e hábitos em um só lugar. O ISH Workout dá uma estrutura simples à sua disciplina física.",
+    "availability": "Para iPhone e iPad. A disponibilidade pública na App Store está pendente.",
+    "trust1": "iOS: sem conta",
+    "trust2": "Seus hábitos, juntos",
+    "trust3": "Apple Health opcional",
+    "screenAlt": "Painel do ISH Workout com hábitos e atividade diária",
+    "screenCaption": "App real para iOS · modo claro",
+    "featuresTitle": "Um lugar para os hábitos que fazem a diferença.",
+    "nativeNote": "Feito para iOS, com integração opcional com Apple Health.",
+    "cards": [
+      {
+        "title": "Corridas",
+        "body": "Defina distância e tempo. Acompanhe a corrida com GPS, ritmo e mapa."
+      },
+      {
+        "title": "Flexões",
+        "body": "Registre suas séries e acompanhe sua meta diária."
+      },
+      {
+        "title": "Peso",
+        "body": "Registre seu peso e observe as mudanças ao longo do tempo."
+      },
+      {
+        "title": "Água",
+        "body": "Registre copos de água em relação à sua meta diária."
+      },
+      {
+        "title": "Refeições",
+        "body": "Mantenha um registro simples do que você come."
+      },
+      {
+        "title": "Tarefas diárias",
+        "body": "Organize o dia e mantenha as tarefas pendentes."
+      }
+    ],
+    "runAlt": "Configuração de corrida no iOS",
+    "weightAlt": "Histórico de peso no iOS com um registro de exemplo",
+    "routineLabel": "Um ritmo constante",
+    "routineTitle": "Defina sua intenção. Registre seu esforço.",
+    "steps": [
+      {
+        "title": "Escolha suas metas",
+        "body": "Defina objetivos que combinem com sua rotina."
+      },
+      {
+        "title": "Registre ao longo do dia",
+        "body": "Anote uma série, refeição, copo de água ou corrida."
+      },
+      {
+        "title": "Revise seu progresso",
+        "body": "Consulte os registros e ajuste o próximo dia."
+      }
+    ],
+    "privacyTitle": "Sua rotina é pessoal.",
+    "privacyBody": "O app para iOS armazena seus registros no dispositivo. Não é preciso criar uma conta. A localização permite registrar corridas, e a integração com Apple Health é opcional e depende de permissão.",
+    "faqTitle": "Antes de começar",
+    "faq": [
+      {
+        "q": "Posso baixar o app para iOS?",
+        "a": "Ele está em testes. Adicionaremos o link da App Store quando estiver disponível ao público."
+      },
+      {
+        "q": "Preciso de uma conta?",
+        "a": "Não. Seus registros ficam no dispositivo; não é preciso criar uma conta."
+      },
+      {
+        "q": "O app oferece orientação médica?",
+        "a": "ISH Workout é um registro pessoal de atividade física e hábitos. Não oferece diagnóstico nem tratamento."
+      }
+    ],
+    "ctaTitle": "Dê estrutura ao seu dia.",
+    "ctaBody": "Encontre o ISH Workout na App Store quando o lançamento estiver disponível.",
+    "supportTitle": "Como podemos ajudar?",
+    "supportIntro": "Para dúvidas ou problemas técnicos, entre em contato com nossa equipe.",
+    "emailAction": "Enviar e-mail ao suporte",
+    "include": "Informe seu dispositivo, versão do iOS, versão do app e o que aconteceu. Não envie dados de saúde, rotas precisas, senhas ou informações sensíveis.",
+    "help": [
+      {
+        "title": "Seus registros",
+        "body": "O app armazena os registros no dispositivo. Guarde os arquivos exportados em um local seguro."
+      },
+      {
+        "title": "Localização e Apple Health",
+        "body": "Verifique as permissões nos Ajustes do iPhone. As permissões do Apple Health são gerenciadas no app Saúde."
+      },
+      {
+        "title": "Remover dados",
+        "body": "Excluir o app para iOS remove seus dados locais. Exclua arquivos exportados separadamente. Registros salvos no Apple Health devem ser gerenciados no app Saúde."
+      }
+    ],
+    "workoutDomain": "Disciplina física",
+    "workoutLine": "Um sistema diário para movimento, atividade física e hábitos pessoais.",
+    "menu": "Menu",
+    "allProducts": "Todos os produtos IshVerse",
+    "appStore": "Ver na App Store"
   }
 }

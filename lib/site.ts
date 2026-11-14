@@ -49,6 +49,13 @@ export const siteConfig = {
       status: "live",
     },
     {
+      id: "workout",
+      name: "ISH Workout",
+      wordmark: { strong: "ISH", light: "WORKOUT" },
+      href: "https://workout.ishverse.com",
+      status: "soon",
+    },
+    {
       id: "bloom",
       name: "IshBloom",
       wordmark: { strong: "ISH", light: "BLOOM" },

@@ -32,7 +32,7 @@ const LANGUAGES: LangMeta[] = [
   { code: "pt", flag: "🇵🇹", nativeName: "Português", englishName: "Portuguese" },
 ];
 
-const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "bloom"]);
+const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout", "bloom"]);
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;

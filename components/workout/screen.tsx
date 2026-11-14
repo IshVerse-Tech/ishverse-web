@@ -1,11 +1,11 @@
 /**
- * Module: BloomScreen
+ * Module: WorkoutScreen
  * Context: See DESIGN.md §13 — consistent native screenshot presentation.
  * Keeps the full screenshot at its original aspect ratio inside a fitted frame.
  * Exports: WorkoutScreen
  */
 import Image from "next/image";
-export function BloomScreen({
+export function WorkoutScreen({
   src,
   alt,
   priority = false,
