@@ -225,7 +225,7 @@
   "company": {
     "meta": {
       "title": "Sistemas para o crescimento intencional.",
-      "description": "Ferramentas para formação espiritual, planejamento institucional e atividade física diária. Conheça IshGospel, IshRize e ISH Workout: cada um atende a uma área da vida."
+      "description": "Ferramentas para formação espiritual, planejamento institucional, atividade física diária e jogo tranquilo. Conheça IshGospel, IshRize, ISH Workout e IshBloom: cada um atende a uma área da vida."
     },
     "nav": {
       "products": "Produtos",
@@ -242,7 +242,7 @@
     "products": {
       "eyebrow": "Produtos",
       "heading": "Encontre o sistema para o seu dia.",
-      "sub": "Três produtos com propósitos diferentes. Explore suas funcionalidades e disponibilidade atual.",
+      "sub": "Quatro produtos com propósitos diferentes. Explore suas funcionalidades e disponibilidade atual.",
       "visit": "Visitar {name}",
       "live": "Disponível",
       "soon": "Em breve",
@@ -254,7 +254,10 @@
       "workoutLine": "Um sistema diário para movimento, atividade física e hábitos pessoais.",
       "gospelAvailability": "Android primeiro · iOS planejado",
       "rizeAvailability": "Plataforma web disponível",
-      "workoutAvailability": "App para iOS · lançamento pendente"
+      "workoutAvailability": "App para iOS · lançamento pendente",
+      "bloomDomain": "Quebra-cabeça tranquilo",
+      "bloomLine": "Um jogo de quebra-cabeça hexagonal para foco e calma.",
+      "bloomAvailability": "App iOS · disponível na App Store"
     },
     "philosophy": {
       "eyebrow": "O nome",
@@ -510,5 +513,112 @@
     "menu": "Menu",
     "allProducts": "Todos os produtos IshVerse",
     "appStore": "Ver na App Store"
+  },
+  "bloom": {
+    "skip": "Pular para o conteúdo",
+    "navigation": "Navegação principal",
+    "footer": "Navegação do rodapé",
+    "menu": "Menu",
+    "family": "Parte do ecossistema IshVerse",
+    "features": "Recursos",
+    "support": "Suporte",
+    "privacy": "Política de privacidade",
+    "allProducts": "Todos os produtos IshVerse",
+    "appStore": "Baixar na App Store",
+    "title": "Encontre seu ritmo.",
+    "description": "IshBloom é um quebra-cabeça hexagonal tranquilo. Posicione grupos de cristais em um jardim de 61 casas, complete Blooms de sete células e jogue no seu ritmo.",
+    "availability": "Disponível na App Store. Requer iOS 15 ou posterior.",
+    "trust1": "Sem conta",
+    "trust2": "Funciona offline",
+    "trust3": "Sem limite de jogadas",
+    "screenAlt": "Seleção de modo do IshBloom com Journey e Marathon",
+    "screenCaption": "App iOS real · captura da App Store",
+    "featuresTitle": "Um quebra-cabeça que recompensa o planejamento, não a pressão.",
+    "nativeNote": "Feito nativamente para iPhone e iPad, com layouts adaptáveis e Game Center.",
+    "cards": [
+      {
+        "title": "Forme um Bloom",
+        "body": "Preencha um hexágono e seus seis vizinhos para completar um Bloom e liberar espaço no tabuleiro."
+      },
+      {
+        "title": "Marathon",
+        "body": "Uma partida sem fim. Continue posicionando grupos e tente superar sua melhor pontuação."
+      },
+      {
+        "title": "Journey",
+        "body": "144 níveis em 12 jardins temáticos, com estrelas e desbloqueios salvos conforme você avança."
+      },
+      {
+        "title": "Colete gemas",
+        "body": "No Journey, limpe as casas com gemas para atingir a meta de cada nível. Não há contagem regressiva de jogadas."
+      },
+      {
+        "title": "Game Center",
+        "body": "Entre com o Game Center e abra o painel dele em Ajustes."
+      },
+      {
+        "title": "Jogue em qualquer lugar",
+        "body": "O jogo e o progresso salvo funcionam sem conexão com a internet."
+      }
+    ],
+    "boardAlt": "Tabuleiro hexagonal do IshBloom com gemas e grupos na bandeja",
+    "journeyAlt": "Mapa do Journey do IshBloom mostrando jardins e níveis",
+    "routineLabel": "Como jogar",
+    "routineTitle": "Planeje. Posicione. Floresça.",
+    "steps": [
+      {
+        "title": "Escolha um grupo",
+        "body": "Escolha uma das formas da bandeja e arraste-a sobre o jardim."
+      },
+      {
+        "title": "Posicione",
+        "body": "O contorno mostra onde ela vai ficar. Solte em uma posição válida."
+      },
+      {
+        "title": "Complete um Bloom",
+        "body": "Preencha um hexágono e seus seis vizinhos para limpá-los e continuar jogando."
+      }
+    ],
+    "privacyTitle": "Seu progresso fica no seu dispositivo.",
+    "privacyBody": "Você não precisa de uma conta IshVerse para jogar. As melhores pontuações e os registros do Journey são salvos no seu dispositivo. A versão 1.1 inclui anúncios do Google, com opções de privacidade quando exigido.",
+    "faqTitle": "Antes de jogar",
+    "faq": [
+      {
+        "q": "O IshBloom é gratuito?",
+        "a": "Sim. O IshBloom pode ser baixado gratuitamente na App Store."
+      },
+      {
+        "q": "Preciso de uma conta?",
+        "a": "Não. Suas pontuações e seu progresso no Journey ficam salvos localmente no seu dispositivo."
+      },
+      {
+        "q": "Posso jogar offline?",
+        "a": "Sim. O jogo funciona sem conexão com a internet. Anúncios e Game Center precisam de conexão."
+      }
+    ],
+    "ctaTitle": "Reserve um minuto de calma.",
+    "ctaBody": "Baixe o IshBloom e comece seu primeiro jardim.",
+    "supportTitle": "Como podemos ajudar?",
+    "supportIntro": "Para dúvidas sobre o jogo ou para relatar um erro, fale com nossa equipe de suporte.",
+    "emailAction": "Enviar e-mail ao suporte",
+    "include": "Ao relatar um erro, informe o modelo do dispositivo, a versão do iOS, a versão do app e o que aconteceu.",
+    "help": [
+      {
+        "title": "Como formo um Bloom?",
+        "body": "Preencha um hexágono e os seis hexágonos adjacentes. No Journey, limpar uma casa com gema conta para a meta do nível."
+      },
+      {
+        "title": "O que o Lightning faz?",
+        "body": "Quando sua mão está bloqueada e há uma forma segura de abrir espaço, uma recuperação opcional com Lightning limpa algumas casas comuns. Suas gemas e sua pontuação são mantidas."
+      },
+      {
+        "title": "Onde meu progresso fica salvo?",
+        "body": "As melhores pontuações e os registros do Journey ficam salvos no seu dispositivo. Excluir o app remove os registros locais."
+      },
+      {
+        "title": "Anúncios e opções de privacidade",
+        "body": "A versão 1.1 exibe anúncios do Google. Quando exigido, você pode revisar suas opções de privacidade no app. Consulte a política de privacidade para mais detalhes."
+      }
+    ]
   }
 }

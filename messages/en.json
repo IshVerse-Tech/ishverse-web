@@ -225,7 +225,7 @@
   "company": {
     "meta": {
       "title": "Systems for Intentional Growth.",
-      "description": "Tools for spiritual formation, institutional scheduling, and daily fitness. Explore IshGospel, IshRize, and ISH Workout — each built for a different part of life."
+      "description": "Tools for spiritual formation, institutional scheduling, daily fitness, and calm play. Explore IshGospel, IshRize, ISH Workout, and IshBloom — each built for a different part of life."
     },
     "nav": {
       "products": "Products",
@@ -242,7 +242,7 @@
     "products": {
       "eyebrow": "Products",
       "heading": "Find the system for your day.",
-      "sub": "Three products. Different purposes. Choose a product to explore its features and current availability.",
+      "sub": "Four products. Different purposes. Choose a product to explore its features and current availability.",
       "visit": "Visit {name}",
       "live": "Live",
       "soon": "Coming soon",
@@ -254,7 +254,10 @@
       "workoutLine": "A daily system for movement, fitness, and personal habits.",
       "gospelAvailability": "Android first · iOS planned",
       "rizeAvailability": "Web platform available",
-      "workoutAvailability": "iOS app · release pending"
+      "workoutAvailability": "iOS app · release pending",
+      "bloomDomain": "Calm puzzle play",
+      "bloomLine": "A hexagonal puzzle game for focus and calm.",
+      "bloomAvailability": "iOS app · on the App Store"
     },
     "philosophy": {
       "eyebrow": "The name",
@@ -510,5 +513,112 @@
     "menu": "Menu",
     "allProducts": "All IshVerse products",
     "appStore": "View on the App Store"
+  },
+  "bloom": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "footer": "Footer navigation",
+    "menu": "Menu",
+    "family": "Part of the IshVerse ecosystem",
+    "features": "Features",
+    "support": "Support",
+    "privacy": "Privacy policy",
+    "allProducts": "All IshVerse products",
+    "appStore": "Download on the App Store",
+    "title": "Find your flow.",
+    "description": "IshBloom is a calm hexagonal puzzle. Place crystal clusters on a 61-cell garden, complete seven-cell Blooms, and play at your own pace.",
+    "availability": "Available on the App Store. Requires iOS 15 or later.",
+    "trust1": "No account required",
+    "trust2": "Plays offline",
+    "trust3": "No move limits",
+    "screenAlt": "IshBloom mode selection with Journey and Marathon",
+    "screenCaption": "Actual iOS app · App Store screenshot",
+    "featuresTitle": "A puzzle that rewards planning, not pressure.",
+    "nativeNote": "Built natively for iPhone and iPad, with adaptive layouts and Game Center.",
+    "cards": [
+      {
+        "title": "Make a Bloom",
+        "body": "Fill one hex and all six of its neighbours to complete a Bloom and clear space on the board."
+      },
+      {
+        "title": "Marathon",
+        "body": "An endless run. Keep placing clusters and try to beat your own best score."
+      },
+      {
+        "title": "Journey",
+        "body": "144 levels across 12 themed gardens, with stars and unlocks saved as you go."
+      },
+      {
+        "title": "Collect gems",
+        "body": "In Journey, clear tiles that hold gems to reach each level goal. There is no move countdown."
+      },
+      {
+        "title": "Game Center",
+        "body": "Sign in with Game Center and open its dashboard from Settings."
+      },
+      {
+        "title": "Play anywhere",
+        "body": "Core gameplay and saved progress work without an internet connection."
+      }
+    ],
+    "boardAlt": "IshBloom hex board with gem tiles and clusters in the tray",
+    "journeyAlt": "IshBloom Journey map showing gardens and levels",
+    "routineLabel": "How it plays",
+    "routineTitle": "Plan. Place. Bloom.",
+    "steps": [
+      {
+        "title": "Choose a cluster",
+        "body": "Pick one of the shapes in your tray and drag it over the garden."
+      },
+      {
+        "title": "Place it",
+        "body": "The outlined footprint shows where it will land. Release on a valid spot."
+      },
+      {
+        "title": "Complete a Bloom",
+        "body": "Fill a hex and its six neighbours to clear them and keep playing."
+      }
+    ],
+    "privacyTitle": "Your progress stays on your device.",
+    "privacyBody": "You do not need an IshVerse account to play. Best scores and Journey records are saved on your device. Version 1.1 includes ads served by Google, with privacy choices where required.",
+    "faqTitle": "Before you play",
+    "faq": [
+      {
+        "q": "Is IshBloom free?",
+        "a": "Yes. IshBloom is free to download from the App Store."
+      },
+      {
+        "q": "Do I need an account?",
+        "a": "No. Your scores and Journey progress are saved locally on your device."
+      },
+      {
+        "q": "Can I play offline?",
+        "a": "Yes. Core gameplay works without an internet connection. Ads and Game Center need a connection."
+      }
+    ],
+    "ctaTitle": "Take a calm minute.",
+    "ctaBody": "Download IshBloom and start your first garden.",
+    "supportTitle": "How can we help?",
+    "supportIntro": "For gameplay questions or a bug report, contact our support team.",
+    "emailAction": "Email support",
+    "include": "If you are reporting a bug, include your device model, iOS version, app version, and what happened.",
+    "help": [
+      {
+        "title": "How do I make a Bloom?",
+        "body": "Fill one hex and all six adjacent hexes. In Journey, clearing a gem tile counts it toward the level goal."
+      },
+      {
+        "title": "What does Lightning do?",
+        "body": "When your hand is blocked and there is a safe way to make room, an optional Lightning recovery clears a few ordinary tiles. Your gems and score stay intact."
+      },
+      {
+        "title": "Where is my progress saved?",
+        "body": "Best scores and Journey records are saved on your device. Deleting the app removes its local records."
+      },
+      {
+        "title": "Ads and privacy choices",
+        "body": "Version 1.1 shows ads from Google. Where required, you can review your privacy choices in the app. See the privacy policy for details."
+      }
+    ]
   }
 }

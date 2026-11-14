@@ -4,9 +4,11 @@
  * Every product has a working landing-page link, independently of app release status.
  * Exports: LocalizedProduct, ProductCard
  */
-import { ArrowUpRight, BookOpen, CalendarDays, Dumbbell } from "lucide-react";
+import { ArrowUpRight, BookOpen, CalendarDays, Dumbbell, Hexagon } from "lucide-react";
+import type { Product } from "@/lib/site";
 import { ProductDestination } from "./product-destination";
 export type LocalizedProduct = {
+  id: Product["id"];
   name: string;
   domain: string;
   oneLiner: string;
@@ -15,9 +17,10 @@ export type LocalizedProduct = {
   availability: string;
   visit: string;
 };
+const icons = { gospel: BookOpen, rize: CalendarDays, workout: Dumbbell, bloom: Hexagon };
+
 export function ProductCard({ product }: { product: LocalizedProduct }) {
-  const Icon =
-    product.name === "IshGospel" ? BookOpen : product.name === "IshRize" ? CalendarDays : Dumbbell;
+  const Icon = icons[product.id];
   return (
     <article className="flex h-full min-w-0 flex-col rounded-2xl border border-divider bg-surface p-5 sm:p-8">
       <Icon size={26} className="text-accent-text" aria-hidden />

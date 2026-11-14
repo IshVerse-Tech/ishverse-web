@@ -16,30 +16,16 @@ import { siteConfig } from "@/lib/site";
 export function Ecosystem() {
   const t = useTranslations("company.products");
 
+  // Copy is keyed off p.id so every product gets its own strings.
   const products: LocalizedProduct[] = siteConfig.products.map((p) => ({
+    id: p.id,
     name: p.name,
     href: p.href,
     path: p.path,
-    availability: t(
-      p.name === "ISH Workout"
-        ? "workoutAvailability"
-        : p.name === "IshGospel"
-          ? "gospelAvailability"
-          : "rizeAvailability",
-    ),
+    availability: t(`${p.id}Availability`),
     visit: t("visit", { name: p.name }),
-    domain:
-      p.name === "ISH Workout"
-        ? t("workoutDomain")
-        : p.name === "IshGospel"
-          ? t("gospelDomain")
-          : t("rizeDomain"),
-    oneLiner:
-      p.name === "ISH Workout"
-        ? t("workoutLine")
-        : p.name === "IshGospel"
-          ? t("gospelLine")
-          : t("rizeLine"),
+    domain: t(`${p.id}Domain`),
+    oneLiner: t(`${p.id}Line`),
   }));
 
   return (
@@ -53,7 +39,7 @@ export function Ecosystem() {
         </h2>
         <p className="mt-4 max-w-prose text-base leading-relaxed text-fg-secondary">{t("sub")}</p>
       </Reveal>
-      <div className="mt-8 grid auto-rows-fr gap-5 md:mt-12 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-8 grid auto-rows-fr gap-5 md:mt-12 md:grid-cols-2">
         {products.map((p, i) => (
           <Reveal key={p.name} delay={i * 60}>
             <ProductCard product={p} />
