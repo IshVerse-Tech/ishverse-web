@@ -1,55 +1,54 @@
 /**
  * Module: BloomSupport
- * Context: See DESIGN.md §9 and §10 for support and legal copy.
- * Public contact and help page for IshBloom players.
- * Exports: BloomSupport
+ * Context: See DESIGN.md §13 — product pages.
+ * Localized help and contact details for IshBloom players.
+ * Exports: generateMetadata, BloomSupport
  */
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { bloomConfig } from "@/lib/bloom";
 
-export const metadata: Metadata = {
-  title: "IshBloom support",
-  description: "Get help with IshBloom gameplay, settings and saved progress.",
-  alternates: { canonical: "https://bloom.ishverse.com/support" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "bloom" });
+  return {
+    title: `IshBloom — ${t("support")}`,
+    description: t("supportIntro"),
+    alternates: {
+      canonical: `${bloomConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+    },
+  };
+}
 
-export default function BloomSupport() {
+export default async function BloomSupport({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("bloom");
   return (
-    <>
-      <h1 className="text-4xl font-bold tracking-tight">IshBloom support</h1>
-      <p className="mt-5 leading-relaxed">
-        For gameplay questions or a bug report, email{" "}
-        <a
-          className="break-all text-accent-text underline"
-          href={`mailto:${siteConfig.supportEmail}?subject=IshBloom%20support`}
-        >
-          {siteConfig.supportEmail}
-        </a>
-        . If reporting a bug, include your iPhone model, iOS version, and what happened.
-      </p>
-      <dl className="mt-9 space-y-6 leading-relaxed">
-        <div>
-          <dt className="font-semibold">How do I make a Bloom?</dt>
-          <dd className="mt-1">
-            Fill one hex and all six adjacent hexes. In Journey, clearing a gem tile counts it
-            toward the level goal.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">What does Lightning do?</dt>
-          <dd className="mt-1">
-            When your Journey hand is blocked and there is a safe way to make room, Lightning clears
-            ordinary tiles once per attempt. Your gems and score stay intact.
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold">Where is my progress saved?</dt>
-          <dd className="mt-1">
-            Best scores and Journey records are saved on this iPhone. Deleting the app removes its
-            local records.
-          </dd>
-        </div>
-      </dl>
-    </>
+    <main id="main" className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
+      <p className="text-sm text-accent-text">IshBloom</p>
+      <h1 className="mt-4 text-4xl font-bold">{t("supportTitle")}</h1>
+      <p className="mt-6 text-lg text-fg-secondary">{t("supportIntro")}</p>
+      <a
+        href={`mailto:${bloomConfig.support}?subject=IshBloom%20support`}
+        className="mt-8 inline-block rounded-xl bg-accent px-6 py-4 text-accent-on hover:bg-accent-dark"
+      >
+        {t("emailAction")}
+      </a>
+      <p className="mt-4 text-sm">{bloomConfig.support}</p>
+      <p className="mt-6 leading-relaxed text-fg-secondary">{t("include")}</p>
+      <div className="mt-12 space-y-8">
+        {[0, 1, 2, 3].map((i) => (
+          <section key={i}>
+            <h2 className="text-xl font-semibold">{t(`help.${i}.title`)}</h2>
+            <p className="mt-3 leading-relaxed text-fg-secondary">{t(`help.${i}.body`)}</p>
+          </section>
+        ))}
+      </div>
+    </main>
   );
 }

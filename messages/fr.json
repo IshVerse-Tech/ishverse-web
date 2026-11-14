@@ -250,7 +250,9 @@
       "gospelDomain": "Discipline spirituelle",
       "gospelLine": "Un système structuré de formation spirituelle.",
       "rizeDomain": "Discipline académique",
-      "rizeLine": "Des emplois du temps sans conflit et un suivi de présence, en direct dans chaque département."
+      "rizeLine": "Des emplois du temps sans conflit et un suivi de présence, en direct dans chaque département.",
+      "bloomDomain": "Puzzle apaisant",
+      "bloomLine": "Un jeu de puzzle hexagonal pour la concentration et le calme."
     },
     "philosophy": {
       "eyebrow": "Le nom",
@@ -532,5 +534,112 @@
       "successBody": "We received your message and will respond within 24 hours.",
       "sendAnother": "Send another message"
     }
+  },
+  "bloom": {
+    "skip": "Aller au contenu",
+    "navigation": "Navigation principale",
+    "footer": "Navigation du pied de page",
+    "menu": "Menu",
+    "family": "Membre de l’écosystème IshVerse",
+    "features": "Fonctionnalités",
+    "support": "Assistance",
+    "privacy": "Politique de confidentialité",
+    "allProducts": "Tous les produits IshVerse",
+    "appStore": "Télécharger dans l’App Store",
+    "title": "Trouvez votre rythme.",
+    "description": "IshBloom est un puzzle hexagonal apaisant. Placez des grappes de cristaux sur un jardin de 61 cases, complétez des Blooms de sept cases et jouez à votre rythme.",
+    "availability": "Disponible sur l’App Store. Nécessite iOS 15 ou version ultérieure.",
+    "trust1": "Aucun compte requis",
+    "trust2": "Fonctionne hors ligne",
+    "trust3": "Aucune limite de coups",
+    "screenAlt": "Choix du mode dans IshBloom avec Journey et Marathon",
+    "screenCaption": "Application iOS réelle · capture de l’App Store",
+    "featuresTitle": "Un puzzle qui récompense la réflexion, pas la pression.",
+    "nativeNote": "Conçu nativement pour iPhone et iPad, avec des mises en page adaptatives et Game Center.",
+    "cards": [
+      {
+        "title": "Formez un Bloom",
+        "body": "Remplissez une case hexagonale et ses six voisines pour compléter un Bloom et libérer de la place."
+      },
+      {
+        "title": "Marathon",
+        "body": "Une partie sans fin. Continuez à placer des grappes et tentez de battre votre meilleur score."
+      },
+      {
+        "title": "Journey",
+        "body": "144 niveaux répartis dans 12 jardins thématiques, avec étoiles et déblocages enregistrés au fil de la progression."
+      },
+      {
+        "title": "Collectez des gemmes",
+        "body": "Dans Journey, dégagez les cases contenant des gemmes pour atteindre l’objectif de chaque niveau. Aucun compte à rebours de coups."
+      },
+      {
+        "title": "Game Center",
+        "body": "Connectez-vous à Game Center et ouvrez son tableau de bord depuis les Réglages."
+      },
+      {
+        "title": "Jouez partout",
+        "body": "Le jeu et la progression enregistrée fonctionnent sans connexion internet."
+      }
+    ],
+    "boardAlt": "Plateau hexagonal d’IshBloom avec des gemmes et des grappes dans le plateau",
+    "journeyAlt": "Carte Journey d’IshBloom montrant les jardins et les niveaux",
+    "routineLabel": "Comment jouer",
+    "routineTitle": "Planifiez. Placez. Faites fleurir.",
+    "steps": [
+      {
+        "title": "Choisissez une grappe",
+        "body": "Sélectionnez une forme dans votre réserve et faites-la glisser sur le jardin."
+      },
+      {
+        "title": "Placez-la",
+        "body": "Le contour indique où elle se posera. Relâchez-la sur un emplacement valide."
+      },
+      {
+        "title": "Complétez un Bloom",
+        "body": "Remplissez une case et ses six voisines pour les dégager et continuer à jouer."
+      }
+    ],
+    "privacyTitle": "Votre progression reste sur votre appareil.",
+    "privacyBody": "Aucun compte IshVerse n’est nécessaire pour jouer. Les meilleurs scores et la progression Journey sont enregistrés sur votre appareil. La version 1.1 inclut des publicités fournies par Google, avec des choix de confidentialité lorsque c’est requis.",
+    "faqTitle": "Avant de jouer",
+    "faq": [
+      {
+        "q": "IshBloom est-il gratuit ?",
+        "a": "Oui. IshBloom se télécharge gratuitement sur l’App Store."
+      },
+      {
+        "q": "Ai-je besoin d’un compte ?",
+        "a": "Non. Vos scores et votre progression Journey sont enregistrés localement sur votre appareil."
+      },
+      {
+        "q": "Puis-je jouer hors ligne ?",
+        "a": "Oui. Le jeu fonctionne sans connexion internet. Les publicités et Game Center nécessitent une connexion."
+      }
+    ],
+    "ctaTitle": "Offrez-vous une minute de calme.",
+    "ctaBody": "Téléchargez IshBloom et commencez votre premier jardin.",
+    "supportTitle": "Comment pouvons-nous vous aider ?",
+    "supportIntro": "Pour une question sur le jeu ou pour signaler un bug, contactez notre équipe d’assistance.",
+    "emailAction": "Écrire à l’assistance",
+    "include": "Pour signaler un bug, indiquez le modèle de votre appareil, la version d’iOS, la version de l’application et ce qui s’est passé.",
+    "help": [
+      {
+        "title": "Comment former un Bloom ?",
+        "body": "Remplissez une case et les six cases adjacentes. Dans Journey, dégager une case avec une gemme compte pour l’objectif du niveau."
+      },
+      {
+        "title": "À quoi sert Lightning ?",
+        "body": "Lorsque votre main est bloquée et qu’il existe un moyen sûr de faire de la place, une récupération Lightning facultative dégage quelques cases ordinaires. Vos gemmes et votre score sont conservés."
+      },
+      {
+        "title": "Où ma progression est-elle enregistrée ?",
+        "body": "Les meilleurs scores et la progression Journey sont enregistrés sur votre appareil. Supprimer l’application efface ses données locales."
+      },
+      {
+        "title": "Publicités et choix de confidentialité",
+        "body": "La version 1.1 affiche des publicités de Google. Lorsque c’est requis, vous pouvez revoir vos choix de confidentialité dans l’application. Consultez la politique de confidentialité pour plus de détails."
+      }
+    ]
   }
 }

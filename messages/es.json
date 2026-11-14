@@ -250,7 +250,9 @@
       "gospelDomain": "Disciplina espiritual",
       "gospelLine": "Un sistema estructurado de formación espiritual.",
       "rizeDomain": "Disciplina académica",
-      "rizeLine": "Horarios sin conflictos y control de asistencia, en vivo en cada departamento."
+      "rizeLine": "Horarios sin conflictos y control de asistencia, en vivo en cada departamento.",
+      "bloomDomain": "Rompecabezas relajante",
+      "bloomLine": "Un juego de rompecabezas hexagonal para la concentración y la calma."
     },
     "philosophy": {
       "eyebrow": "El nombre",
@@ -532,5 +534,112 @@
       "successBody": "We received your message and will respond within 24 hours.",
       "sendAnother": "Send another message"
     }
+  },
+  "bloom": {
+    "skip": "Ir al contenido",
+    "navigation": "Navegación principal",
+    "footer": "Navegación del pie de página",
+    "menu": "Menú",
+    "family": "Parte del ecosistema IshVerse",
+    "features": "Funciones",
+    "support": "Soporte",
+    "privacy": "Política de privacidad",
+    "allProducts": "Todos los productos de IshVerse",
+    "appStore": "Descargar en App Store",
+    "title": "Encuentra tu ritmo.",
+    "description": "IshBloom es un rompecabezas hexagonal relajante. Coloca grupos de cristales en un jardín de 61 casillas, completa Blooms de siete celdas y juega a tu propio ritmo.",
+    "availability": "Disponible en App Store. Requiere iOS 15 o posterior.",
+    "trust1": "Sin cuenta",
+    "trust2": "Funciona sin conexión",
+    "trust3": "Sin límite de movimientos",
+    "screenAlt": "Selección de modo de IshBloom con Journey y Marathon",
+    "screenCaption": "App de iOS real · captura de App Store",
+    "featuresTitle": "Un rompecabezas que premia la planificación, no la presión.",
+    "nativeNote": "Diseñado de forma nativa para iPhone y iPad, con diseños adaptables y Game Center.",
+    "cards": [
+      {
+        "title": "Forma un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para completar un Bloom y liberar espacio en el tablero."
+      },
+      {
+        "title": "Marathon",
+        "body": "Una partida sin fin. Sigue colocando grupos e intenta superar tu mejor puntuación."
+      },
+      {
+        "title": "Journey",
+        "body": "144 niveles en 12 jardines temáticos, con estrellas y desbloqueos que se guardan a medida que avanzas."
+      },
+      {
+        "title": "Recoge gemas",
+        "body": "En Journey, despeja las casillas con gemas para alcanzar el objetivo de cada nivel. No hay cuenta atrás de movimientos."
+      },
+      {
+        "title": "Game Center",
+        "body": "Inicia sesión con Game Center y abre su panel desde Ajustes."
+      },
+      {
+        "title": "Juega donde quieras",
+        "body": "El juego y el progreso guardado funcionan sin conexión a internet."
+      }
+    ],
+    "boardAlt": "Tablero hexagonal de IshBloom con gemas y grupos en la bandeja",
+    "journeyAlt": "Mapa de Journey de IshBloom con jardines y niveles",
+    "routineLabel": "Cómo se juega",
+    "routineTitle": "Planifica. Coloca. Florece.",
+    "steps": [
+      {
+        "title": "Elige un grupo",
+        "body": "Escoge una de las formas de tu bandeja y arrástrala sobre el jardín."
+      },
+      {
+        "title": "Colócalo",
+        "body": "La silueta indica dónde quedará. Suéltalo en una posición válida."
+      },
+      {
+        "title": "Completa un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para despejarlos y seguir jugando."
+      }
+    ],
+    "privacyTitle": "Tu progreso se queda en tu dispositivo.",
+    "privacyBody": "No necesitas una cuenta de IshVerse para jugar. Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. La versión 1.1 incluye anuncios de Google, con opciones de privacidad cuando corresponde.",
+    "faqTitle": "Antes de jugar",
+    "faq": [
+      {
+        "q": "¿IshBloom es gratis?",
+        "a": "Sí. IshBloom se descarga gratis en App Store."
+      },
+      {
+        "q": "¿Necesito una cuenta?",
+        "a": "No. Tus puntuaciones y tu progreso en Journey se guardan localmente en tu dispositivo."
+      },
+      {
+        "q": "¿Puedo jugar sin conexión?",
+        "a": "Sí. El juego funciona sin conexión a internet. Los anuncios y Game Center necesitan conexión."
+      }
+    ],
+    "ctaTitle": "Regálate un minuto de calma.",
+    "ctaBody": "Descarga IshBloom y empieza tu primer jardín.",
+    "supportTitle": "¿Cómo podemos ayudarte?",
+    "supportIntro": "Para preguntas sobre el juego o para informar de un error, contacta con nuestro equipo de soporte.",
+    "emailAction": "Escribir a soporte",
+    "include": "Si informas de un error, indica el modelo de tu dispositivo, la versión de iOS, la versión de la app y qué ocurrió.",
+    "help": [
+      {
+        "title": "¿Cómo formo un Bloom?",
+        "body": "Llena un hexágono y los seis hexágonos adyacentes. En Journey, despejar una casilla con gema cuenta para el objetivo del nivel."
+      },
+      {
+        "title": "¿Qué hace Lightning?",
+        "body": "Cuando tu mano está bloqueada y hay una forma segura de hacer espacio, una recuperación opcional con Lightning despeja algunas casillas normales. Tus gemas y tu puntuación se conservan."
+      },
+      {
+        "title": "¿Dónde se guarda mi progreso?",
+        "body": "Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. Al eliminar la app se eliminan sus registros locales."
+      },
+      {
+        "title": "Anuncios y opciones de privacidad",
+        "body": "La versión 1.1 muestra anuncios de Google. Cuando corresponde, puedes revisar tus opciones de privacidad en la app. Consulta la política de privacidad para más detalles."
+      }
+    ]
   }
 }

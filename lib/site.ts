@@ -48,5 +48,12 @@ export const siteConfig = {
       href: "https://rize.ishverse.com",
       status: "live",
     },
+    {
+      id: "bloom",
+      name: "IshBloom",
+      wordmark: { strong: "ISH", light: "BLOOM" },
+      href: "https://bloom.ishverse.com",
+      status: "live",
+    },
   ] as Product[],
 } as const;
