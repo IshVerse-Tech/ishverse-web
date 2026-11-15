@@ -35,6 +35,12 @@ export function RizeSiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-divider bg-bg/70 backdrop-blur-md">
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-bg focus:px-4 focus:py-2 focus:ring-2 focus:ring-accent"
+        >
+          {common("skip")}
+        </a>
         <ProductLink product="rize" className="inline-flex">
           <span className="sr-only">{rizeConfig.name}</span>
           <RizeLogo />
@@ -42,7 +48,7 @@ export function RizeSiteHeader() {
 
         <nav
           className="hidden items-center gap-5 whitespace-nowrap lg:flex xl:gap-7"
-          aria-label="Primary"
+          aria-label={common("primary")}
         >
           {links.map((l) => (
             <ProductLink

@@ -202,7 +202,10 @@ export default async function VersePage({
   return (
     <>
       <GospelSiteHeader />
-      <main className="min-h-[calc(100vh-8rem)] flex items-center justify-center px-4 py-16">
+      <main
+        id="main"
+        className="min-h-[calc(100vh-8rem)] flex items-center justify-center px-4 py-16"
+      >
         <div className="w-full max-w-lg mx-auto flex flex-col items-center gap-10">
           {/* Label */}
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-fg-secondary">
