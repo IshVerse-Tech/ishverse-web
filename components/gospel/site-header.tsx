@@ -40,7 +40,7 @@ export function GospelSiteHeader() {
           <GospelLogo />
         </ProductLink>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {links.map((l) => (
             <ProductLink
               key={l.href}
@@ -53,7 +53,7 @@ export function GospelSiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex sm:gap-3">
+        <div className="hidden items-center gap-3 lg:flex">
           <div className="hidden sm:block">
             <LanguageSwitcher />
           </div>
@@ -68,7 +68,7 @@ export function GospelSiteHeader() {
             <span className="sm:hidden">{t("nav.getAppShort")}</span>
           </ProductLink>
         </div>
-        <MobileMenu label={common("menu")}>
+        <MobileMenu until="lg" label={common("menu")}>
           <nav className="grid gap-2" aria-label={common("menu")}>
             {links.map((link) => (
               <ProductLink key={link.href} product="gospel" path={link.href} className="py-3">
