@@ -3,6 +3,9 @@
  * Context: See DESIGN.md §10 — hero blueprint: copy beside the VerseGlobe;
  * on mobile the globe sits below the copy. Localized (Phase 4).
  *
+ * Everything here is above the fold, so every Reveal runs in `immediate`
+ * mode: painted from the server, so the heading never waits on JavaScript.
+ *
  * Exports:
  *   Hero — server component (VerseGlobe is a client canvas island)
  */
@@ -21,22 +24,22 @@ export function Hero() {
     <div className="relative overflow-hidden">
       <Section className="grid items-center gap-8 py-12 sm:py-20 md:min-h-[80svh] md:grid-cols-2 md:gap-6">
         <div>
-          <Reveal>
+          <Reveal immediate>
             <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
               {siteConfig.name}
             </p>
           </Reveal>
-          <Reveal delay={60}>
+          <Reveal immediate delay={60}>
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl">
               {t("meta.title")}
             </h1>
           </Reveal>
-          <Reveal delay={120}>
+          <Reveal immediate delay={120}>
             <p className="mt-6 max-w-prose text-base leading-relaxed text-fg-secondary md:text-lg">
               {t("meta.description")}
             </p>
           </Reveal>
-          <Reveal delay={180}>
+          <Reveal immediate delay={180}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href="#products"
