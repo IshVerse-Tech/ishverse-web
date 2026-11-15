@@ -13,7 +13,6 @@ import { useTranslations } from "next-intl";
 import { IshVerseMark } from "@/components/logo";
 import { RizeLogo } from "./logo";
 import { rizeConfig } from "@/lib/rize";
-import { siteConfig } from "@/lib/site";
 
 export function RizeSiteFooter() {
   const t = useTranslations("rize");
