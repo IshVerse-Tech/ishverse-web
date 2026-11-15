@@ -406,7 +406,59 @@
       "linkPrivacy": "Confidentialité",
       "linkTerms": "Conditions",
       "linkSupport": "Assistance",
-      "rights": "Tous droits réservés."
+      "rights": "Tous droits réservés.",
+      "linkPricing": "Tarifs"
+    },
+    "pricing": {
+      "eyebrow": "Tarifs",
+      "heading": "Des tarifs simples qui évoluent avec vous.",
+      "sub": "Commencez gratuitement. Passez à l’offre supérieure quand votre établissement en a besoin.",
+      "free": {
+        "name": "Gratuit",
+        "desc": "Pour les petits départements qui démarrent.",
+        "f1": "Jusqu’à 5 activités dans l’emploi du temps",
+        "f2": "Vue de base de l’emploi du temps et filtres",
+        "f3": "Création manuelle des séances",
+        "f4": "Présences par code QR"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Pour les départements qui ont besoin d’une planification intelligente complète.",
+        "f1": "Activités et réservations illimitées",
+        "f2": "Détection et résolution automatiques des conflits",
+        "f3": "Génération automatique des séances depuis l’emploi du temps",
+        "f4": "Analyses et tendances des présences",
+        "f5": "Vérification des présences à plusieurs niveaux",
+        "f6": "Indicateurs de progression pour les étudiants"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Pour les établissements qui gèrent plusieurs départements.",
+        "f1": "Tout ce qui est inclus dans Pro",
+        "f2": "Prise en charge de plusieurs organisations",
+        "f3": "Image de marque et configuration personnalisées",
+        "f4": "Assistance et intégration prioritaires",
+        "f5": "Gestionnaire de compte dédié",
+        "f6": "Intégrations personnalisées et accès à l’API"
+      },
+      "forever": "pour toujours",
+      "perMonth": "/ mois",
+      "custom": "Sur mesure",
+      "getStarted": "Commencer",
+      "requestDemo": "Demander une démo",
+      "talkToUs": "Nous contacter",
+      "mostPopular": "Le plus choisi",
+      "faq": {
+        "heading": "Questions",
+        "q1": "Puis-je changer d’offre plus tard ?",
+        "a1": "Oui. Vous pouvez passer à une offre supérieure ou inférieure à tout moment. Les changements prennent effet au début du cycle de facturation suivant.",
+        "q2": "Y a-t-il un engagement ?",
+        "a2": "Non. Toutes les offres sont mensuelles. Résiliez à tout moment.",
+        "q3": "Quels moyens de paiement acceptez-vous ?",
+        "a3": "Nous acceptons les principales cartes de crédit et de débit. Les clients Enterprise peuvent payer sur facture.",
+        "q4": "Proposez-vous des réductions pour l’éducation ?",
+        "a4": "Oui. Les établissements d’enseignement accrédités bénéficient de 20 % de réduction sur l’offre Pro. Contactez-nous pour en savoir plus."
+      }
     }
   },
   "workout": {

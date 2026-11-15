@@ -406,7 +406,59 @@
       "linkPrivacy": "Privacidad",
       "linkTerms": "Términos",
       "linkSupport": "Soporte",
-      "rights": "Todos los derechos reservados."
+      "rights": "Todos los derechos reservados.",
+      "linkPricing": "Precios"
+    },
+    "pricing": {
+      "eyebrow": "Precios",
+      "heading": "Precios sencillos que crecen contigo.",
+      "sub": "Empieza gratis. Mejora el plan cuando tu institución lo necesite.",
+      "free": {
+        "name": "Gratis",
+        "desc": "Para departamentos pequeños que empiezan.",
+        "f1": "Hasta 5 actividades en el horario",
+        "f2": "Vista básica del horario y filtros",
+        "f3": "Creación manual de sesiones",
+        "f4": "Asistencia con código QR"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Para departamentos que necesitan planificación inteligente completa.",
+        "f1": "Actividades y reservas ilimitadas",
+        "f2": "Detección y resolución automática de conflictos",
+        "f3": "Generación automática de sesiones desde el horario",
+        "f4": "Análisis y tendencias de asistencia",
+        "f5": "Verificación de asistencia en varias capas",
+        "f6": "Indicadores de progreso para estudiantes"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Para instituciones que gestionan varios departamentos.",
+        "f1": "Todo lo incluido en Pro",
+        "f2": "Soporte para varias organizaciones",
+        "f3": "Marca y configuración personalizadas",
+        "f4": "Soporte e incorporación prioritarios",
+        "f5": "Gestor de cuenta dedicado",
+        "f6": "Integraciones personalizadas y acceso a la API"
+      },
+      "forever": "para siempre",
+      "perMonth": "/ mes",
+      "custom": "A medida",
+      "getStarted": "Empezar",
+      "requestDemo": "Solicitar una demostración",
+      "talkToUs": "Hablemos",
+      "mostPopular": "Más popular",
+      "faq": {
+        "heading": "Preguntas",
+        "q1": "¿Puedo cambiar de plan más adelante?",
+        "a1": "Sí. Puedes mejorar o reducir tu plan en cualquier momento. Los cambios se aplican al inicio del siguiente ciclo de facturación.",
+        "q2": "¿Hay permanencia?",
+        "a2": "No. Todos los planes son mensuales. Cancela cuando quieras.",
+        "q3": "¿Qué métodos de pago aceptan?",
+        "a3": "Aceptamos las principales tarjetas de crédito y débito. Los clientes Enterprise pueden pagar con factura.",
+        "q4": "¿Ofrecen descuentos para educación?",
+        "a4": "Sí. Las instituciones educativas acreditadas reciben un 20 % de descuento en los planes Pro. Contáctanos para más detalles."
+      }
     }
   },
   "workout": {

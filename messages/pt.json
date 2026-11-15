@@ -406,7 +406,59 @@
       "linkPrivacy": "Privacidade",
       "linkTerms": "Termos",
       "linkSupport": "Suporte",
-      "rights": "Todos os direitos reservados."
+      "rights": "Todos os direitos reservados.",
+      "linkPricing": "Preços"
+    },
+    "pricing": {
+      "eyebrow": "Preços",
+      "heading": "Preços simples que crescem com você.",
+      "sub": "Comece grátis. Faça upgrade quando sua instituição precisar de mais.",
+      "free": {
+        "name": "Grátis",
+        "desc": "Para departamentos pequenos que estão começando.",
+        "f1": "Até 5 atividades no horário",
+        "f2": "Visualização básica do horário e filtros",
+        "f3": "Criação manual de aulas",
+        "f4": "Presença por QR code"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Para departamentos que precisam de planejamento inteligente completo.",
+        "f1": "Atividades e reservas ilimitadas",
+        "f2": "Detecção e resolução automática de conflitos",
+        "f3": "Geração automática de aulas a partir do horário",
+        "f4": "Análises e tendências de presença",
+        "f5": "Verificação de presença em várias camadas",
+        "f6": "Indicadores de evolução para estudantes"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Para instituições que gerenciam vários departamentos.",
+        "f1": "Tudo do plano Pro",
+        "f2": "Suporte a várias organizações",
+        "f3": "Marca e configuração personalizadas",
+        "f4": "Suporte e implantação prioritários",
+        "f5": "Gerente de conta dedicado",
+        "f6": "Integrações personalizadas e acesso à API"
+      },
+      "forever": "para sempre",
+      "perMonth": "/ mês",
+      "custom": "Sob medida",
+      "getStarted": "Começar",
+      "requestDemo": "Solicitar uma demonstração",
+      "talkToUs": "Fale conosco",
+      "mostPopular": "Mais popular",
+      "faq": {
+        "heading": "Perguntas",
+        "q1": "Posso trocar de plano depois?",
+        "a1": "Sim. Você pode fazer upgrade ou downgrade a qualquer momento. As mudanças valem a partir do próximo ciclo de cobrança.",
+        "q2": "Existe fidelidade?",
+        "a2": "Não. Todos os planos são mensais. Cancele quando quiser.",
+        "q3": "Quais formas de pagamento vocês aceitam?",
+        "a3": "Aceitamos os principais cartões de crédito e débito. Clientes Enterprise podem pagar por fatura.",
+        "q4": "Vocês oferecem desconto para educação?",
+        "a4": "Sim. Instituições de ensino credenciadas recebem 20% de desconto no plano Pro. Fale conosco para saber mais."
+      }
     }
   },
   "workout": {

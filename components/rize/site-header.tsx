@@ -24,6 +24,7 @@ export function RizeSiteHeader() {
     { href: "#features", label: t("nav.features") },
     { href: "#how-it-works", label: t("nav.howItWorks") },
     { href: "#audiences", label: t("nav.institutions") },
+    { href: "/pricing", label: t("footer.linkPricing") },
   ];
 
   return (
