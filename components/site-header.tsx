@@ -60,7 +60,7 @@ export function SiteHeader() {
             </a>
           </nav>
           <div className="mt-5 flex items-center justify-between border-t border-divider pt-4">
-            <LanguageSwitcher />
+            <LanguageSwitcher placement="menu" />
             <ThemeToggle />
           </div>
         </MobileMenu>
