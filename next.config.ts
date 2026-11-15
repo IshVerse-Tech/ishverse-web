@@ -4,6 +4,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  images: {
+    // Let browsers keep optimized images for 7 days instead of re-checking
+    // every visit. Cached copies cannot be invalidated, so when replacing an
+    // image give the new file a new name (e.g. flow.jpg instead of board.jpg).
+    minimumCacheTTL: 604800,
+  },
   async rewrites() {
     return {
       // Proxy rize.ishverse.com/app/* → ish-rize-web Vercel deployment.
