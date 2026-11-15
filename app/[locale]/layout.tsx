@@ -85,6 +85,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
+      <head>
+        {/* Marks "scripts are running" before first paint; scroll reveals only
+            hide content when this class is present (see components/reveal.tsx). */}
+        <script
+          dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }}
+        />
+      </head>
       <body className="min-h-screen bg-bg text-fg">
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
