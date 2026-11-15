@@ -64,7 +64,7 @@ export default async function RizeCaseStudyPage({
       <main>
         {/* Hero */}
         <Section className="py-16 sm:py-24">
-          <Reveal>
+          <Reveal immediate>
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-[13px] font-medium uppercase tracking-wide text-accent-text">
                 {t("eyebrow")}

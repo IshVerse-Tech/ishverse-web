@@ -9,6 +9,11 @@
  * variants force the element visible with no transition) — a static
  * fallback, not a slower animation.
  *
+ * The scroll variant is visible in the server HTML. It only starts hidden
+ * (`reveal-pending`, styled in globals.css) once the inline `js` class is on
+ * <html>, and a CSS failsafe shows it anyway if hydration is slow or the
+ * bundle never loads — so slow connections never see blank sections.
+ *
  * `immediate` is for content that is already in the viewport on load (the
  * hero). The scroll variant server-renders at opacity-0 and only becomes
  * visible once the bundle has downloaded, hydrated and the observer has
@@ -23,7 +28,15 @@
 
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+
+/**
+ * Must not exceed the CSS failsafe delay in globals.css (`reveal-failsafe`,
+ * 3.5s): if the app hydrates later than this, the failsafe has (or is about
+ * to have) shown pending content, so every Reveal simply starts shown.
+ */
+const FAILSAFE_MS = 3500;
+let hydratedLate: boolean | null = null;
 
 export function Reveal({
   children,
@@ -39,8 +52,22 @@ export function Reveal({
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
-  useEffect(() => {
+  // Decide once, before paint, whether the page hydrated in time to run the
+  // scroll animation. Early: tell the CSS to drop its failsafe. Late: show.
+  useLayoutEffect(() => {
     if (immediate) return;
+    if (hydratedLate === null) {
+      hydratedLate = performance.now() > FAILSAFE_MS;
+      if (!hydratedLate) document.documentElement.classList.add("reveal-ready");
+    }
+    // Before paint on purpose: the CSS failsafe may already have shown this
+    // content, so switching to `shown` here avoids it flashing hidden again.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (hydratedLate) setShown(true);
+  }, [immediate]);
+
+  useEffect(() => {
+    if (immediate || hydratedLate) return;
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
@@ -73,8 +100,8 @@ export function Reveal({
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-[opacity,transform] duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
-        shown ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+      className={`transition-[opacity,transform] duration-500 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none ${
+        shown ? "translate-y-0 opacity-100" : "reveal-pending"
       } ${className}`}
     >
       {children}
