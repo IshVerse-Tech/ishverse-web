@@ -18,7 +18,7 @@
   --bg: #ffffff;
   --surface: #f5f5f5;
   --fg: #1a1a1a;
-  --fg-secondary: #6b7280;
+  --fg-secondary: #636b78; /* ≥4.5:1 on --bg and --surface */
   --divider: rgba(0, 0, 0, 0.08);
   --glass-bg: rgba(0, 0, 0, 0.04);
   --glass-border: rgba(0, 0, 0, 0.08);
@@ -49,6 +49,10 @@
   --surface: #111111;
   --fg: #ffffff;
   --fg-secondary: #a1a1aa;
+  /* Status colours lightened for black/#111 surfaces (≥9:1). */
+  --success: #86d39a;
+  --warning: #e5c06a;
+  --error: #f2a7a7;
   --divider: rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.15);

@@ -232,7 +232,12 @@
       "story": "História",
       "contact": "Contato",
       "explore": "Explorar produtos",
-      "menu": "Menu"
+      "menu": "Menu",
+      "skip": "Pular para o conteúdo",
+      "primary": "Navegação principal",
+      "themeToggle": "Alternar entre tema claro e escuro",
+      "language": "Idioma: {name}",
+      "selectLanguage": "Selecionar idioma"
     },
     "hero": {
       "rize": "IshRize",

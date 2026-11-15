@@ -60,7 +60,7 @@ export default async function RizeHome({ params }: { params: Promise<{ locale: s
   return (
     <>
       <RizeSiteHeader />
-      <main>
+      <main id="main">
         <RizeHero />
         <RizeProblem />
         <RizeHowItWorks />

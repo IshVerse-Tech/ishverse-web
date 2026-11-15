@@ -30,7 +30,7 @@ export function LegalPage({
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main">
         <Section className="py-16 md:py-24">
           <div className="mx-auto max-w-prose">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{title}</h1>
