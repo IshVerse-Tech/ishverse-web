@@ -5,6 +5,7 @@
  * Exports: WorkoutSupport
  */
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { workoutConfig } from "@/lib/workout";
 export async function generateMetadata({
@@ -14,14 +15,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "workout" });
-  return {
-    title: `ISH Workout — ${t("support")}`,
-    description: t("supportIntro"),
-    alternates: {
-      canonical: `${workoutConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
-      languages: {},
+  return withSocial(
+    "workout",
+    {
+      title: `ISH Workout — ${t("support")}`,
+      description: t("supportIntro"),
+      alternates: {
+        canonical: `${workoutConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+        languages: {},
+      },
     },
-  };
+    { locale: locale },
+  );
 }
 export default async function WorkoutSupport({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

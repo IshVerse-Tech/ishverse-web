@@ -39,9 +39,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "company.meta" });
   const title = `${siteConfig.name} — ${t("title")}`;
 
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, l === routing.defaultLocale ? "/" : `/${l}`]),
-  );
+  const languages = {
+    ...Object.fromEntries(
+      routing.locales.map((l) => [l, l === routing.defaultLocale ? "/" : `/${l}`]),
+    ),
+    "x-default": "/",
+  };
+  const path = locale === routing.defaultLocale ? "/" : `/${locale}`;
 
   return {
     metadataBase: new URL(siteConfig.url),
@@ -49,14 +53,14 @@ export async function generateMetadata({
     description: t("description"),
     applicationName: siteConfig.name,
     alternates: {
-      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
+      canonical: path,
       languages,
     },
     openGraph: {
       type: "website",
       title,
       description: t("description"),
-      url: siteConfig.url,
+      url: path,
       siteName: siteConfig.name,
       locale,
       images: [{ url: "/brand/ishverse-og.png", width: 1200, height: 630, alt: siteConfig.name }],

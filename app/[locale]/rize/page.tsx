@@ -10,6 +10,7 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RizeSiteHeader } from "@/components/rize/site-header";
 import { RizeSiteFooter } from "@/components/rize/site-footer";
@@ -32,25 +33,29 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "rize.meta" });
   const title = t("title");
 
-  return {
-    title,
-    description: t("description"),
-    alternates: { canonical: rizeConfig.url },
-    robots: { index: true },
-    openGraph: {
-      type: "website",
+  return withSocial(
+    "rize",
+    {
       title,
       description: t("description"),
-      url: rizeConfig.url,
-      siteName: rizeConfig.name,
-      locale,
+      alternates: { canonical: rizeConfig.url },
+      robots: { index: true },
+      openGraph: {
+        type: "website",
+        title,
+        description: t("description"),
+        url: rizeConfig.url,
+        siteName: rizeConfig.name,
+        locale,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: t("description"),
+      },
     },
-    twitter: {
-      card: "summary",
-      title,
-      description: t("description"),
-    },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function RizeHome({ params }: { params: Promise<{ locale: string }> }) {

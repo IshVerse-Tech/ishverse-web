@@ -9,15 +9,16 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { LegalPage, H2, P, UL } from "@/components/legal/prose";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocial("company", {
   title: "Terms of Service",
   description: "The terms that govern your use of IshVerse products.",
   alternates: { canonical: "/terms" },
-};
+});
 
 const UPDATED = "July 2, 2026";
 

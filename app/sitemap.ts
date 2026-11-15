@@ -156,7 +156,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
     ...(localized && {
       alternates: {
-        languages: Object.fromEntries(routing.locales.map((l) => [l, url(host, l, path)])),
+        languages: {
+          ...Object.fromEntries(routing.locales.map((l) => [l, url(host, l, path)])),
+          "x-default": url(host, routing.defaultLocale, path),
+        },
       },
     }),
   }));

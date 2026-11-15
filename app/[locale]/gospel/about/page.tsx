@@ -10,16 +10,17 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { GospelLegalPage, H2, H3, P, UL } from "@/components/gospel/legal-prose";
 import { gospelConfig } from "@/lib/gospel";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocial("gospel", {
   title: "About — IshGospel",
   description:
     "IshGospel is a structured spiritual formation app — Bible, prayer, community, and vision. Not a content feed.",
   alternates: { canonical: `${gospelConfig.url}/about` },
-};
+});
 
 const SUPPORT = "support@ishverse.com";
 
