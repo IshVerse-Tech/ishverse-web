@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "bloom" });
   const url = bloomConfig.url + (locale === "en" ? "/" : `/${locale}`);
-  const image = `${bloomConfig.url}/bloom/screens/welcome.jpg`;
+  const image = `${bloomConfig.url}/bloom/og.jpg`;
   return {
     title: `IshBloom — ${t("title")}`,
     description: t("description"),
@@ -33,9 +33,14 @@ export async function generateMetadata({
       description: t("description"),
       url,
       siteName: "IshBloom",
-      images: [{ url: image, width: 660, height: 1434 }],
+      images: [{ url: image, width: 1200, height: 630, alt: "IshBloom" }],
     },
-    twitter: { card: "summary", title: "IshBloom", description: t("description"), images: [image] },
+    twitter: {
+      card: "summary_large_image",
+      title: "IshBloom",
+      description: t("description"),
+      images: [image],
+    },
   };
 }
 
