@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { workoutConfig } from "@/lib/workout";
-import { ProductLink } from "./product-link";
+import { ProductLink } from "@/components/product-link";
 const icons = [Footprints, Dumbbell, Scale, Droplets, Utensils, ListChecks];
 export function WorkoutLanding() {
   const t = useTranslations("workout");
@@ -113,6 +113,7 @@ export function WorkoutLanding() {
           <h2 className="text-3xl font-bold sm:text-4xl tracking-tight">{t("privacyTitle")}</h2>
           <p className="mt-5 leading-relaxed text-fg-secondary">{t("privacyBody")}</p>
           <ProductLink
+            product="workout"
             path="/privacy"
             className="mt-6 inline-block text-accent-text underline underline-offset-4"
           >

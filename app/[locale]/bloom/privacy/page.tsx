@@ -2,6 +2,7 @@
  * Module: BloomPrivacy
  * Context: docs/design/DESIGN-SYSTEM.md and CONTENT-AND-COPY.md — legal content.
  * Public policy for IshBloom's local data, ads, consent, Apple services and website.
+ * Legal text stays English in every locale (AGENTS.md); the shell is localized.
  * Exports: metadata — stable privacy URL and SEO; BloomPrivacy — policy page.
  */
 import type { Metadata } from "next";
@@ -16,10 +17,12 @@ export const metadata: Metadata = {
 
 export default function BloomPrivacy() {
   return (
-    <>
-      <h1 className="text-4xl font-bold tracking-tight">Privacy policy</h1>
+    <main id="main" lang="en" className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
+      <p className="text-sm text-accent-text">IshBloom · iOS</p>
+      <h1 className="mt-4 text-4xl font-bold tracking-tight">Privacy policy</h1>
       <p className="mt-3 text-sm text-fg-secondary">
-        Last updated <time dateTime="2026-11-14">November 14, 2026</time>
+        Last updated <time dateTime="2026-11-14">November 14, 2026</time> · This policy is provided
+        in English.
       </p>
       <div className="mt-9 space-y-8 leading-relaxed">
         <section aria-labelledby="introduction">
@@ -333,6 +336,6 @@ export default function BloomPrivacy() {
           </p>
         </section>
       </div>
-    </>
+    </main>
   );
 }

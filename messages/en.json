@@ -225,7 +225,7 @@
   "company": {
     "meta": {
       "title": "Systems for Intentional Growth.",
-      "description": "Tools for spiritual formation, institutional scheduling, and daily fitness. Explore IshGospel, IshRize, and ISH Workout — each built for a different part of life."
+      "description": "Tools for spiritual formation, institutional scheduling, daily fitness, and calm play. Explore IshGospel, IshRize, ISH Workout, and IshBloom — each built for a different part of life."
     },
     "nav": {
       "products": "Products",
@@ -242,7 +242,7 @@
     "products": {
       "eyebrow": "Products",
       "heading": "Find the system for your day.",
-      "sub": "Three products. Different purposes. Choose a product to explore its features and current availability.",
+      "sub": "Four products. Different purposes. Choose a product to explore its features and current availability.",
       "visit": "Visit {name}",
       "live": "Live",
       "soon": "Coming soon",
@@ -254,7 +254,10 @@
       "workoutLine": "A daily system for movement, fitness, and personal habits.",
       "gospelAvailability": "Android first · iOS planned",
       "rizeAvailability": "Web platform available",
-      "workoutAvailability": "iOS app · release pending"
+      "workoutAvailability": "iOS app · release pending",
+      "bloomDomain": "Calm puzzle play",
+      "bloomLine": "A hexagonal puzzle game for focus and calm.",
+      "bloomAvailability": "iOS app · on the App Store"
     },
     "philosophy": {
       "eyebrow": "The name",
@@ -403,7 +406,114 @@
       "linkPrivacy": "Privacy",
       "linkTerms": "Terms",
       "linkSupport": "Support",
-      "rights": "All rights reserved."
+      "rights": "All rights reserved.",
+      "linkPricing": "Pricing",
+      "linkChangelog": "Changelog",
+      "linkCaseStudy": "Case study"
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "heading": "Simple pricing that scales with you.",
+      "sub": "Start free. Upgrade when your institution needs more.",
+      "free": {
+        "name": "Free",
+        "desc": "For small departments getting started.",
+        "f1": "Up to 5 activities on the timetable",
+        "f2": "Basic schedule view and filtering",
+        "f3": "Manual session creation",
+        "f4": "QR attendance marking"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "For departments that need full scheduling intelligence.",
+        "f1": "Unlimited activities and bookings",
+        "f2": "Automated clash detection and resolution",
+        "f3": "Auto-session generation from timetable",
+        "f4": "Attendance analytics and trends",
+        "f5": "Multi-layer attendance verification",
+        "f6": "Student self-growth insights"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For institutions managing multiple departments.",
+        "f1": "Everything in Pro",
+        "f2": "Multi-organization support",
+        "f3": "Custom branding and configuration",
+        "f4": "Priority support and onboarding",
+        "f5": "Dedicated account manager",
+        "f6": "Custom integrations and API access"
+      },
+      "forever": "forever",
+      "perMonth": "/ month",
+      "getStarted": "Get started",
+      "requestDemo": "Request a demo",
+      "talkToUs": "Talk to us",
+      "mostPopular": "Most popular",
+      "faq": {
+        "heading": "Questions",
+        "q1": "Can I switch plans later?",
+        "a1": "Yes. You can upgrade or downgrade at any time. Changes take effect at the start of the next billing cycle.",
+        "q2": "Is there a contract?",
+        "a2": "No. All plans are month-to-month. Cancel anytime.",
+        "q3": "What payment methods do you accept?",
+        "a3": "We accept all major credit and debit cards. Enterprise customers can pay by invoice.",
+        "q4": "Do you offer discounts for education?",
+        "a4": "Yes. Accredited educational institutions receive a 20% discount on Pro plans. Contact us for details."
+      },
+      "custom": "Custom"
+    },
+    "changelog": {
+      "eyebrow": "Changelog",
+      "heading": "What's new in IshRize",
+      "sub": "A timeline of releases, improvements, and fixes.",
+      "englishNote": "Release notes are published in English.",
+      "types": {
+        "added": "Added",
+        "improved": "Improved",
+        "fixed": "Fixed"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Case study",
+      "heading": "How UG Mathematics replaced spreadsheets with IshRize",
+      "sub": "The University of Ghana's Department of Mathematics was the first to adopt IshRize for scheduling and attendance.",
+      "challengeHeading": "The challenge",
+      "challengeBody": "Before IshRize, the department managed timetables for 40+ courses across multiple lecture halls using a shared spreadsheet. Clashes were discovered the morning of lectures. Attendance was tracked by passing around a paper sign-in sheet — easy to forge, impossible to analyze.",
+      "solutionHeading": "The solution",
+      "solutionBody": "IshRize replaced the spreadsheet with a constraint-aware scheduling engine. The coordinator imports courses, venues, and time slots, and the system generates a clash-free timetable in seconds. Lecturers start sessions from their phones. Students scan a rotating QR code to mark attendance — no paper, no proxies.",
+      "resultHeading": "The results",
+      "result1Title": "Zero scheduling clashes",
+      "result1Desc": "The constraint solver eliminates double-bookings before they happen.",
+      "result2Title": "85% average attendance rate",
+      "result2Desc": "Up from an estimated 60% when tracking was manual and inconsistent.",
+      "result3Title": "Hours saved per week",
+      "result3Desc": "The coordinator no longer spends half a day resolving timetable conflicts.",
+      "result4Title": "Real-time visibility",
+      "result4Desc": "Department heads see attendance trends across all courses on a single dashboard.",
+      "quoteBody": "We used to find out about a room clash when two lecturers showed up at the same door. Now the system won't let it happen.",
+      "quoteAuthor": "Department Coordinator",
+      "quoteOrg": "University of Ghana, Department of Mathematics"
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "How can we help?",
+      "intro": "For questions about IshRize or a technical issue, contact our support team.",
+      "emailAction": "Email support",
+      "include": "Tell us your institution, your role, and what happened. Please do not send passwords or student personal data.",
+      "help": [
+        {
+          "title": "Signing in",
+          "body": "Coordinators, lecturers and administrators sign in to the IshRize dashboard. If you cannot sign in, tell us the email address you use and your institution."
+        },
+        {
+          "title": "Timetables and clashes",
+          "body": "For an import or clash question, describe the course, venue and time slot involved, and what you expected to see."
+        },
+        {
+          "title": "Attendance",
+          "body": "If a QR check-in does not work, tell us the session, the time and the device used."
+        }
+      ]
     }
   },
   "workout": {
@@ -510,5 +620,112 @@
     "menu": "Menu",
     "allProducts": "All IshVerse products",
     "appStore": "View on the App Store"
+  },
+  "bloom": {
+    "skip": "Skip to content",
+    "navigation": "Main navigation",
+    "footer": "Footer navigation",
+    "menu": "Menu",
+    "family": "Part of the IshVerse ecosystem",
+    "features": "Features",
+    "support": "Support",
+    "privacy": "Privacy policy",
+    "allProducts": "All IshVerse products",
+    "appStore": "Download on the App Store",
+    "title": "Find your flow.",
+    "description": "IshBloom is a calm hexagonal puzzle. Place crystal clusters on a 61-cell garden, complete seven-cell Blooms, and play at your own pace.",
+    "availability": "Available on the App Store. Requires iOS 15 or later.",
+    "trust1": "No account required",
+    "trust2": "Plays offline",
+    "trust3": "No move limits",
+    "screenAlt": "IshBloom mode selection with Journey and Marathon",
+    "screenCaption": "Actual iOS app · App Store screenshot",
+    "featuresTitle": "A puzzle that rewards planning, not pressure.",
+    "nativeNote": "Built natively for iPhone and iPad, with adaptive layouts and Game Center.",
+    "cards": [
+      {
+        "title": "Make a Bloom",
+        "body": "Fill one hex and all six of its neighbours to complete a Bloom and clear space on the board."
+      },
+      {
+        "title": "Marathon",
+        "body": "An endless run. Keep placing clusters and try to beat your own best score."
+      },
+      {
+        "title": "Journey",
+        "body": "144 levels across 12 themed gardens, with stars and unlocks saved as you go."
+      },
+      {
+        "title": "Collect gems",
+        "body": "In Journey, clear tiles that hold gems to reach each level goal. There is no move countdown."
+      },
+      {
+        "title": "Game Center",
+        "body": "Sign in with Game Center and open its dashboard from Settings."
+      },
+      {
+        "title": "Play anywhere",
+        "body": "Core gameplay and saved progress work without an internet connection."
+      }
+    ],
+    "boardAlt": "IshBloom hex board with gem tiles and clusters in the tray",
+    "journeyAlt": "IshBloom Journey map showing gardens and levels",
+    "routineLabel": "How it plays",
+    "routineTitle": "Plan. Place. Bloom.",
+    "steps": [
+      {
+        "title": "Choose a cluster",
+        "body": "Pick one of the shapes in your tray and drag it over the garden."
+      },
+      {
+        "title": "Place it",
+        "body": "The outlined footprint shows where it will land. Release on a valid spot."
+      },
+      {
+        "title": "Complete a Bloom",
+        "body": "Fill a hex and its six neighbours to clear them and keep playing."
+      }
+    ],
+    "privacyTitle": "Your progress stays on your device.",
+    "privacyBody": "You do not need an IshVerse account to play. Best scores and Journey records are saved on your device. Version 1.1 includes ads served by Google, with privacy choices where required.",
+    "faqTitle": "Before you play",
+    "faq": [
+      {
+        "q": "Is IshBloom free?",
+        "a": "Yes. IshBloom is free to download from the App Store."
+      },
+      {
+        "q": "Do I need an account?",
+        "a": "No. Your scores and Journey progress are saved locally on your device."
+      },
+      {
+        "q": "Can I play offline?",
+        "a": "Yes. Core gameplay works without an internet connection. Ads and Game Center need a connection."
+      }
+    ],
+    "ctaTitle": "Take a calm minute.",
+    "ctaBody": "Download IshBloom and start your first garden.",
+    "supportTitle": "How can we help?",
+    "supportIntro": "For gameplay questions or a bug report, contact our support team.",
+    "emailAction": "Email support",
+    "include": "If you are reporting a bug, include your device model, iOS version, app version, and what happened.",
+    "help": [
+      {
+        "title": "How do I make a Bloom?",
+        "body": "Fill one hex and all six adjacent hexes. In Journey, clearing a gem tile counts it toward the level goal."
+      },
+      {
+        "title": "What does Lightning do?",
+        "body": "When your hand is blocked and there is a safe way to make room, an optional Lightning recovery clears a few ordinary tiles. Your gems and score stay intact."
+      },
+      {
+        "title": "Where is my progress saved?",
+        "body": "Best scores and Journey records are saved on your device. Deleting the app removes its local records."
+      },
+      {
+        "title": "Ads and privacy choices",
+        "body": "Version 1.1 shows ads from Google. Where required, you can review your privacy choices in the app. See the privacy policy for details."
+      }
+    ]
   }
 }

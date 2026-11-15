@@ -225,7 +225,7 @@
   "company": {
     "meta": {
       "title": "Sistemas para el crecimiento intencional.",
-      "description": "Herramientas para la formación espiritual, la planificación institucional y el ejercicio diario. Explora IshGospel, IshRize e ISH Workout: cada uno responde a una parte de la vida."
+      "description": "Herramientas para la formación espiritual, la planificación institucional, el ejercicio diario y el juego tranquilo. Explora IshGospel, IshRize, ISH Workout e IshBloom: cada uno responde a una parte de la vida."
     },
     "nav": {
       "products": "Productos",
@@ -242,7 +242,7 @@
     "products": {
       "eyebrow": "Productos",
       "heading": "Encuentra el sistema para tu día.",
-      "sub": "Tres productos con propósitos distintos. Explora sus funciones y disponibilidad actual.",
+      "sub": "Cuatro productos con propósitos distintos. Explora sus funciones y disponibilidad actual.",
       "visit": "Visitar {name}",
       "live": "Disponible",
       "soon": "Próximamente",
@@ -254,7 +254,10 @@
       "workoutLine": "Un sistema diario para el movimiento, el ejercicio y los hábitos personales.",
       "gospelAvailability": "Android primero · iOS previsto",
       "rizeAvailability": "Plataforma web disponible",
-      "workoutAvailability": "App para iOS · lanzamiento pendiente"
+      "workoutAvailability": "App para iOS · lanzamiento pendiente",
+      "bloomDomain": "Rompecabezas relajante",
+      "bloomLine": "Un juego de rompecabezas hexagonal para la concentración y la calma.",
+      "bloomAvailability": "App de iOS · disponible en App Store"
     },
     "philosophy": {
       "eyebrow": "El nombre",
@@ -403,7 +406,114 @@
       "linkPrivacy": "Privacidad",
       "linkTerms": "Términos",
       "linkSupport": "Soporte",
-      "rights": "Todos los derechos reservados."
+      "rights": "Todos los derechos reservados.",
+      "linkPricing": "Precios",
+      "linkChangelog": "Novedades",
+      "linkCaseStudy": "Caso de éxito"
+    },
+    "pricing": {
+      "eyebrow": "Precios",
+      "heading": "Precios sencillos que crecen contigo.",
+      "sub": "Empieza gratis. Mejora el plan cuando tu institución lo necesite.",
+      "free": {
+        "name": "Gratis",
+        "desc": "Para departamentos pequeños que empiezan.",
+        "f1": "Hasta 5 actividades en el horario",
+        "f2": "Vista básica del horario y filtros",
+        "f3": "Creación manual de sesiones",
+        "f4": "Asistencia con código QR"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "Para departamentos que necesitan planificación inteligente completa.",
+        "f1": "Actividades y reservas ilimitadas",
+        "f2": "Detección y resolución automática de conflictos",
+        "f3": "Generación automática de sesiones desde el horario",
+        "f4": "Análisis y tendencias de asistencia",
+        "f5": "Verificación de asistencia en varias capas",
+        "f6": "Indicadores de progreso para estudiantes"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Para instituciones que gestionan varios departamentos.",
+        "f1": "Todo lo incluido en Pro",
+        "f2": "Soporte para varias organizaciones",
+        "f3": "Marca y configuración personalizadas",
+        "f4": "Soporte e incorporación prioritarios",
+        "f5": "Gestor de cuenta dedicado",
+        "f6": "Integraciones personalizadas y acceso a la API"
+      },
+      "forever": "para siempre",
+      "perMonth": "/ mes",
+      "custom": "A medida",
+      "getStarted": "Empezar",
+      "requestDemo": "Solicitar una demostración",
+      "talkToUs": "Hablemos",
+      "mostPopular": "Más popular",
+      "faq": {
+        "heading": "Preguntas",
+        "q1": "¿Puedo cambiar de plan más adelante?",
+        "a1": "Sí. Puedes mejorar o reducir tu plan en cualquier momento. Los cambios se aplican al inicio del siguiente ciclo de facturación.",
+        "q2": "¿Hay permanencia?",
+        "a2": "No. Todos los planes son mensuales. Cancela cuando quieras.",
+        "q3": "¿Qué métodos de pago aceptan?",
+        "a3": "Aceptamos las principales tarjetas de crédito y débito. Los clientes Enterprise pueden pagar con factura.",
+        "q4": "¿Ofrecen descuentos para educación?",
+        "a4": "Sí. Las instituciones educativas acreditadas reciben un 20 % de descuento en los planes Pro. Contáctanos para más detalles."
+      }
+    },
+    "changelog": {
+      "eyebrow": "Novedades",
+      "heading": "Novedades de IshRize",
+      "sub": "Un historial de versiones, mejoras y correcciones.",
+      "englishNote": "Las notas de versión se publican en inglés.",
+      "types": {
+        "added": "Nuevo",
+        "improved": "Mejorado",
+        "fixed": "Corregido"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Caso de éxito",
+      "heading": "Cómo Matemáticas de la UG sustituyó las hojas de cálculo por IshRize",
+      "sub": "El Departamento de Matemáticas de la Universidad de Ghana fue el primero en adoptar IshRize para horarios y asistencia.",
+      "challengeHeading": "El reto",
+      "challengeBody": "Antes de IshRize, el departamento gestionaba los horarios de más de 40 cursos en varias aulas con una hoja de cálculo compartida. Los conflictos se descubrían la misma mañana de las clases. La asistencia se registraba con una hoja de firmas en papel: fácil de falsificar e imposible de analizar.",
+      "solutionHeading": "La solución",
+      "solutionBody": "IshRize sustituyó la hoja de cálculo por un motor de planificación que tiene en cuenta las restricciones. El coordinador importa cursos, aulas y franjas horarias, y el sistema genera un horario sin conflictos en segundos. Los profesores inician las sesiones desde el teléfono. Los estudiantes escanean un código QR rotativo para registrar su asistencia: sin papel y sin suplantaciones.",
+      "resultHeading": "Los resultados",
+      "result1Title": "Cero conflictos de horario",
+      "result1Desc": "El motor de restricciones elimina las reservas duplicadas antes de que ocurran.",
+      "result2Title": "85 % de asistencia media",
+      "result2Desc": "Frente a un 60 % estimado cuando el registro era manual e irregular.",
+      "result3Title": "Horas ahorradas cada semana",
+      "result3Desc": "El coordinador ya no dedica media jornada a resolver conflictos de horario.",
+      "result4Title": "Visibilidad en tiempo real",
+      "result4Desc": "Los jefes de departamento ven las tendencias de asistencia de todos los cursos en un solo panel.",
+      "quoteBody": "Antes nos enterábamos de un conflicto de aula cuando dos profesores llegaban a la misma puerta. Ahora el sistema no lo permite.",
+      "quoteAuthor": "Coordinador del departamento",
+      "quoteOrg": "Universidad de Ghana, Departamento de Matemáticas"
+    },
+    "support": {
+      "eyebrow": "Soporte",
+      "title": "¿Cómo podemos ayudarte?",
+      "intro": "Para preguntas sobre IshRize o un problema técnico, contacta con nuestro equipo de soporte.",
+      "emailAction": "Escribir a soporte",
+      "include": "Indica tu institución, tu función y qué ocurrió. No envíes contraseñas ni datos personales de estudiantes.",
+      "help": [
+        {
+          "title": "Inicio de sesión",
+          "body": "Coordinadores, profesores y administradores inician sesión en el panel de IshRize. Si no puedes iniciar sesión, indícanos el correo que usas y tu institución."
+        },
+        {
+          "title": "Horarios y conflictos",
+          "body": "Para una duda sobre importación o conflictos, describe el curso, el aula y la franja horaria afectados, y qué esperabas ver."
+        },
+        {
+          "title": "Asistencia",
+          "body": "Si un registro con QR no funciona, indícanos la sesión, la hora y el dispositivo utilizado."
+        }
+      ]
     }
   },
   "workout": {
@@ -510,5 +620,112 @@
     "menu": "Menú",
     "allProducts": "Todos los productos IshVerse",
     "appStore": "Ver en App Store"
+  },
+  "bloom": {
+    "skip": "Ir al contenido",
+    "navigation": "Navegación principal",
+    "footer": "Navegación del pie de página",
+    "menu": "Menú",
+    "family": "Parte del ecosistema IshVerse",
+    "features": "Funciones",
+    "support": "Soporte",
+    "privacy": "Política de privacidad",
+    "allProducts": "Todos los productos de IshVerse",
+    "appStore": "Descargar en App Store",
+    "title": "Encuentra tu ritmo.",
+    "description": "IshBloom es un rompecabezas hexagonal relajante. Coloca grupos de cristales en un jardín de 61 casillas, completa Blooms de siete celdas y juega a tu propio ritmo.",
+    "availability": "Disponible en App Store. Requiere iOS 15 o posterior.",
+    "trust1": "Sin cuenta",
+    "trust2": "Funciona sin conexión",
+    "trust3": "Sin límite de movimientos",
+    "screenAlt": "Selección de modo de IshBloom con Journey y Marathon",
+    "screenCaption": "App de iOS real · captura de App Store",
+    "featuresTitle": "Un rompecabezas que premia la planificación, no la presión.",
+    "nativeNote": "Diseñado de forma nativa para iPhone y iPad, con diseños adaptables y Game Center.",
+    "cards": [
+      {
+        "title": "Forma un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para completar un Bloom y liberar espacio en el tablero."
+      },
+      {
+        "title": "Marathon",
+        "body": "Una partida sin fin. Sigue colocando grupos e intenta superar tu mejor puntuación."
+      },
+      {
+        "title": "Journey",
+        "body": "144 niveles en 12 jardines temáticos, con estrellas y desbloqueos que se guardan a medida que avanzas."
+      },
+      {
+        "title": "Recoge gemas",
+        "body": "En Journey, despeja las casillas con gemas para alcanzar el objetivo de cada nivel. No hay cuenta atrás de movimientos."
+      },
+      {
+        "title": "Game Center",
+        "body": "Inicia sesión con Game Center y abre su panel desde Ajustes."
+      },
+      {
+        "title": "Juega donde quieras",
+        "body": "El juego y el progreso guardado funcionan sin conexión a internet."
+      }
+    ],
+    "boardAlt": "Tablero hexagonal de IshBloom con gemas y grupos en la bandeja",
+    "journeyAlt": "Mapa de Journey de IshBloom con jardines y niveles",
+    "routineLabel": "Cómo se juega",
+    "routineTitle": "Planifica. Coloca. Florece.",
+    "steps": [
+      {
+        "title": "Elige un grupo",
+        "body": "Escoge una de las formas de tu bandeja y arrástrala sobre el jardín."
+      },
+      {
+        "title": "Colócalo",
+        "body": "La silueta indica dónde quedará. Suéltalo en una posición válida."
+      },
+      {
+        "title": "Completa un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para despejarlos y seguir jugando."
+      }
+    ],
+    "privacyTitle": "Tu progreso se queda en tu dispositivo.",
+    "privacyBody": "No necesitas una cuenta de IshVerse para jugar. Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. La versión 1.1 incluye anuncios de Google, con opciones de privacidad cuando corresponde.",
+    "faqTitle": "Antes de jugar",
+    "faq": [
+      {
+        "q": "¿IshBloom es gratis?",
+        "a": "Sí. IshBloom se descarga gratis en App Store."
+      },
+      {
+        "q": "¿Necesito una cuenta?",
+        "a": "No. Tus puntuaciones y tu progreso en Journey se guardan localmente en tu dispositivo."
+      },
+      {
+        "q": "¿Puedo jugar sin conexión?",
+        "a": "Sí. El juego funciona sin conexión a internet. Los anuncios y Game Center necesitan conexión."
+      }
+    ],
+    "ctaTitle": "Regálate un minuto de calma.",
+    "ctaBody": "Descarga IshBloom y empieza tu primer jardín.",
+    "supportTitle": "¿Cómo podemos ayudarte?",
+    "supportIntro": "Para preguntas sobre el juego o para informar de un error, contacta con nuestro equipo de soporte.",
+    "emailAction": "Escribir a soporte",
+    "include": "Si informas de un error, indica el modelo de tu dispositivo, la versión de iOS, la versión de la app y qué ocurrió.",
+    "help": [
+      {
+        "title": "¿Cómo formo un Bloom?",
+        "body": "Llena un hexágono y los seis hexágonos adyacentes. En Journey, despejar una casilla con gema cuenta para el objetivo del nivel."
+      },
+      {
+        "title": "¿Qué hace Lightning?",
+        "body": "Cuando tu mano está bloqueada y hay una forma segura de hacer espacio, una recuperación opcional con Lightning despeja algunas casillas normales. Tus gemas y tu puntuación se conservan."
+      },
+      {
+        "title": "¿Dónde se guarda mi progreso?",
+        "body": "Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. Al eliminar la app se eliminan sus registros locales."
+      },
+      {
+        "title": "Anuncios y opciones de privacidad",
+        "body": "La versión 1.1 muestra anuncios de Google. Cuando corresponde, puedes revisar tus opciones de privacidad en la app. Consulta la política de privacidad para más detalles."
+      }
+    ]
   }
 }

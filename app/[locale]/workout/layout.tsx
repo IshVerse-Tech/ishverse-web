@@ -5,8 +5,14 @@
  * Exports: WorkoutLayout
  */
 import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { WorkoutShell } from "@/components/workout/shell";
+// Product favicon for every Workout page (support/privacy included).
+export const metadata: Metadata = {
+  icons: { icon: "/workout/icon.png", apple: "/workout/icon.png" },
+};
+
 export default async function WorkoutLayout({
   children,
   params,

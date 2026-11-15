@@ -11,7 +11,9 @@
  *   Product    — the shape of one ecosystem product entry
  */
 
+/** `id` keys this product's copy in `company.products` (`<id>Domain`, …). */
 export type Product = {
+  id: "gospel" | "rize" | "workout" | "bloom";
   name: string;
   wordmark: { strong: string; light: string };
   domain: string;
@@ -32,6 +34,7 @@ export const siteConfig = {
   supportEmail: "support@ishverse.com",
   products: [
     {
+      id: "gospel",
       name: "IshGospel",
       wordmark: { strong: "ISH", light: "GOSPEL" },
       domain: "Spiritual discipline",
@@ -41,6 +44,7 @@ export const siteConfig = {
       status: "live",
     },
     {
+      id: "rize",
       name: "IshRize",
       wordmark: { strong: "ISH", light: "RIZE" },
       domain: "Scheduling & attendance",
@@ -50,6 +54,7 @@ export const siteConfig = {
       status: "live",
     },
     {
+      id: "workout",
       name: "ISH Workout",
       wordmark: { strong: "ISH", light: "WORKOUT" },
       domain: "Physical discipline",
@@ -57,6 +62,16 @@ export const siteConfig = {
       href: "https://workout.ishverse.com",
       path: "/workout",
       status: "soon",
+    },
+    {
+      id: "bloom",
+      name: "IshBloom",
+      wordmark: { strong: "ISH", light: "BLOOM" },
+      domain: "Calm puzzle play",
+      oneLiner: "A hexagonal puzzle game for focus and calm.",
+      href: "https://bloom.ishverse.com",
+      path: "/bloom",
+      status: "live",
     },
   ] as Product[],
 } as const;

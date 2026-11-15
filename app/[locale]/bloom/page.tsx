@@ -1,42 +1,46 @@
 /**
  * Module: BloomHome
- * Context: See DESIGN.md §9 for product copy.
- * Landing page for the IshBloom iPhone game.
- * Exports: BloomHome
+ * Context: See DESIGN.md §13 — product pages.
+ * Localized marketing page, canonical on the Bloom subdomain.
+ * Exports: generateMetadata, BloomHome
  */
 import type { Metadata } from "next";
-import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { BloomLanding } from "@/components/bloom/landing";
+import { bloomConfig } from "@/lib/bloom";
+import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "IshBloom for iPhone",
-  description: "A hex puzzle with seven-cell Blooms, an endless mode and gem levels.",
-  alternates: { canonical: "https://bloom.ishverse.com/" },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "bloom" });
+  const url = bloomConfig.url + (locale === "en" ? "/" : `/${locale}`);
+  const image = `${bloomConfig.url}/bloom/screens/welcome.jpg`;
+  return {
+    title: `IshBloom — ${t("title")}`,
+    description: t("description"),
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(
+        routing.locales.map((l) => [l, bloomConfig.url + (l === "en" ? "/" : `/${l}`)]),
+      ),
+    },
+    openGraph: {
+      title: "IshBloom",
+      description: t("description"),
+      url,
+      siteName: "IshBloom",
+      images: [{ url: image, width: 660, height: 1434 }],
+    },
+    twitter: { card: "summary", title: "IshBloom", description: t("description"), images: [image] },
+  };
+}
 
-export default function BloomHome() {
-  return (
-    <>
-      <Image src="/bloom/symbol.svg" alt="" width={144} height={144} />
-      <p className="mt-4 text-sm text-accent-text">iPhone puzzle by IshVerse</p>
-      <h1 className="mt-3 text-5xl font-bold tracking-tight">IshBloom</h1>
-      <p className="mt-5 max-w-xl text-lg leading-relaxed text-fg-secondary">
-        Fit clusters into a 61-cell garden. Fill a hex and its six neighbours to make a Bloom, clear
-        space and keep playing.
-      </p>
-      <dl className="mt-10 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-divider bg-surface p-5">
-          <dt className="font-semibold">Marathon</dt>
-          <dd className="mt-2 text-sm leading-relaxed text-fg-secondary">
-            Play an endless run and try to beat your best score.
-          </dd>
-        </div>
-        <div className="rounded-2xl border border-divider bg-surface p-5">
-          <dt className="font-semibold">Journey</dt>
-          <dd className="mt-2 text-sm leading-relaxed text-fg-secondary">
-            Collect gems through Blooms across 12 levels.
-          </dd>
-        </div>
-      </dl>
-    </>
-  );
+export default async function BloomHome({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <BloomLanding />;
 }
