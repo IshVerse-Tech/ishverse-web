@@ -638,7 +638,7 @@
     "trust1": "No account required",
     "trust2": "Plays offline",
     "trust3": "No move limits",
-    "screenAlt": "IshBloom mode selection with Journey and Marathon",
+    "screenAlt": "IshBloom welcome screen with the app icon and a Let's play button",
     "screenCaption": "Actual iOS app · App Store screenshot",
     "featuresTitle": "A puzzle that rewards planning, not pressure.",
     "nativeNote": "Built natively for iPhone and iPad, with adaptive layouts and Game Center.",
@@ -648,16 +648,16 @@
         "body": "Fill one hex and all six of its neighbours to complete a Bloom and clear space on the board."
       },
       {
-        "title": "Marathon",
-        "body": "An endless run. Keep placing clusters and try to beat your own best score."
-      },
-      {
-        "title": "Journey",
-        "body": "144 levels across 12 themed gardens, with stars and unlocks saved as you go."
-      },
-      {
         "title": "Collect gems",
-        "body": "In Journey, clear tiles that hold gems to reach each level goal. There is no move countdown."
+        "body": "In Journey, gems sit on the board or travel with a cluster. Clear their cells with a Bloom to collect them."
+      },
+      {
+        "title": "Earn stars",
+        "body": "Earn up to three stars on every Journey level, 432 in all, with stars and unlocks saved as you go."
+      },
+      {
+        "title": "Lightning recovery",
+        "body": "When your hand is blocked and there is a safe way to make room, optional Lightning clears a few ordinary tiles. Your gems and score stay intact."
       },
       {
         "title": "Game Center",
@@ -668,8 +668,22 @@
         "body": "Core gameplay and saved progress work without an internet connection."
       }
     ],
-    "boardAlt": "IshBloom hex board with gem tiles and clusters in the tray",
-    "journeyAlt": "IshBloom Journey map showing gardens and levels",
+    "modesLabel": "Two ways to play",
+    "modesTitle": "Play your way.",
+    "modes": [
+      {
+        "title": "Journey",
+        "body": "144 levels across 12 themed gardens. Reach each level's gem goal at your own pace, with no move countdown."
+      },
+      {
+        "title": "Marathon",
+        "body": "An endless run on the full garden. Find your rhythm, keep making Blooms and chase your best score."
+      }
+    ],
+    "boardAlt": "IshBloom on iPad: a Journey level with gem tiles on the 61-cell garden and clusters in the tray",
+    "ipadCaption": "Actual iPad app · App Store screenshot",
+    "journeyAlt": "IshBloom Journey map with the Dewlight Grove and Sunseed Dunes gardens",
+    "marathonAlt": "IshBloom Marathon board with a score of 3,680 and three clusters in the tray",
     "routineLabel": "How it plays",
     "routineTitle": "Plan. Place. Bloom.",
     "steps": [
