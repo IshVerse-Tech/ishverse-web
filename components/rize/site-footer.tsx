@@ -12,6 +12,7 @@
 import { useTranslations } from "next-intl";
 import { IshVerseMark } from "@/components/logo";
 import { RizeLogo } from "./logo";
+import { ProductLink } from "../product-link";
 import { rizeConfig } from "@/lib/rize";
 
 export function RizeSiteFooter() {
@@ -21,8 +22,8 @@ export function RizeSiteFooter() {
     {
       title: t("footer.groupProduct"),
       links: [
-        { label: t("nav.features"), href: "#features" },
-        { label: t("nav.howItWorks"), href: "#how-it-works" },
+        { label: t("nav.features"), href: "/#features" },
+        { label: t("nav.howItWorks"), href: "/#how-it-works" },
         { label: t("footer.linkPricing"), href: "/pricing" },
         { label: t("footer.linkChangelog"), href: "/changelog" },
         { label: t("footer.linkCaseStudy"), href: "/case-study" },
@@ -60,12 +61,22 @@ export function RizeSiteFooter() {
             <ul className="mt-3 space-y-2">
               {g.links.map((l) => (
                 <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
-                  >
-                    {l.label}
-                  </a>
+                  {l.href.startsWith("/") ? (
+                    <ProductLink
+                      product="rize"
+                      path={l.href}
+                      className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
+                    >
+                      {l.label}
+                    </ProductLink>
+                  ) : (
+                    <a
+                      href={l.href}
+                      className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
+                    >
+                      {l.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
