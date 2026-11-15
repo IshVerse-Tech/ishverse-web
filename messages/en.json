@@ -493,6 +493,27 @@
       "quoteBody": "We used to find out about a room clash when two lecturers showed up at the same door. Now the system won't let it happen.",
       "quoteAuthor": "Department Coordinator",
       "quoteOrg": "University of Ghana, Department of Mathematics"
+    },
+    "support": {
+      "eyebrow": "Support",
+      "title": "How can we help?",
+      "intro": "For questions about IshRize or a technical issue, contact our support team.",
+      "emailAction": "Email support",
+      "include": "Tell us your institution, your role, and what happened. Please do not send passwords or student personal data.",
+      "help": [
+        {
+          "title": "Signing in",
+          "body": "Coordinators, lecturers and administrators sign in to the IshRize dashboard. If you cannot sign in, tell us the email address you use and your institution."
+        },
+        {
+          "title": "Timetables and clashes",
+          "body": "For an import or clash question, describe the course, venue and time slot involved, and what you expected to see."
+        },
+        {
+          "title": "Attendance",
+          "body": "If a QR check-in does not work, tell us the session, the time and the device used."
+        }
+      ]
     }
   },
   "workout": {

@@ -493,6 +493,27 @@
       "quoteBody": "Antes nos enterábamos de un conflicto de aula cuando dos profesores llegaban a la misma puerta. Ahora el sistema no lo permite.",
       "quoteAuthor": "Coordinador del departamento",
       "quoteOrg": "Universidad de Ghana, Departamento de Matemáticas"
+    },
+    "support": {
+      "eyebrow": "Soporte",
+      "title": "¿Cómo podemos ayudarte?",
+      "intro": "Para preguntas sobre IshRize o un problema técnico, contacta con nuestro equipo de soporte.",
+      "emailAction": "Escribir a soporte",
+      "include": "Indica tu institución, tu función y qué ocurrió. No envíes contraseñas ni datos personales de estudiantes.",
+      "help": [
+        {
+          "title": "Inicio de sesión",
+          "body": "Coordinadores, profesores y administradores inician sesión en el panel de IshRize. Si no puedes iniciar sesión, indícanos el correo que usas y tu institución."
+        },
+        {
+          "title": "Horarios y conflictos",
+          "body": "Para una duda sobre importación o conflictos, describe el curso, el aula y la franja horaria afectados, y qué esperabas ver."
+        },
+        {
+          "title": "Asistencia",
+          "body": "Si un registro con QR no funciona, indícanos la sesión, la hora y el dispositivo utilizado."
+        }
+      ]
     }
   },
   "workout": {

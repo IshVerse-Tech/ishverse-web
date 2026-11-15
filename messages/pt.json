@@ -493,6 +493,27 @@
       "quoteBody": "Antes, a gente só descobria um conflito de sala quando dois professores apareciam na mesma porta. Agora o sistema não deixa isso acontecer.",
       "quoteAuthor": "Coordenador do departamento",
       "quoteOrg": "Universidade de Gana, Departamento de Matemática"
+    },
+    "support": {
+      "eyebrow": "Suporte",
+      "title": "Como podemos ajudar?",
+      "intro": "Para dúvidas sobre o IshRize ou um problema técnico, fale com nossa equipe de suporte.",
+      "emailAction": "Enviar e-mail ao suporte",
+      "include": "Informe sua instituição, sua função e o que aconteceu. Não envie senhas nem dados pessoais de estudantes.",
+      "help": [
+        {
+          "title": "Acesso",
+          "body": "Coordenadores, professores e administradores entram no painel do IshRize. Se não conseguir entrar, informe o e-mail que você usa e sua instituição."
+        },
+        {
+          "title": "Horários e conflitos",
+          "body": "Para dúvidas sobre importação ou conflitos, descreva a disciplina, a sala e o horário envolvidos, e o que você esperava ver."
+        },
+        {
+          "title": "Presença",
+          "body": "Se um registro por QR code não funcionar, informe a aula, o horário e o dispositivo usado."
+        }
+      ]
     }
   },
   "workout": {

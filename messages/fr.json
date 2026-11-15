@@ -493,6 +493,27 @@
       "quoteBody": "Avant, on découvrait un conflit de salle quand deux enseignants se présentaient à la même porte. Désormais, le système ne le permet plus.",
       "quoteAuthor": "Coordinateur du département",
       "quoteOrg": "Université du Ghana, département de mathématiques"
+    },
+    "support": {
+      "eyebrow": "Assistance",
+      "title": "Comment pouvons-nous vous aider ?",
+      "intro": "Pour une question sur IshRize ou un problème technique, contactez notre équipe d’assistance.",
+      "emailAction": "Écrire à l’assistance",
+      "include": "Indiquez votre établissement, votre rôle et ce qui s’est passé. N’envoyez ni mot de passe ni données personnelles d’étudiants.",
+      "help": [
+        {
+          "title": "Connexion",
+          "body": "Les coordinateurs, enseignants et administrateurs se connectent au tableau de bord IshRize. Si vous ne parvenez pas à vous connecter, indiquez-nous l’adresse e-mail utilisée et votre établissement."
+        },
+        {
+          "title": "Emplois du temps et conflits",
+          "body": "Pour une question d’import ou de conflit, décrivez le cours, la salle et le créneau concernés, ainsi que le résultat attendu."
+        },
+        {
+          "title": "Présences",
+          "body": "Si un pointage par QR ne fonctionne pas, indiquez-nous la séance, l’heure et l’appareil utilisé."
+        }
+      ]
     }
   },
   "workout": {

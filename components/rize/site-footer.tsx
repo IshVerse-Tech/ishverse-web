@@ -13,7 +13,6 @@ import { useTranslations } from "next-intl";
 import { IshVerseMark } from "@/components/logo";
 import { RizeLogo } from "./logo";
 import { rizeConfig } from "@/lib/rize";
-import { siteConfig } from "@/lib/site";
 
 export function RizeSiteFooter() {
   const t = useTranslations("rize");
@@ -40,7 +39,7 @@ export function RizeSiteFooter() {
         { label: "IshVerse", href: "https://ishverse.com" },
         { label: t("footer.linkPrivacy"), href: "https://ishverse.com/privacy" },
         { label: t("footer.linkTerms"), href: "https://ishverse.com/terms" },
-        { label: t("footer.linkSupport"), href: `mailto:${siteConfig.supportEmail}` },
+        { label: t("footer.linkSupport"), href: "/support" },
       ],
     },
   ];
