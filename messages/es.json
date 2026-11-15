@@ -37,8 +37,8 @@
     },
     "formationEngine": {
       "eyebrow": "La diferencia",
-      "title": "Esto no es una app de la Biblia. Es un motor de formación.",
-      "body": "La fe no crece por accidente: se forja, un día disciplinado a la vez. IshGospel te da la estructura que convierte la intención en formación. Sin ruido. Sin trucos.",
+      "title": "Una práctica diaria para crecer espiritualmente.",
+      "body": "Crea un ritmo constante de lectura, reflexión y acción consciente.",
       "not1": "Un feed de contenido para desplazar",
       "but1": "Un sistema diario para practicar",
       "not2": "Puntos, insignias, clasificaciones",
@@ -219,38 +219,47 @@
       "q5": "¿Cómo funcionan las suscripciones?",
       "a5": "Premium se compra dentro de la app a través de la facturación de tu tienda (Google Play o App Store) y puede cancelarse allí en cualquier momento.",
       "q6": "¿Puede usarla mi iglesia o grupo pequeño?",
-      "a6": "Sí. Church Lite y Church Pro añaden panel de administración, herramientas para líderes y seguimiento del progreso. Escríbenos a contact@ishverse.com y te lo preparamos."
+      "a6": "Sí. Church Lite y Church Pro añaden panel de administración, herramientas para líderes y seguimiento del progreso. Escríbenos a support@ishverse.com y te lo preparamos."
     }
   },
   "company": {
     "meta": {
       "title": "Sistemas para el crecimiento intencional.",
-      "description": "IshVerse construye sistemas de disciplina, uno para cada dominio de la vida. Un hombre al mando de su mundo."
+      "description": "Herramientas para la formación espiritual, la planificación institucional, el ejercicio diario y el juego tranquilo. Explora IshGospel, IshRize, ISH Workout e IshBloom: cada uno responde a una parte de la vida."
     },
     "nav": {
       "products": "Productos",
       "story": "Historia",
       "contact": "Contacto",
-      "explore": "Explora {name}"
+      "explore": "Explorar productos",
+      "menu": "Menú"
     },
     "hero": {
+      "rize": "IshRize",
+      "comingSoon": "próximamente",
+      "live": "Disponible",
       "headline": "Sistemas para el crecimiento intencional.",
-      "sub": "Construimos un sistema de disciplina por cada dominio de la vida: IshRize para los horarios y la asistencia universitarios, IshGospel para la formación espiritual. Un hombre al mando de su mundo.",
-      "explore": "Explora {name}",
-      "live": "disponible ahora",
-      "comingSoon": "próximamente"
+      "sub": "Herramientas para la formación espiritual, la planificación institucional, el ejercicio diario y el juego tranquilo. Explora IshGospel, IshRize, ISH Workout e IshBloom: cada uno responde a una parte de la vida."
     },
     "products": {
       "eyebrow": "Productos",
-      "heading": "Un sistema por cada dominio de la vida.",
-      "sub": "La misma filosofía. El mismo rigor de diseño. Dominios distintos.",
+      "heading": "Encuentra el sistema para tu día.",
+      "sub": "Cuatro productos con propósitos distintos. Explora sus funciones y disponibilidad actual.",
       "visit": "Visitar {name}",
       "live": "Disponible",
       "soon": "Próximamente",
-      "gospelDomain": "Disciplina espiritual",
+      "gospelDomain": "Formación espiritual",
       "gospelLine": "Un sistema estructurado de formación espiritual.",
-      "rizeDomain": "Disciplina académica",
-      "rizeLine": "Horarios sin conflictos y control de asistencia, en vivo en cada departamento."
+      "rizeDomain": "Horarios y asistencia",
+      "rizeLine": "Horarios, detección de conflictos y asistencia para instituciones.",
+      "workoutDomain": "Ejercicio y hábitos diarios",
+      "workoutLine": "Un sistema diario para el movimiento, el ejercicio y los hábitos personales.",
+      "gospelAvailability": "Android primero · iOS previsto",
+      "rizeAvailability": "Plataforma web disponible",
+      "workoutAvailability": "App para iOS · lanzamiento pendiente",
+      "bloomDomain": "Rompecabezas relajante",
+      "bloomLine": "Un juego de rompecabezas hexagonal para la concentración y la calma.",
+      "bloomAvailability": "App de iOS · disponible en App Store"
     },
     "philosophy": {
       "eyebrow": "El nombre",
@@ -433,89 +442,96 @@
     "footer": {
       "groupProduct": "Product",
       "groupCompany": "Company",
-      "linkPricing": "Pricing",
-      "linkChangelog": "Changelog",
-      "linkCaseStudy": "Case study",
+      "linkPricing": "Precios",
+      "linkChangelog": "Novedades",
+      "linkCaseStudy": "Caso de éxito",
       "linkPrivacy": "Privacy",
       "linkTerms": "Terms",
       "linkSupport": "Support",
       "rights": "All rights reserved."
     },
     "pricing": {
-      "eyebrow": "Pricing",
-      "heading": "Simple pricing that scales with you.",
-      "sub": "Start free. Upgrade when your institution needs more.",
+      "eyebrow": "Precios",
+      "heading": "Precios sencillos que crecen contigo.",
+      "sub": "Empieza gratis. Mejora el plan cuando tu institución lo necesite.",
       "free": {
-        "name": "Free",
-        "desc": "For small departments getting started.",
-        "f1": "Up to 5 activities on the timetable",
-        "f2": "Basic schedule view and filtering",
-        "f3": "Manual session creation",
-        "f4": "QR attendance marking"
+        "name": "Gratis",
+        "desc": "Para departamentos pequeños que empiezan.",
+        "f1": "Hasta 5 actividades en el horario",
+        "f2": "Vista básica del horario y filtros",
+        "f3": "Creación manual de sesiones",
+        "f4": "Asistencia con código QR"
       },
       "pro": {
         "name": "Pro",
-        "desc": "For departments that need full scheduling intelligence.",
-        "f1": "Unlimited activities and bookings",
-        "f2": "Automated clash detection and resolution",
-        "f3": "Auto-session generation from timetable",
-        "f4": "Attendance analytics and trends",
-        "f5": "Multi-layer attendance verification",
-        "f6": "Student self-growth insights"
+        "desc": "Para departamentos que necesitan planificación inteligente completa.",
+        "f1": "Actividades y reservas ilimitadas",
+        "f2": "Detección y resolución automática de conflictos",
+        "f3": "Generación automática de sesiones desde el horario",
+        "f4": "Análisis y tendencias de asistencia",
+        "f5": "Verificación de asistencia en varias capas",
+        "f6": "Indicadores de progreso para estudiantes"
       },
       "enterprise": {
         "name": "Enterprise",
-        "desc": "For institutions managing multiple departments.",
-        "f1": "Everything in Pro",
-        "f2": "Multi-organization support",
-        "f3": "Custom branding and configuration",
-        "f4": "Priority support and onboarding",
-        "f5": "Dedicated account manager",
-        "f6": "Custom integrations and API access"
+        "desc": "Para instituciones que gestionan varios departamentos.",
+        "f1": "Todo lo incluido en Pro",
+        "f2": "Soporte para varias organizaciones",
+        "f3": "Marca y configuración personalizadas",
+        "f4": "Soporte e incorporación prioritarios",
+        "f5": "Gestor de cuenta dedicado",
+        "f6": "Integraciones personalizadas y acceso a la API"
       },
-      "forever": "forever",
-      "perMonth": "/ month",
-      "getStarted": "Get started",
-      "requestDemo": "Request a demo",
-      "talkToUs": "Talk to us",
-      "mostPopular": "Most popular",
+      "forever": "para siempre",
+      "perMonth": "/ mes",
+      "custom": "A medida",
+      "getStarted": "Empezar",
+      "requestDemo": "Solicitar una demostración",
+      "talkToUs": "Hablemos",
+      "mostPopular": "Más popular",
       "faq": {
-        "heading": "Questions",
-        "q1": "Can I switch plans later?",
-        "a1": "Yes. You can upgrade or downgrade at any time. Changes take effect at the start of the next billing cycle.",
-        "q2": "Is there a contract?",
-        "a2": "No. All plans are month-to-month. Cancel anytime.",
-        "q3": "What payment methods do you accept?",
-        "a3": "We accept all major credit and debit cards. Enterprise customers can pay by invoice.",
-        "q4": "Do you offer discounts for education?",
-        "a4": "Yes. Accredited educational institutions receive a 20% discount on Pro plans. Contact us for details."
+        "heading": "Preguntas",
+        "q1": "¿Puedo cambiar de plan más adelante?",
+        "a1": "Sí. Puedes mejorar o reducir tu plan en cualquier momento. Los cambios se aplican al inicio del siguiente ciclo de facturación.",
+        "q2": "¿Hay permanencia?",
+        "a2": "No. Todos los planes son mensuales. Cancela cuando quieras.",
+        "q3": "¿Qué métodos de pago aceptan?",
+        "a3": "Aceptamos las principales tarjetas de crédito y débito. Los clientes Enterprise pueden pagar con factura.",
+        "q4": "¿Ofrecen descuentos para educación?",
+        "a4": "Sí. Las instituciones educativas acreditadas reciben un 20 % de descuento en los planes Pro. Contáctanos para más detalles."
       }
     },
     "changelog": {
-      "eyebrow": "Changelog",
-      "heading": "What's new in IshRize",
-      "sub": "A timeline of releases, improvements, and fixes."
+      "eyebrow": "Novedades",
+      "heading": "Novedades de IshRize",
+      "sub": "Un historial de versiones, mejoras y correcciones.",
+      "englishNote": "Las notas de versión se publican en inglés.",
+      "types": {
+        "added": "Nuevo",
+        "improved": "Mejorado",
+        "fixed": "Corregido"
+      }
     },
     "caseStudy": {
-      "eyebrow": "Case study",
-      "heading": "How UG Mathematics replaced spreadsheets with IshRize",
-      "sub": "The University of Ghana's Department of Mathematics was the first to adopt IshRize for scheduling and attendance.",
-      "challengeHeading": "The challenge",
-      "challengeBody": "Before IshRize, the department managed timetables for 40+ courses across multiple lecture halls using a shared spreadsheet. Clashes were discovered the morning of lectures. Attendance was tracked by passing around a paper sign-in sheet — easy to forge, impossible to analyze.",
-      "solutionHeading": "The solution",
-      "solutionBody": "IshRize replaced the spreadsheet with a constraint-aware scheduling engine. The coordinator imports courses, venues, and time slots, and the system generates a clash-free timetable in seconds. Lecturers start sessions from their phones. Students scan a rotating QR code to mark attendance — no paper, no proxies.",
-      "resultHeading": "The results",
-      "result1Title": "Zero scheduling clashes",
-      "result1Desc": "The constraint solver eliminates double-bookings before they happen.",
-      "result2Title": "85% average attendance rate",
-      "result2Desc": "Up from an estimated 60% when tracking was manual and inconsistent.",
-      "result3Title": "Hours saved per week",
-      "result3Desc": "The coordinator no longer spends half a day resolving timetable conflicts.",
-      "result4Title": "Real-time visibility",
-      "result4Desc": "Department heads see attendance trends across all courses on a single dashboard.",
-      "quoteBody": "We used to find out about a room clash when two lecturers showed up at the same door. Now the system won't let it happen.",
-      "quoteAuthor": "Department Coordinator",
-      "quoteOrg": "University of Ghana, Department of Mathematics"
+      "eyebrow": "Caso de éxito",
+      "heading": "Cómo Matemáticas de la UG sustituyó las hojas de cálculo por IshRize",
+      "sub": "El Departamento de Matemáticas de la Universidad de Ghana fue el primero en adoptar IshRize para horarios y asistencia.",
+      "challengeHeading": "El reto",
+      "challengeBody": "Antes de IshRize, el departamento gestionaba los horarios de más de 40 cursos en varias aulas con una hoja de cálculo compartida. Los conflictos se descubrían la misma mañana de las clases. La asistencia se registraba con una hoja de firmas en papel: fácil de falsificar e imposible de analizar.",
+      "solutionHeading": "La solución",
+      "solutionBody": "IshRize sustituyó la hoja de cálculo por un motor de planificación que tiene en cuenta las restricciones. El coordinador importa cursos, aulas y franjas horarias, y el sistema genera un horario sin conflictos en segundos. Los profesores inician las sesiones desde el teléfono. Los estudiantes escanean un código QR rotativo para registrar su asistencia: sin papel y sin suplantaciones.",
+      "resultHeading": "Los resultados",
+      "result1Title": "Cero conflictos de horario",
+      "result1Desc": "El motor de restricciones elimina las reservas duplicadas antes de que ocurran.",
+      "result2Title": "85 % de asistencia media",
+      "result2Desc": "Frente a un 60 % estimado cuando el registro era manual e irregular.",
+      "result3Title": "Horas ahorradas cada semana",
+      "result3Desc": "El coordinador ya no dedica media jornada a resolver conflictos de horario.",
+      "result4Title": "Visibilidad en tiempo real",
+      "result4Desc": "Los jefes de departamento ven las tendencias de asistencia de todos los cursos en un solo panel.",
+      "quoteBody": "Antes nos enterábamos de un conflicto de aula cuando dos profesores llegaban a la misma puerta. Ahora el sistema no lo permite.",
+      "quoteAuthor": "Coordinador del departamento",
+      "quoteOrg": "Universidad de Ghana, Departamento de Matemáticas"
     },
     "support": {
       "title": "Get in touch",
@@ -532,5 +548,217 @@
       "successBody": "We received your message and will respond within 24 hours.",
       "sendAnother": "Send another message"
     }
+  },
+  "bloom": {
+    "skip": "Ir al contenido",
+    "navigation": "Navegación principal",
+    "footer": "Navegación del pie de página",
+    "menu": "Menú",
+    "family": "Parte del ecosistema IshVerse",
+    "features": "Funciones",
+    "support": "Soporte",
+    "privacy": "Política de privacidad",
+    "allProducts": "Todos los productos de IshVerse",
+    "appStore": "Descargar en App Store",
+    "title": "Encuentra tu ritmo.",
+    "description": "IshBloom es un rompecabezas hexagonal relajante. Coloca grupos de cristales en un jardín de 61 casillas, completa Blooms de siete celdas y juega a tu propio ritmo.",
+    "availability": "Disponible en App Store. Requiere iOS 15 o posterior.",
+    "trust1": "Sin cuenta",
+    "trust2": "Funciona sin conexión",
+    "trust3": "Sin límite de movimientos",
+    "screenAlt": "Selección de modo de IshBloom con Journey y Marathon",
+    "screenCaption": "App de iOS real · captura de App Store",
+    "featuresTitle": "Un rompecabezas que premia la planificación, no la presión.",
+    "nativeNote": "Diseñado de forma nativa para iPhone y iPad, con diseños adaptables y Game Center.",
+    "cards": [
+      {
+        "title": "Forma un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para completar un Bloom y liberar espacio en el tablero."
+      },
+      {
+        "title": "Marathon",
+        "body": "Una partida sin fin. Sigue colocando grupos e intenta superar tu mejor puntuación."
+      },
+      {
+        "title": "Journey",
+        "body": "144 niveles en 12 jardines temáticos, con estrellas y desbloqueos que se guardan a medida que avanzas."
+      },
+      {
+        "title": "Recoge gemas",
+        "body": "En Journey, despeja las casillas con gemas para alcanzar el objetivo de cada nivel. No hay cuenta atrás de movimientos."
+      },
+      {
+        "title": "Game Center",
+        "body": "Inicia sesión con Game Center y abre su panel desde Ajustes."
+      },
+      {
+        "title": "Juega donde quieras",
+        "body": "El juego y el progreso guardado funcionan sin conexión a internet."
+      }
+    ],
+    "boardAlt": "Tablero hexagonal de IshBloom con gemas y grupos en la bandeja",
+    "journeyAlt": "Mapa de Journey de IshBloom con jardines y niveles",
+    "routineLabel": "Cómo se juega",
+    "routineTitle": "Planifica. Coloca. Florece.",
+    "steps": [
+      {
+        "title": "Elige un grupo",
+        "body": "Escoge una de las formas de tu bandeja y arrástrala sobre el jardín."
+      },
+      {
+        "title": "Colócalo",
+        "body": "La silueta indica dónde quedará. Suéltalo en una posición válida."
+      },
+      {
+        "title": "Completa un Bloom",
+        "body": "Llena un hexágono y sus seis vecinos para despejarlos y seguir jugando."
+      }
+    ],
+    "privacyTitle": "Tu progreso se queda en tu dispositivo.",
+    "privacyBody": "No necesitas una cuenta de IshVerse para jugar. Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. La versión 1.1 incluye anuncios de Google, con opciones de privacidad cuando corresponde.",
+    "faqTitle": "Antes de jugar",
+    "faq": [
+      {
+        "q": "¿IshBloom es gratis?",
+        "a": "Sí. IshBloom se descarga gratis en App Store."
+      },
+      {
+        "q": "¿Necesito una cuenta?",
+        "a": "No. Tus puntuaciones y tu progreso en Journey se guardan localmente en tu dispositivo."
+      },
+      {
+        "q": "¿Puedo jugar sin conexión?",
+        "a": "Sí. El juego funciona sin conexión a internet. Los anuncios y Game Center necesitan conexión."
+      }
+    ],
+    "ctaTitle": "Regálate un minuto de calma.",
+    "ctaBody": "Descarga IshBloom y empieza tu primer jardín.",
+    "supportTitle": "¿Cómo podemos ayudarte?",
+    "supportIntro": "Para preguntas sobre el juego o para informar de un error, contacta con nuestro equipo de soporte.",
+    "emailAction": "Escribir a soporte",
+    "include": "Si informas de un error, indica el modelo de tu dispositivo, la versión de iOS, la versión de la app y qué ocurrió.",
+    "help": [
+      {
+        "title": "¿Cómo formo un Bloom?",
+        "body": "Llena un hexágono y los seis hexágonos adyacentes. En Journey, despejar una casilla con gema cuenta para el objetivo del nivel."
+      },
+      {
+        "title": "¿Qué hace Lightning?",
+        "body": "Cuando tu mano está bloqueada y hay una forma segura de hacer espacio, una recuperación opcional con Lightning despeja algunas casillas normales. Tus gemas y tu puntuación se conservan."
+      },
+      {
+        "title": "¿Dónde se guarda mi progreso?",
+        "body": "Las mejores puntuaciones y los registros de Journey se guardan en tu dispositivo. Al eliminar la app se eliminan sus registros locales."
+      },
+      {
+        "title": "Anuncios y opciones de privacidad",
+        "body": "La versión 1.1 muestra anuncios de Google. Cuando corresponde, puedes revisar tus opciones de privacidad en la app. Consulta la política de privacidad para más detalles."
+      }
+    ]
+  },
+  "workout": {
+    "skip": "Saltar al contenido",
+    "navigation": "Navegación principal",
+    "footer": "Navegación del pie",
+    "family": "Parte del ecosistema IshVerse",
+    "features": "Funciones",
+    "support": "Ayuda",
+    "privacy": "Política de privacidad",
+    "title": "Haz del movimiento una práctica diaria.",
+    "description": "Reúne tus carreras, entrenamientos y hábitos cotidianos en un solo lugar. ISH Workout aporta una estructura sencilla a tu disciplina física.",
+    "availability": "Para iPhone y iPad. Pendiente de disponibilidad pública en App Store.",
+    "trust1": "iOS: sin cuenta",
+    "trust2": "Tus hábitos, juntos",
+    "trust3": "Apple Health opcional",
+    "screenAlt": "Panel de ISH Workout con hábitos y actividad diaria",
+    "screenCaption": "App real de iOS · modo claro",
+    "featuresTitle": "Un lugar para los hábitos que suman.",
+    "nativeNote": "Diseñada para iOS, con integración opcional con Apple Health.",
+    "cards": [
+      {
+        "title": "Carreras",
+        "body": "Define una distancia y un tiempo. Registra tu carrera con GPS, ritmo y mapa."
+      },
+      {
+        "title": "Flexiones",
+        "body": "Registra tus series y sigue tu progreso hacia una meta diaria."
+      },
+      {
+        "title": "Peso",
+        "body": "Registra tu peso y observa los cambios con el tiempo."
+      },
+      {
+        "title": "Agua",
+        "body": "Registra vasos de agua y tu objetivo diario."
+      },
+      {
+        "title": "Comidas",
+        "body": "Lleva un registro sencillo de lo que comes."
+      },
+      {
+        "title": "Tareas diarias",
+        "body": "Organiza el día y conserva las tareas pendientes."
+      }
+    ],
+    "runAlt": "Preparación de una carrera en iOS",
+    "weightAlt": "Historial de peso en iOS con un registro de ejemplo",
+    "routineLabel": "Un ritmo constante",
+    "routineTitle": "Define tu intención. Registra tu esfuerzo.",
+    "steps": [
+      {
+        "title": "Elige tus objetivos",
+        "body": "Define metas acordes con tu rutina."
+      },
+      {
+        "title": "Registra sobre la marcha",
+        "body": "Anota una serie, comida, vaso de agua o carrera."
+      },
+      {
+        "title": "Revisa tu progreso",
+        "body": "Consulta tus registros y ajusta el día siguiente."
+      }
+    ],
+    "privacyTitle": "Tu rutina es personal.",
+    "privacyBody": "La app para iOS guarda tus registros en tu dispositivo. No necesitas una cuenta. La ubicación permite registrar carreras; la integración con Apple Health es opcional y requiere permiso.",
+    "faqTitle": "Antes de empezar",
+    "faq": [
+      {
+        "q": "¿Puedo descargar la app para iOS?",
+        "a": "Está en pruebas. Añadiremos el enlace a App Store cuando esté disponible públicamente."
+      },
+      {
+        "q": "¿Necesito una cuenta?",
+        "a": "No. Tus registros se guardan en tu dispositivo; no necesitas una cuenta."
+      },
+      {
+        "q": "¿Ofrece consejos médicos?",
+        "a": "ISH Workout es un registro personal de ejercicio y hábitos. No ofrece diagnósticos ni tratamientos."
+      }
+    ],
+    "ctaTitle": "Dale estructura a tu día.",
+    "ctaBody": "Encuentra ISH Workout en App Store cuando esté disponible.",
+    "supportTitle": "¿Cómo podemos ayudarte?",
+    "supportIntro": "Si tienes preguntas o un problema técnico, contacta con nuestro equipo.",
+    "emailAction": "Contactar por correo",
+    "include": "Indica tu dispositivo, versión de iOS, versión de la app y lo que ocurrió. No envíes datos de salud, rutas precisas, contraseñas ni información sensible.",
+    "help": [
+      {
+        "title": "Tus registros",
+        "body": "La app guarda los datos en tu dispositivo. Conserva los archivos exportados en un lugar seguro."
+      },
+      {
+        "title": "Ubicación y Apple Health",
+        "body": "Revisa los permisos en Ajustes del iPhone si no puedes registrar carreras. Gestiona los permisos de Apple Health en Salud."
+      },
+      {
+        "title": "Eliminar datos",
+        "body": "Eliminar la app de iOS borra sus datos locales. Elimina los archivos exportados por separado. Los registros guardados en Apple Health se gestionan en Salud."
+      }
+    ],
+    "workoutDomain": "Disciplina física",
+    "workoutLine": "Un sistema diario para el movimiento, el ejercicio y los hábitos personales.",
+    "menu": "Menú",
+    "allProducts": "Todos los productos IshVerse",
+    "appStore": "Ver en App Store"
   }
 }

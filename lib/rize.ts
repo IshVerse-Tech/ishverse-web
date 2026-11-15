@@ -15,7 +15,7 @@ export const rizeConfig = {
     "A scheduling-intelligence and attendance platform for organizations. Import your timetables, run live clash detection, and track attendance — all in one system.",
   url: "https://rize.ishverse.com",
   ecosystem: "Part of the IshVerse ecosystem",
-  contact: "contact@ishverse.com",
+  contact: "support@ishverse.com",
   app: {
     // The lecturer/admin dashboard — served from this same hostname (see the
     // /app multi-zone rewrite in next.config.ts once Phase 4 ships).

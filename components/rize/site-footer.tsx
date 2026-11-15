@@ -10,9 +10,9 @@
  */
 
 import { useTranslations } from "next-intl";
+import { IshVerseMark } from "@/components/logo";
 import { RizeLogo } from "./logo";
 import { rizeConfig } from "@/lib/rize";
-import { siteConfig } from "@/lib/site";
 
 export function RizeSiteFooter() {
   const t = useTranslations("rize");
@@ -68,8 +68,11 @@ export function RizeSiteFooter() {
         ))}
       </div>
       <div className="border-t border-divider">
-        <p className="mx-auto max-w-6xl px-5 py-5 text-[12px] text-fg-secondary sm:px-8">
-          © {new Date().getFullYear()} IshVerse. {t("footer.rights")}
+        <p className="mx-auto max-w-6xl px-5 py-5 text-[12px] text-fg-secondary sm:px-8 flex items-center gap-2">
+          <IshVerseMark size={16} />
+          <span>
+            © {new Date().getFullYear()} IshVerse. {t("footer.rights")}
+          </span>
         </p>
       </div>
     </footer>

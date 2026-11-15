@@ -17,7 +17,7 @@ export function Contact() {
   return (
     <Section id="contact" className="pb-24 md:pb-32">
       <Reveal>
-        <div className="rounded-2xl border border-divider bg-glass-bg p-8 text-center backdrop-blur md:p-12">
+        <div className="rounded-2xl border border-divider bg-glass-bg p-5 sm:p-8 text-center backdrop-blur md:p-12">
           <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
             {t("eyebrow")}
           </p>
@@ -25,7 +25,7 @@ export function Contact() {
           <p className="mt-3 text-base text-fg-secondary">{t("body")}</p>
           <a
             href={`mailto:${siteConfig.contactEmail}`}
-            className="mt-6 inline-flex items-center gap-2 rounded-[10px] bg-fg px-5 py-3 text-[14px] font-medium text-bg transition-opacity hover:opacity-90"
+            className="mt-6 inline-flex max-w-full break-all items-center gap-2 rounded-[10px] bg-fg px-3 sm:px-5 py-3 text-[14px] font-medium text-bg transition-opacity hover:opacity-90"
           >
             {siteConfig.contactEmail}
           </a>

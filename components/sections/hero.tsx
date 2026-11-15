@@ -4,16 +4,9 @@
  * on mobile the globe sits below the copy. Localized (Phase 4).
  *
  * Everything here is above the fold, so every Reveal runs in `immediate`
- * mode — the scroll-observer variant server-renders at opacity-0, which made
- * the h1 an LCP candidate that could not paint until the bundle had hydrated.
- *
- * Headline and sub-headline have their own message keys rather than reusing
- * `company.meta.*`: the SEO title and the on-page headline get edited for
- * different reasons and should not be forced to be the same string.
- *
- * The product buttons are built from `siteConfig.products` rather than
- * indexing [0] and [1] with a hard-coded "live" label, so adding a product or
- * flipping one back to `soon` needs no edit here.
+ * mode — the scroll variant server-renders at opacity-0, which would make
+ * the h1 an LCP candidate gated on hydration. Headline and sub-headline have
+ * their own keys so SEO title and on-page copy can be edited separately.
  *
  * Exports:
  *   Hero — server component (VerseGlobe is a client canvas island)
@@ -29,11 +22,9 @@ import { siteConfig } from "@/lib/site";
 export function Hero() {
   const t = useTranslations("company");
 
-  const [flagship, ...rest] = siteConfig.products;
-
   return (
     <div className="relative overflow-hidden">
-      <Section className="grid min-h-[88svh] items-center gap-10 py-20 md:grid-cols-2 md:gap-6">
+      <Section className="grid items-center gap-8 py-12 sm:py-20 md:min-h-[80svh] md:grid-cols-2 md:gap-6">
         <div>
           <Reveal immediate>
             <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
@@ -41,7 +32,7 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal immediate delay={60}>
-            <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">
+            <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-7xl">
               {t("hero.headline")}
             </h1>
           </Reveal>
@@ -53,29 +44,23 @@ export function Hero() {
           <Reveal immediate delay={180}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
-                href={flagship.href}
-                className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 text-[14px] font-medium text-accent-on transition-colors hover:bg-accent-dark"
+                href="#products"
+                className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-accent-on hover:bg-accent-dark"
               >
-                {t("hero.explore", { name: flagship.name })}
-                <ArrowUpRight className="h-4 w-4" aria-hidden />
+                {t("nav.explore")}
+                <ArrowUpRight size={16} aria-hidden />
               </a>
-              {rest.map((p) => (
-                <a
-                  key={p.id}
-                  href={p.href}
-                  className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
-                >
-                  {p.name}
-                  <span className="text-gold-text">
-                    · {p.status === "live" ? t("hero.live") : t("hero.comingSoon")}
-                  </span>
-                </a>
-              ))}
+              <a
+                href="#contact"
+                className="inline-flex min-h-11 items-center rounded-xl border border-divider px-5 py-3 text-sm"
+              >
+                {t("nav.contact")}
+              </a>
             </div>
           </Reveal>
         </div>
 
-        <div className="relative h-[320px] sm:h-[420px] md:h-[560px]" aria-hidden="true">
+        <div className="relative h-64 sm:h-[420px] md:h-[560px]" aria-hidden="true">
           <VerseGlobe />
         </div>
       </Section>
