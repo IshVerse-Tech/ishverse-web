@@ -5,12 +5,15 @@
  *
  * Exports:
  *   RizeSiteHeader — server component (switcher + toggle are client islands)
+ *
+ * Internal links go through ProductLink so they keep the active locale and
+ * section links work from every IshRize page, not only the home page.
  */
 
 import { MobileMenu } from "../mobile-menu";
 import { useTranslations } from "next-intl";
 import { LogIn } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { ProductLink } from "../product-link";
 import { RizeLogo } from "./logo";
 import { ThemeToggle } from "../theme-toggle";
 import { LanguageSwitcher } from "../language-switcher";
@@ -21,29 +24,31 @@ export function RizeSiteHeader() {
   const common = useTranslations("company.nav");
 
   const links = [
-    { href: "#features", label: t("nav.features") },
-    { href: "#how-it-works", label: t("nav.howItWorks") },
-    { href: "#engine", label: t("nav.engine") },
-    { href: "#audiences", label: t("nav.institutions") },
+    { href: "/#features", label: t("nav.features") },
+    { href: "/#how-it-works", label: t("nav.howItWorks") },
+    { href: "/#engine", label: t("nav.engine") },
+    { href: "/#audiences", label: t("nav.institutions") },
     { href: "/pricing", label: t("footer.linkPricing") },
   ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-divider bg-bg/70 backdrop-blur-md">
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8">
-        <Link href="/" aria-label={rizeConfig.name}>
+        <ProductLink product="rize" className="inline-flex">
+          <span className="sr-only">{rizeConfig.name}</span>
           <RizeLogo />
-        </Link>
+        </ProductLink>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {links.map((l) => (
-            <a
+            <ProductLink
               key={l.href}
-              href={l.href}
+              product="rize"
+              path={l.href}
               className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
             >
               {l.label}
-            </a>
+            </ProductLink>
           ))}
         </nav>
 
@@ -70,9 +75,9 @@ export function RizeSiteHeader() {
         <MobileMenu label={common("menu")}>
           <nav className="grid gap-2" aria-label={common("menu")}>
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="py-3">
+              <ProductLink key={link.href} product="rize" path={link.href} className="py-3">
                 {link.label}
-              </a>
+              </ProductLink>
             ))}
             <a href="https://ishverse.com/#products" className="py-3">
               {common("explore")}
