@@ -566,7 +566,7 @@
     "trust1": "Aucun compte requis",
     "trust2": "Fonctionne hors ligne",
     "trust3": "Aucune limite de coups",
-    "screenAlt": "Choix du mode dans IshBloom avec Journey et Marathon",
+    "screenAlt": "Écran d’accueil d’IshBloom avec l’icône de l’app et le bouton Let’s play",
     "screenCaption": "Application iOS réelle · capture de l’App Store",
     "featuresTitle": "Un puzzle qui récompense la réflexion, pas la pression.",
     "nativeNote": "Conçu nativement pour iPhone et iPad, avec des mises en page adaptatives et Game Center.",
@@ -576,16 +576,16 @@
         "body": "Remplissez une case hexagonale et ses six voisines pour compléter un Bloom et libérer de la place."
       },
       {
-        "title": "Marathon",
-        "body": "Une partie sans fin. Continuez à placer des grappes et tentez de battre votre meilleur score."
-      },
-      {
-        "title": "Journey",
-        "body": "144 niveaux répartis dans 12 jardins thématiques, avec étoiles et déblocages enregistrés au fil de la progression."
-      },
-      {
         "title": "Collectez des gemmes",
-        "body": "Dans Journey, dégagez les cases contenant des gemmes pour atteindre l’objectif de chaque niveau. Aucun compte à rebours de coups."
+        "body": "Dans Journey, les gemmes sont posées sur le plateau ou voyagent avec une grappe. Dégagez leurs cases avec un Bloom pour les collecter."
+      },
+      {
+        "title": "Gagnez des étoiles",
+        "body": "Obtenez jusqu’à trois étoiles à chaque niveau de Journey, 432 au total, avec étoiles et déblocages enregistrés au fil de la progression."
+      },
+      {
+        "title": "Récupération Lightning",
+        "body": "Lorsque votre main est bloquée et qu’il existe un moyen sûr de faire de la place, Lightning (facultatif) dégage quelques cases ordinaires. Vos gemmes et votre score sont conservés."
       },
       {
         "title": "Game Center",
@@ -596,8 +596,22 @@
         "body": "Le jeu et la progression enregistrée fonctionnent sans connexion internet."
       }
     ],
-    "boardAlt": "Plateau hexagonal d’IshBloom avec des gemmes et des grappes dans le plateau",
-    "journeyAlt": "Carte Journey d’IshBloom montrant les jardins et les niveaux",
+    "modesLabel": "Deux façons de jouer",
+    "modesTitle": "Jouez à votre façon.",
+    "modes": [
+      {
+        "title": "Journey",
+        "body": "144 niveaux répartis dans 12 jardins thématiques. Atteignez l’objectif de gemmes de chaque niveau à votre rythme, sans compte à rebours de coups."
+      },
+      {
+        "title": "Marathon",
+        "body": "Une partie sans fin sur le jardin complet. Trouvez votre rythme, enchaînez les Blooms et battez votre meilleur score."
+      }
+    ],
+    "boardAlt": "IshBloom sur iPad : un niveau Journey avec des gemmes sur le jardin de 61 cases et des grappes dans la réserve",
+    "ipadCaption": "Application iPad réelle · capture de l’App Store",
+    "journeyAlt": "Carte Journey d’IshBloom avec les jardins Dewlight Grove et Sunseed Dunes",
+    "marathonAlt": "Plateau Marathon d’IshBloom avec un score de 3 680 et trois grappes dans la réserve",
     "routineLabel": "Comment jouer",
     "routineTitle": "Planifiez. Placez. Faites fleurir.",
     "steps": [

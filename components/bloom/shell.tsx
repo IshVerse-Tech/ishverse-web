@@ -56,7 +56,7 @@ export function BloomShell({ children }: { children: ReactNode }) {
               </a>
             </nav>
             <div className="mt-4 flex items-center justify-between border-t border-divider pt-4">
-              <LanguageSwitcher />
+              <LanguageSwitcher placement="menu" />
               <ThemeToggle />
             </div>
           </MobileMenu>

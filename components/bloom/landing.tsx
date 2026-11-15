@@ -2,10 +2,14 @@
  * Module: BloomLanding
  * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages. Same section rhythm as the
  * Workout page (hero → features → how it plays → privacy/FAQ → CTA) so every
- * IshVerse product reads as part of one family.
- * Real App Store screens alongside localized, feature-accurate copy.
+ * IshVerse product reads as part of one family. The features section closes
+ * with the two game modes (Journey, Marathon) as a paired-screen block, and
+ * "How it plays" uses the iPad screenshot to show the full 61-cell garden.
+ * Real App Store screens (iPhone 17, iPad Pro 13-inch) alongside localized,
+ * feature-accurate copy. Bloom violet stays inside the icon and screenshots.
  * Exports: BloomLanding
  */
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
   ArrowUpRight,
@@ -13,15 +17,33 @@ import {
   Hexagon,
   Infinity as InfinityIcon,
   Map,
+  Star,
   Trophy,
   WifiOff,
+  Zap,
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { ProductLink } from "@/components/product-link";
-import { WorkoutScreen as Screen } from "@/components/workout/screen";
+import { BloomScreen as Screen } from "./screen";
 import { bloomConfig } from "@/lib/bloom";
 
-const icons = [Hexagon, InfinityIcon, Map, Gem, Trophy, WifiOff];
+const icons = [Hexagon, Gem, Star, Zap, Trophy, WifiOff];
+const modes = [
+  { icon: Map, src: "/bloom/screens/journey.jpg", alt: "journeyAlt" },
+  { icon: InfinityIcon, src: "/bloom/screens/marathon.jpg", alt: "marathonAlt" },
+] as const;
+
+function AppStoreButton({ label }: { label: string }) {
+  return (
+    <a
+      href={bloomConfig.appStore}
+      className="mt-8 inline-flex items-center gap-3 rounded-xl bg-accent px-6 py-4 font-medium text-accent-on transition-colors hover:bg-accent-dark"
+    >
+      {label}
+      <ArrowUpRight size={18} aria-hidden />
+    </a>
+  );
+}
 
 export function BloomLanding() {
   const t = useTranslations("bloom");
@@ -39,13 +61,7 @@ export function BloomLanding() {
             <p className="mt-5 max-w-prose text-base leading-relaxed text-fg-secondary sm:text-lg">
               {t("description")}
             </p>
-            <a
-              href={bloomConfig.appStore}
-              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-accent px-6 py-4 font-medium text-accent-on transition-colors hover:bg-accent-dark"
-            >
-              {t("appStore")}
-              <ArrowUpRight size={18} aria-hidden />
-            </a>
+            <AppStoreButton label={t("appStore")} />
             <p className="mt-4 text-sm text-fg-secondary">{t("availability")}</p>
             <div className="mt-6 flex flex-wrap gap-2 text-xs text-fg-secondary">
               {["trust1", "trust2", "trust3"].map((k) => (
@@ -56,7 +72,7 @@ export function BloomLanding() {
             </div>
           </div>
           <figure className="mx-auto w-full max-w-sm">
-            <Screen src="/bloom/screens/modes.jpg" alt={t("screenAlt")} priority />
+            <Screen src="/bloom/screens/flow.jpg" alt={t("screenAlt")} priority />
             <figcaption className="mt-6 text-center text-xs text-fg-secondary">
               {t("screenCaption")}
             </figcaption>
@@ -85,14 +101,48 @@ export function BloomLanding() {
             </Reveal>
           ))}
         </div>
+
+        <div className="mt-16 grid items-center gap-12 border-t border-divider pt-16 sm:mt-24 sm:pt-24 lg:grid-cols-2">
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gold-text">
+              {t("modesLabel")}
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              {t("modesTitle")}
+            </h2>
+            <ul className="mt-8 space-y-8">
+              {modes.map(({ icon: Icon }, i) => (
+                <li className="flex gap-5" key={i}>
+                  <Icon className="mt-0.5 shrink-0 text-gold-text" size={20} aria-hidden />
+                  <div>
+                    <h3 className="font-semibold">{t(`modes.${i}.title`)}</h3>
+                    <p className="mt-2 leading-relaxed text-fg">{t(`modes.${i}.body`)}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <div className="mx-auto grid w-full max-w-lg grid-cols-1 items-start gap-8 min-[400px]:grid-cols-2 sm:gap-6">
+            {modes.map(({ src, alt }, i) => (
+              <figure key={src}>
+                <Screen src={src} alt={t(alt)} variant="compact" />
+                <figcaption className="mt-4 text-center text-xs font-medium text-fg-secondary">
+                  {t(`modes.${i}.title`)}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="border-y border-divider bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-14 sm:px-6 sm:py-24 lg:grid-cols-2">
-          <div className="mx-auto grid w-full max-w-lg grid-cols-1 items-start gap-8 min-[400px]:grid-cols-2 sm:gap-6">
-            <Screen src="/bloom/screens/board.jpg" alt={t("boardAlt")} compact />
-            <Screen src="/bloom/screens/journey.jpg" alt={t("journeyAlt")} compact />
-          </div>
+          <figure className="mx-auto w-full max-w-md">
+            <Screen src="/bloom/screens/ipad-board.jpg" alt={t("boardAlt")} variant="tablet" />
+            <figcaption className="mt-6 text-center text-xs text-fg-secondary">
+              {t("ipadCaption")}
+            </figcaption>
+          </figure>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-text">
               {t("routineLabel")}
@@ -139,15 +189,16 @@ export function BloomLanding() {
       </section>
 
       <section className="border-t border-divider bg-surface px-4 py-14 text-center sm:px-6 sm:py-24">
+        <Image
+          src="/bloom/symbol.svg"
+          alt=""
+          width={64}
+          height={64}
+          className="mx-auto mb-6 h-14 w-14 sm:h-16 sm:w-16"
+        />
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("ctaTitle")}</h2>
         <p className="mx-auto mt-4 max-w-prose text-fg">{t("ctaBody")}</p>
-        <a
-          href={bloomConfig.appStore}
-          className="mt-8 inline-flex items-center gap-3 rounded-xl bg-accent px-6 py-4 font-medium text-accent-on hover:bg-accent-dark"
-        >
-          {t("appStore")}
-          <ArrowUpRight size={18} aria-hidden />
-        </a>
+        <AppStoreButton label={t("appStore")} />
       </section>
     </main>
   );
