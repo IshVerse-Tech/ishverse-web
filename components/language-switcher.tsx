@@ -4,9 +4,15 @@
  *
  * Custom dropdown that mirrors the mobile app's LanguagePickerSheet: flag
  * emoji, native name as primary label, English name as secondary. Subdomain-
- * aware: on gospel.* / rize.* the public URL has no product segment, so we
- * navigate to just the locale prefix (e.g. /es) and let the middleware rewrite
- * to the correct internal path.
+ * aware: on product subdomains (gospel.*, bloom.* …) the public URL has no
+ * product segment, so we swap only the locale prefix and keep the page path
+ * (bloom.ishverse.com/support → /es/support); the middleware rewrites it to
+ * the correct internal path.
+ *
+ * `placement="menu"` is for the mobile menus: there the trigger sits at the
+ * left edge of a scrolling panel, so the default right-aligned, downward list
+ * would open off-screen and be clipped by the panel. The menu placement opens
+ * upward from the left edge, over the links, and stays inside the panel.
  *
  * Exports:
  *   LanguageSwitcher — client component
@@ -34,7 +40,14 @@ const LANGUAGES: LangMeta[] = [
 
 const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize", "workout", "bloom"]);
 
-export function LanguageSwitcher() {
+const LIST_PLACEMENT = {
+  header: "right-0 top-full mt-1.5",
+  menu: "bottom-full left-0 mb-1.5",
+} as const;
+
+export function LanguageSwitcher({
+  placement = "header",
+}: { placement?: keyof typeof LIST_PLACEMENT } = {}) {
   const locale = useLocale() as Locale;
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -65,12 +78,15 @@ export function LanguageSwitcher() {
     const sub = window.location.hostname.split(".")[0];
     const isProduct = PRODUCT_SUBDOMAINS.has(sub);
 
-    // On product subdomains the public URL carries no product segment —
-    // navigate to just the locale prefix. The middleware rewrites /es →
-    // /es/gospel (etc.) internally. On the main domain preserve the path.
+    // On product subdomains the public URL carries no product segment — swap
+    // the locale prefix and keep the rest of the path. The middleware rewrites
+    // /es/support → /es/bloom/support (etc.) internally. On the main domain
+    // preserve the path too.
     let publicPath: string;
     if (isProduct) {
-      publicPath = next === routing.defaultLocale ? "/" : `/${next}`;
+      const rest = window.location.pathname.replace(/^\/(en|es|fr|pt)(?=\/|$)/, "");
+      publicPath =
+        (next === routing.defaultLocale ? "" : `/${next}`) + (rest === "/" ? "" : rest) || "/";
     } else {
       // Strip the current locale prefix from window.location.pathname manually
       // (usePathname from next-intl can lag behind during navigation).
@@ -128,7 +144,7 @@ export function LanguageSwitcher() {
         <ul
           role="listbox"
           aria-label="Select language"
-          className="absolute right-0 top-full z-50 mt-1.5 min-w-[168px] overflow-hidden rounded-[12px] border border-divider bg-bg shadow-lg"
+          className={`absolute z-50 min-w-[168px] overflow-hidden rounded-[12px] border border-divider bg-bg shadow-lg ${LIST_PLACEMENT[placement]}`}
         >
           {LANGUAGES.map((lang) => {
             const selected = lang.code === locale;
