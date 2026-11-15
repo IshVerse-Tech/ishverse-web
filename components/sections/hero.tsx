@@ -4,8 +4,8 @@
  * on mobile the globe sits below the copy. Localized (Phase 4).
  *
  * Everything here is above the fold, so every Reveal runs in `immediate`
- * mode — the scroll variant server-renders at opacity-0, which would make
- * the h1 an LCP candidate gated on hydration. Headline and sub-headline have
+ * mode — the scroll variant hides content until hydration when scripts run,
+ * which would make the h1 an LCP candidate gated on JavaScript. Headline and sub-headline have
  * their own keys so SEO title and on-page copy can be edited separately.
  *
  * Exports:
