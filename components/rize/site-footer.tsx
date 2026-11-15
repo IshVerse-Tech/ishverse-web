@@ -9,7 +9,8 @@
  *   RizeSiteFooter — server component
  */
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { companyHref } from "@/lib/site";
 import { IshVerseMark } from "@/components/logo";
 import { RizeLogo } from "./logo";
 import { ProductLink } from "../product-link";
@@ -17,6 +18,7 @@ import { rizeConfig } from "@/lib/rize";
 
 export function RizeSiteFooter() {
   const t = useTranslations("rize");
+  const locale = useLocale();
 
   const groups = [
     {
@@ -37,7 +39,7 @@ export function RizeSiteFooter() {
     {
       title: t("footer.groupCompany"),
       links: [
-        { label: "IshVerse", href: "https://ishverse.com" },
+        { label: "IshVerse", href: companyHref(locale) },
         { label: t("footer.linkPrivacy"), href: "https://ishverse.com/privacy" },
         { label: t("footer.linkTerms"), href: "https://ishverse.com/terms" },
         { label: t("footer.linkSupport"), href: "/support" },

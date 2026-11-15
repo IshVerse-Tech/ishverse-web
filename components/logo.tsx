@@ -9,15 +9,26 @@
  */
 
 import Image from "next/image";
-import { siteConfig } from "@/lib/site";
+import { useLocale } from "next-intl";
+import { companyHref, siteConfig } from "@/lib/site";
 
-export function IshVerseMark({ size = 28, alt = "" }: { size?: number; alt?: string }) {
+export function IshVerseMark({
+  size = 28,
+  alt = "",
+  eager = false,
+}: {
+  size?: number;
+  alt?: string;
+  /** Load immediately — for marks in the header, above the fold. */
+  eager?: boolean;
+}) {
   return (
     <Image
       src="/brand/ishverse-mark.png"
       alt={alt}
       width={size}
       height={size}
+      loading={eager ? "eager" : "lazy"}
       className="shrink-0"
       style={{ width: size, height: size }}
     />
@@ -27,7 +38,7 @@ export function IshVerseMark({ size = 28, alt = "" }: { size?: number; alt?: str
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
-      <IshVerseMark />
+      <IshVerseMark eager />
       <span className="text-[16px] font-bold tracking-[0.2px] text-fg">
         {siteConfig.wordmark.strong}
         <span className="font-normal text-fg-secondary">{siteConfig.wordmark.light}</span>
@@ -38,9 +49,10 @@ export function Logo({ className = "" }: { className?: string }) {
 
 /** Small "Part of IshVerse" link used in every product footer. */
 export function IshVerseFamilyLink({ label }: { label: string }) {
+  const locale = useLocale();
   return (
     <a
-      href={siteConfig.url}
+      href={companyHref(locale)}
       className="inline-flex items-center gap-2 text-sm text-fg-secondary transition-colors hover:text-fg"
     >
       <IshVerseMark size={20} />

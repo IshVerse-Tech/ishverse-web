@@ -7,28 +7,30 @@
  *   GospelSiteFooter — server component
  */
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { ProductLink } from "../product-link";
 import { IshVerseMark } from "@/components/logo";
 import { GospelLogo } from "./logo";
-import { siteConfig } from "@/lib/site";
+import { companyHref, siteConfig } from "@/lib/site";
 
 export function GospelSiteFooter() {
   const t = useTranslations("gospel");
+  const locale = useLocale();
 
   const groups = [
     {
       title: t("footer.groupProduct"),
       links: [
-        { label: t("nav.features"), href: "#features" },
-        { label: t("nav.pillars"), href: "#pillars" },
-        { label: t("nav.pricing"), href: "#pricing" },
-        { label: t("footer.linkDownload"), href: "#waitlist" },
+        { label: t("nav.features"), href: "/#features" },
+        { label: t("nav.pillars"), href: "/#pillars" },
+        { label: t("nav.pricing"), href: "/#pricing" },
+        { label: t("footer.linkDownload"), href: "/#waitlist" },
       ],
     },
     {
       title: t("footer.groupCompany"),
       links: [
-        { label: "IshVerse", href: "https://ishverse.com" },
+        { label: "IshVerse", href: companyHref(locale) },
         { label: t("footer.linkContact"), href: `mailto:${siteConfig.contactEmail}` },
         { label: t("footer.linkSupport"), href: `mailto:${siteConfig.supportEmail}` },
       ],
@@ -57,12 +59,22 @@ export function GospelSiteFooter() {
             <ul className="mt-3 space-y-2">
               {g.links.map((l) => (
                 <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
-                  >
-                    {l.label}
-                  </a>
+                  {l.href.startsWith("/") ? (
+                    <ProductLink
+                      product="gospel"
+                      path={l.href}
+                      className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
+                    >
+                      {l.label}
+                    </ProductLink>
+                  ) : (
+                    <a
+                      href={l.href}
+                      className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
+                    >
+                      {l.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -6,7 +6,8 @@
  */
 import { MobileMenu } from "@/components/mobile-menu";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { companyHref } from "@/lib/site";
 import type { ReactNode } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -15,6 +16,7 @@ import { workoutConfig } from "@/lib/workout";
 import { IshVerseFamilyLink } from "@/components/logo";
 export function WorkoutShell({ children }: { children: ReactNode }) {
   const t = useTranslations("workout");
+  const locale = useLocale();
   return (
     <div className="workout-site">
       <a href="#main" className="sr-only focus:not-sr-only focus:block focus:p-4">
@@ -23,7 +25,14 @@ export function WorkoutShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-50 border-b border-divider bg-bg/90 backdrop-blur-md">
         <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
           <ProductLink product="workout" className="flex min-w-0 items-center gap-2">
-            <Image src="/workout/icon.png" alt="" width={32} height={32} className="rounded-xl" />
+            <Image
+              src="/workout/icon.png"
+              alt=""
+              loading="eager"
+              width={32}
+              height={32}
+              className="rounded-xl"
+            />
             <span className="whitespace-nowrap text-sm font-bold tracking-tight sm:text-base">
               ISH <span className="font-light">WORKOUT</span>
             </span>
@@ -49,7 +58,7 @@ export function WorkoutShell({ children }: { children: ReactNode }) {
               <ProductLink product="workout" path="/privacy" className="py-3">
                 {t("privacy")}
               </ProductLink>
-              <a href="https://ishverse.com/#products" className="py-3">
+              <a href={companyHref(locale, "#products")} className="py-3">
                 {t("allProducts")}
               </a>
             </nav>
@@ -79,7 +88,7 @@ export function WorkoutShell({ children }: { children: ReactNode }) {
             <ProductLink product="workout" path="/privacy">
               {t("privacy")}
             </ProductLink>
-            <a href="https://ishverse.com">IshVerse</a>
+            <a href={companyHref(locale)}>IshVerse</a>
             <a className="col-span-2 break-words" href={`mailto:${workoutConfig.support}`}>
               {workoutConfig.support}
             </a>
