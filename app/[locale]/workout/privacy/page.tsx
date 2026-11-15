@@ -12,7 +12,10 @@ export const metadata: Metadata = withSocial("workout", {
     "How the ISH Workout iOS app handles local records, permissions and support requests.",
   alternates: {
     canonical: "https://workout.ishverse.com/privacy",
-    languages: { en: "https://workout.ishverse.com/privacy" },
+    languages: {
+      en: "https://workout.ishverse.com/privacy",
+      "x-default": "https://workout.ishverse.com/privacy",
+    },
   },
 });
 const sections = [
