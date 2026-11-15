@@ -546,7 +546,17 @@
       "sending": "Sending...",
       "successTitle": "Message sent",
       "successBody": "We received your message and will respond within 24 hours.",
-      "sendAnother": "Send another message"
+      "sendAnother": "Send another message",
+      "metaTitle": "Support",
+      "errors": {
+        "name_required": "Please enter your name.",
+        "email_invalid": "Please enter a valid email address.",
+        "message_short": "Please write at least 10 characters.",
+        "invalid_json": "Something went wrong. Please try again.",
+        "unavailable": "The contact form is not available right now. Please email support@ishverse.com.",
+        "send_failed": "Your message could not be sent. Please try again or email support@ishverse.com.",
+        "generic": "Something went wrong. Please try again or email support@ishverse.com."
+      }
     }
   },
   "bloom": {
