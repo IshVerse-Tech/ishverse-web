@@ -2,6 +2,7 @@
  * Module: RizeChangelog
  * Context: See IshRize-Master-Build-Specification Stage 16 — release notes
  * page. Static content managed as a data array; no CMS needed at this scale.
+ * Page chrome and change-type labels are localized; release notes stay English.
  *
  * Exports:
  *   generateMetadata — localized SEO metadata
@@ -118,13 +119,10 @@ const RELEASES: Release[] = [
   },
 ];
 
-const TYPE_STYLES: Record<
-  Release["changes"][number]["type"],
-  { label: string; className: string }
-> = {
-  added: { label: "Added", className: "bg-accent/10 text-accent-text" },
-  improved: { label: "Improved", className: "bg-gold/10 text-gold-text" },
-  fixed: { label: "Fixed", className: "bg-surface text-fg-secondary" },
+const TYPE_STYLES: Record<Release["changes"][number]["type"], string> = {
+  added: "bg-accent/10 text-accent-text",
+  improved: "bg-gold/10 text-gold-text",
+  fixed: "bg-surface text-fg-secondary",
 };
 
 export async function generateMetadata({
@@ -175,10 +173,13 @@ export default async function RizeChangelogPage({
                 {t("heading")}
               </h1>
               <p className="mt-4 text-[15px] leading-relaxed text-fg-secondary">{t("sub")}</p>
+              {locale !== "en" && (
+                <p className="mt-3 text-[13px] text-fg-secondary">{t("englishNote")}</p>
+              )}
             </div>
           </Reveal>
 
-          <div className="relative mx-auto mt-14 max-w-2xl">
+          <div lang="en" className="relative mx-auto mt-14 max-w-2xl">
             <div className="absolute left-[7px] top-2 bottom-0 w-px bg-divider" aria-hidden />
             <div className="space-y-12">
               {RELEASES.map((release, i) => (
@@ -197,13 +198,13 @@ export default async function RizeChangelogPage({
                     </div>
                     <ul className="mt-3 space-y-2">
                       {release.changes.map((change, j) => {
-                        const style = TYPE_STYLES[change.type];
                         return (
                           <li key={j} className="flex items-start gap-2.5 text-[14px] text-fg">
                             <span
-                              className={`mt-0.5 shrink-0 rounded px-1.5 py-0.5 text-[11px] font-semibold ${style.className}`}
+                              lang={locale}
+                              className={`mt-0.5 shrink-0 rounded px-1.5 py-0.5 text-[11px] font-semibold ${TYPE_STYLES[change.type]}`}
                             >
-                              {style.label}
+                              {t(`types.${change.type}`)}
                             </span>
                             {change.text}
                           </li>

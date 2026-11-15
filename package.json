@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "test:scope": "node --test tests/change-scope.test.mjs"
+    "test:scope": "node --test tests/change-scope.test.mjs",
+    "test:support": "node --test tests/support-email.test.mjs"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

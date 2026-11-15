@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/ishverse-logo.png" width="88" alt="IshVerse blue and gold mark" />
+</p>
+
 # IshVerse Web
 
 Corporate website and public front door for IshVerse. Product availability and company/legal/contact copy must remain accurate.

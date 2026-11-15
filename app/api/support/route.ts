@@ -3,7 +3,9 @@
  * Context: Forwards support form submissions to support@ishverse.com via
  * Resend. The form lives at rize.ishverse.com/support.
  *
- * Validates name, email, and message. Rate-limited by Resend's own limits.
+ * Validates name, email, and message; the email body is built by
+ * lib/support-email.ts, which escapes all visitor input. Rate-limited by
+ * Resend's own limits.
  *
  * Exports:
  *   POST — route handler
@@ -11,6 +13,7 @@
 
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { buildSupportEmail } from "@/lib/support-email";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -39,23 +42,16 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const sanitizedName = name.trim().slice(0, 200);
-  const sanitizedMessage = message.trim().slice(0, 5000);
+  // Visitor input is escaped inside buildSupportEmail; never interpolate it here.
+  const { subject, html } = buildSupportEmail({ name, email, message });
 
   try {
     const { error } = await resend.emails.send({
       from: "IshRize Support <noreply@mail.ishverse.com>",
       to: "support@ishverse.com",
       replyTo: email,
-      subject: `[IshRize Support] from ${sanitizedName}`,
-      html: `
-        <div style="font-family: system-ui, sans-serif; max-width: 600px;">
-          <h2 style="margin: 0 0 16px;">Support request from ${sanitizedName}</h2>
-          <p style="margin: 0 0 8px; color: #666;"><strong>Email:</strong> ${email}</p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 16px 0;" />
-          <p style="white-space: pre-wrap; line-height: 1.6;">${sanitizedMessage}</p>
-        </div>
-      `,
+      subject,
+      html,
     });
 
     if (error) {
