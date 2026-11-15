@@ -20,6 +20,8 @@ export const rizeConfig = {
     // The lecturer/admin dashboard — served from this same hostname (see the
     // /app multi-zone rewrite in next.config.ts once Phase 4 ships).
     web: "https://rize.ishverse.com/app",
+    // Direct link for "Sign in" (the app redirects /app to /app/schedule).
+    login: "https://rize.ishverse.com/app/login",
     appStore: "#", // placeholder until iOS submission
     playStore: "#", // placeholder until Android submission
   },

@@ -33,7 +33,7 @@ export function RizeSiteFooter() {
           label: t("nav.requestDemo"),
           href: `mailto:${rizeConfig.contact}?subject=IshRize%20Demo`,
         },
-        { label: t("nav.signIn"), href: rizeConfig.app.web },
+        { label: t("nav.signIn"), href: rizeConfig.app.login },
       ],
     },
     {

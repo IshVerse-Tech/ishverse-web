@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
       // Proxy rize.ishverse.com/app/* → ish-rize-web Vercel deployment.
       // Runs before Next.js route resolution so /app/* never hits internal pages.
       beforeFiles: [
+        // /app (exact, no trailing path) — /:path* requires a separator, so the
+        // bare path needs its own entry; without it /app redirected to itself.
+        {
+          source: "/app",
+          has: [{ type: "host", value: "rize.ishverse.com" }],
+          destination: "https://ish-rize-web.vercel.app/app",
+        },
         {
           source: "/app/:path*",
           has: [{ type: "host", value: "rize.ishverse.com" }],
