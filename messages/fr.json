@@ -407,7 +407,9 @@
       "linkTerms": "Conditions",
       "linkSupport": "Assistance",
       "rights": "Tous droits réservés.",
-      "linkPricing": "Tarifs"
+      "linkPricing": "Tarifs",
+      "linkChangelog": "Nouveautés",
+      "linkCaseStudy": "Étude de cas"
     },
     "pricing": {
       "eyebrow": "Tarifs",
@@ -459,6 +461,38 @@
         "q4": "Proposez-vous des réductions pour l’éducation ?",
         "a4": "Oui. Les établissements d’enseignement accrédités bénéficient de 20 % de réduction sur l’offre Pro. Contactez-nous pour en savoir plus."
       }
+    },
+    "changelog": {
+      "eyebrow": "Nouveautés",
+      "heading": "Les nouveautés d’IshRize",
+      "sub": "L’historique des versions, améliorations et corrections.",
+      "englishNote": "Les notes de version sont publiées en anglais.",
+      "types": {
+        "added": "Ajouté",
+        "improved": "Amélioré",
+        "fixed": "Corrigé"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Étude de cas",
+      "heading": "Comment le département de mathématiques de l’UG a remplacé ses tableurs par IshRize",
+      "sub": "Le département de mathématiques de l’Université du Ghana a été le premier à adopter IshRize pour ses emplois du temps et le suivi des présences.",
+      "challengeHeading": "Le défi",
+      "challengeBody": "Avant IshRize, le département gérait les emplois du temps de plus de 40 cours répartis sur plusieurs amphithéâtres à l’aide d’un tableur partagé. Les conflits étaient découverts le matin même des cours. Les présences étaient relevées sur une feuille d’émargement papier : facile à falsifier, impossible à analyser.",
+      "solutionHeading": "La solution",
+      "solutionBody": "IshRize a remplacé le tableur par un moteur de planification qui tient compte des contraintes. Le coordinateur importe les cours, les salles et les créneaux, et le système génère un emploi du temps sans conflit en quelques secondes. Les enseignants lancent les séances depuis leur téléphone. Les étudiants scannent un code QR tournant pour marquer leur présence : sans papier, sans signature à la place d’un autre.",
+      "resultHeading": "Les résultats",
+      "result1Title": "Aucun conflit d’emploi du temps",
+      "result1Desc": "Le moteur de contraintes élimine les doubles réservations avant qu’elles ne surviennent.",
+      "result2Title": "85 % de taux de présence moyen",
+      "result2Desc": "Contre environ 60 % lorsque le suivi était manuel et irrégulier.",
+      "result3Title": "Des heures gagnées chaque semaine",
+      "result3Desc": "Le coordinateur ne passe plus une demi-journée à résoudre les conflits d’emploi du temps.",
+      "result4Title": "Une visibilité en temps réel",
+      "result4Desc": "Les chefs de département suivent les tendances de présence de tous les cours sur un seul tableau de bord.",
+      "quoteBody": "Avant, on découvrait un conflit de salle quand deux enseignants se présentaient à la même porte. Désormais, le système ne le permet plus.",
+      "quoteAuthor": "Coordinateur du département",
+      "quoteOrg": "Université du Ghana, département de mathématiques"
     }
   },
   "workout": {

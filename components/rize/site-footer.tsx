@@ -25,6 +25,8 @@ export function RizeSiteFooter() {
         { label: t("nav.features"), href: "#features" },
         { label: t("nav.howItWorks"), href: "#how-it-works" },
         { label: t("footer.linkPricing"), href: "/pricing" },
+        { label: t("footer.linkChangelog"), href: "/changelog" },
+        { label: t("footer.linkCaseStudy"), href: "/case-study" },
         {
           label: t("nav.requestDemo"),
           href: `mailto:${rizeConfig.contact}?subject=IshRize%20Demo`,

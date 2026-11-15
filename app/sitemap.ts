@@ -77,6 +77,20 @@ const ENTRIES: Entry[] = [
     priority: 0.8,
     localized: false,
   },
+  {
+    host: "rize.ishverse.com",
+    path: "/changelog",
+    changeFrequency: "weekly",
+    priority: 0.6,
+    localized: false,
+  },
+  {
+    host: "rize.ishverse.com",
+    path: "/case-study",
+    changeFrequency: "monthly",
+    priority: 0.7,
+    localized: false,
+  },
 
   {
     host: "workout.ishverse.com",

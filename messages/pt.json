@@ -407,7 +407,9 @@
       "linkTerms": "Termos",
       "linkSupport": "Suporte",
       "rights": "Todos os direitos reservados.",
-      "linkPricing": "Preços"
+      "linkPricing": "Preços",
+      "linkChangelog": "Novidades",
+      "linkCaseStudy": "Estudo de caso"
     },
     "pricing": {
       "eyebrow": "Preços",
@@ -459,6 +461,38 @@
         "q4": "Vocês oferecem desconto para educação?",
         "a4": "Sim. Instituições de ensino credenciadas recebem 20% de desconto no plano Pro. Fale conosco para saber mais."
       }
+    },
+    "changelog": {
+      "eyebrow": "Novidades",
+      "heading": "Novidades do IshRize",
+      "sub": "Um histórico de versões, melhorias e correções.",
+      "englishNote": "As notas de versão são publicadas em inglês.",
+      "types": {
+        "added": "Novo",
+        "improved": "Melhorado",
+        "fixed": "Corrigido"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Estudo de caso",
+      "heading": "Como a Matemática da UG trocou as planilhas pelo IshRize",
+      "sub": "O Departamento de Matemática da Universidade de Gana foi o primeiro a adotar o IshRize para horários e controle de presença.",
+      "challengeHeading": "O desafio",
+      "challengeBody": "Antes do IshRize, o departamento gerenciava os horários de mais de 40 disciplinas em várias salas com uma planilha compartilhada. Os conflitos eram descobertos na manhã da aula. A presença era registrada em uma lista de assinaturas em papel: fácil de falsificar e impossível de analisar.",
+      "solutionHeading": "A solução",
+      "solutionBody": "O IshRize substituiu a planilha por um mecanismo de planejamento que considera as restrições. O coordenador importa disciplinas, salas e horários, e o sistema gera um horário sem conflitos em segundos. Os professores iniciam as aulas pelo celular. Os estudantes escaneiam um QR code rotativo para registrar presença: sem papel e sem fraudes.",
+      "resultHeading": "Os resultados",
+      "result1Title": "Zero conflitos de horário",
+      "result1Desc": "O mecanismo de restrições elimina reservas duplicadas antes que aconteçam.",
+      "result2Title": "85% de presença média",
+      "result2Desc": "Antes, cerca de 60%, quando o controle era manual e irregular.",
+      "result3Title": "Horas economizadas por semana",
+      "result3Desc": "O coordenador não passa mais meio dia resolvendo conflitos de horário.",
+      "result4Title": "Visibilidade em tempo real",
+      "result4Desc": "Os chefes de departamento acompanham as tendências de presença de todas as disciplinas em um único painel.",
+      "quoteBody": "Antes, a gente só descobria um conflito de sala quando dois professores apareciam na mesma porta. Agora o sistema não deixa isso acontecer.",
+      "quoteAuthor": "Coordenador do departamento",
+      "quoteOrg": "Universidade de Gana, Departamento de Matemática"
     }
   },
   "workout": {

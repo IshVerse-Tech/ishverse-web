@@ -407,7 +407,9 @@
       "linkTerms": "Términos",
       "linkSupport": "Soporte",
       "rights": "Todos los derechos reservados.",
-      "linkPricing": "Precios"
+      "linkPricing": "Precios",
+      "linkChangelog": "Novedades",
+      "linkCaseStudy": "Caso de éxito"
     },
     "pricing": {
       "eyebrow": "Precios",
@@ -459,6 +461,38 @@
         "q4": "¿Ofrecen descuentos para educación?",
         "a4": "Sí. Las instituciones educativas acreditadas reciben un 20 % de descuento en los planes Pro. Contáctanos para más detalles."
       }
+    },
+    "changelog": {
+      "eyebrow": "Novedades",
+      "heading": "Novedades de IshRize",
+      "sub": "Un historial de versiones, mejoras y correcciones.",
+      "englishNote": "Las notas de versión se publican en inglés.",
+      "types": {
+        "added": "Nuevo",
+        "improved": "Mejorado",
+        "fixed": "Corregido"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Caso de éxito",
+      "heading": "Cómo Matemáticas de la UG sustituyó las hojas de cálculo por IshRize",
+      "sub": "El Departamento de Matemáticas de la Universidad de Ghana fue el primero en adoptar IshRize para horarios y asistencia.",
+      "challengeHeading": "El reto",
+      "challengeBody": "Antes de IshRize, el departamento gestionaba los horarios de más de 40 cursos en varias aulas con una hoja de cálculo compartida. Los conflictos se descubrían la misma mañana de las clases. La asistencia se registraba con una hoja de firmas en papel: fácil de falsificar e imposible de analizar.",
+      "solutionHeading": "La solución",
+      "solutionBody": "IshRize sustituyó la hoja de cálculo por un motor de planificación que tiene en cuenta las restricciones. El coordinador importa cursos, aulas y franjas horarias, y el sistema genera un horario sin conflictos en segundos. Los profesores inician las sesiones desde el teléfono. Los estudiantes escanean un código QR rotativo para registrar su asistencia: sin papel y sin suplantaciones.",
+      "resultHeading": "Los resultados",
+      "result1Title": "Cero conflictos de horario",
+      "result1Desc": "El motor de restricciones elimina las reservas duplicadas antes de que ocurran.",
+      "result2Title": "85 % de asistencia media",
+      "result2Desc": "Frente a un 60 % estimado cuando el registro era manual e irregular.",
+      "result3Title": "Horas ahorradas cada semana",
+      "result3Desc": "El coordinador ya no dedica media jornada a resolver conflictos de horario.",
+      "result4Title": "Visibilidad en tiempo real",
+      "result4Desc": "Los jefes de departamento ven las tendencias de asistencia de todos los cursos en un solo panel.",
+      "quoteBody": "Antes nos enterábamos de un conflicto de aula cuando dos profesores llegaban a la misma puerta. Ahora el sistema no lo permite.",
+      "quoteAuthor": "Coordinador del departamento",
+      "quoteOrg": "Universidad de Ghana, Departamento de Matemáticas"
     }
   },
   "workout": {

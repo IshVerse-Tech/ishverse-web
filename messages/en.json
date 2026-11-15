@@ -407,7 +407,9 @@
       "linkTerms": "Terms",
       "linkSupport": "Support",
       "rights": "All rights reserved.",
-      "linkPricing": "Pricing"
+      "linkPricing": "Pricing",
+      "linkChangelog": "Changelog",
+      "linkCaseStudy": "Case study"
     },
     "pricing": {
       "eyebrow": "Pricing",
@@ -459,6 +461,38 @@
         "a4": "Yes. Accredited educational institutions receive a 20% discount on Pro plans. Contact us for details."
       },
       "custom": "Custom"
+    },
+    "changelog": {
+      "eyebrow": "Changelog",
+      "heading": "What's new in IshRize",
+      "sub": "A timeline of releases, improvements, and fixes.",
+      "englishNote": "Release notes are published in English.",
+      "types": {
+        "added": "Added",
+        "improved": "Improved",
+        "fixed": "Fixed"
+      }
+    },
+    "caseStudy": {
+      "eyebrow": "Case study",
+      "heading": "How UG Mathematics replaced spreadsheets with IshRize",
+      "sub": "The University of Ghana's Department of Mathematics was the first to adopt IshRize for scheduling and attendance.",
+      "challengeHeading": "The challenge",
+      "challengeBody": "Before IshRize, the department managed timetables for 40+ courses across multiple lecture halls using a shared spreadsheet. Clashes were discovered the morning of lectures. Attendance was tracked by passing around a paper sign-in sheet — easy to forge, impossible to analyze.",
+      "solutionHeading": "The solution",
+      "solutionBody": "IshRize replaced the spreadsheet with a constraint-aware scheduling engine. The coordinator imports courses, venues, and time slots, and the system generates a clash-free timetable in seconds. Lecturers start sessions from their phones. Students scan a rotating QR code to mark attendance — no paper, no proxies.",
+      "resultHeading": "The results",
+      "result1Title": "Zero scheduling clashes",
+      "result1Desc": "The constraint solver eliminates double-bookings before they happen.",
+      "result2Title": "85% average attendance rate",
+      "result2Desc": "Up from an estimated 60% when tracking was manual and inconsistent.",
+      "result3Title": "Hours saved per week",
+      "result3Desc": "The coordinator no longer spends half a day resolving timetable conflicts.",
+      "result4Title": "Real-time visibility",
+      "result4Desc": "Department heads see attendance trends across all courses on a single dashboard.",
+      "quoteBody": "We used to find out about a room clash when two lecturers showed up at the same door. Now the system won't let it happen.",
+      "quoteAuthor": "Department Coordinator",
+      "quoteOrg": "University of Ghana, Department of Mathematics"
     }
   },
   "workout": {
