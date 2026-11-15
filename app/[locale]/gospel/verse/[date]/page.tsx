@@ -212,10 +212,12 @@ export default async function VersePage({
         className="min-h-[calc(100vh-8rem)] flex items-center justify-center px-4 py-16"
       >
         <div className="w-full max-w-lg mx-auto flex flex-col items-center gap-10">
-          {/* Label */}
-          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-fg-secondary">
-            ✦&ensp;Verse of the Day
-          </p>
+          {/* Label — the page's main heading (the verse reference is spoken
+              after it for screen readers) */}
+          <h1 className="text-xs font-semibold tracking-[0.15em] uppercase text-fg-secondary">
+            <span aria-hidden>✦&ensp;</span>Verse of the Day
+            <span className="sr-only">: {verse.ref}</span>
+          </h1>
 
           {/* Verse card */}
           <div
@@ -234,7 +236,7 @@ export default async function VersePage({
             />
 
             {/* Date */}
-            <p className="text-xs font-medium tracking-wider uppercase text-white/50 relative z-10">
+            <p className="text-xs font-medium tracking-wider uppercase text-white/90 relative z-10">
               {displayDate}
             </p>
 
@@ -244,12 +246,15 @@ export default async function VersePage({
             </blockquote>
 
             {/* Reference */}
-            <p className="text-sm text-white/70 italic text-right relative z-10">
+            <p className="text-sm text-white/80 italic text-right relative z-10">
               &mdash;&thinsp;{verse.ref}
             </p>
 
             {/* Watermark */}
-            <p className="text-[10px] text-white/30 font-semibold tracking-wide text-right relative z-10 mt-2">
+            <p
+              aria-hidden
+              className="text-[10px] text-white/30 font-semibold tracking-wide text-right relative z-10 mt-2"
+            >
               IshGospel ✦
             </p>
           </div>
