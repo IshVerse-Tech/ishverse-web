@@ -5,7 +5,8 @@
  * Exports: WorkoutPrivacy
  */
 import type { Metadata } from "next";
-export const metadata: Metadata = {
+import { withSocial } from "@/lib/seo";
+export const metadata: Metadata = withSocial("workout", {
   title: "ISH Workout — Privacy policy",
   description:
     "How the ISH Workout iOS app handles local records, permissions and support requests.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "https://workout.ishverse.com/privacy",
     languages: { en: "https://workout.ishverse.com/privacy" },
   },
-};
+});
 const sections = [
   [
     "Scope",

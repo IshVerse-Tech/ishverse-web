@@ -9,6 +9,7 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { GospelSiteHeader } from "@/components/gospel/site-header";
 import { GospelSiteFooter } from "@/components/gospel/site-footer";
@@ -34,27 +35,31 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "gospel.meta" });
   const title = `${gospelConfig.name} — ${t("tagline")}`;
 
-  return {
-    title,
-    description: t("description"),
-    alternates: { canonical: gospelConfig.url },
-    icons: { icon: "/ishgospel-logo.png" },
-    openGraph: {
-      type: "website",
+  return withSocial(
+    "gospel",
+    {
       title,
       description: t("description"),
-      url: gospelConfig.url,
-      siteName: gospelConfig.name,
-      locale,
-      images: [{ url: "/api/og/gospel", width: 1200, height: 630, alt: title }],
+      alternates: { canonical: gospelConfig.url },
+      icons: { icon: "/ishgospel-logo.png" },
+      openGraph: {
+        type: "website",
+        title,
+        description: t("description"),
+        url: gospelConfig.url,
+        siteName: gospelConfig.name,
+        locale,
+        images: [{ url: "/api/og/gospel", width: 1200, height: 630, alt: title }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: t("description"),
+        images: ["/api/og/gospel"],
+      },
     },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description: t("description"),
-      images: ["/api/og/gospel"],
-    },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function GospelHome({ params }: { params: Promise<{ locale: string }> }) {

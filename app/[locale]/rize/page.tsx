@@ -10,6 +10,7 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RizeSiteHeader } from "@/components/rize/site-header";
 import { RizeSiteFooter } from "@/components/rize/site-footer";
@@ -33,28 +34,32 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "rize.meta" });
   const title = t("title");
 
-  return {
-    title,
-    description: t("description"),
-    alternates: { canonical: rizeConfig.url },
-    icons: { icon: "/ishrize-logo.png" },
-    robots: { index: true },
-    openGraph: {
-      type: "website",
+  return withSocial(
+    "rize",
+    {
       title,
       description: t("description"),
-      url: rizeConfig.url,
-      siteName: rizeConfig.name,
-      locale,
-      images: [{ url: "/api/og/rize", width: 1200, height: 630 }],
+      alternates: { canonical: rizeConfig.url },
+      icons: { icon: "/ishrize-logo.png" },
+      robots: { index: true },
+      openGraph: {
+        type: "website",
+        title,
+        description: t("description"),
+        url: rizeConfig.url,
+        siteName: rizeConfig.name,
+        locale,
+        images: [{ url: "/api/og/rize", width: 1200, height: 630 }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: t("description"),
+        images: ["/api/og/rize"],
+      },
     },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description: t("description"),
-      images: ["/api/og/rize"],
-    },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function RizeHome({ params }: { params: Promise<{ locale: string }> }) {

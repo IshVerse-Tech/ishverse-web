@@ -5,6 +5,7 @@
  * Exports: generateMetadata, BloomHome
  */
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BloomLanding } from "@/components/bloom/landing";
 import { bloomConfig } from "@/lib/bloom";
@@ -19,29 +20,36 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "bloom" });
   const url = bloomConfig.url + (locale === "en" ? "/" : `/${locale}`);
   const image = `${bloomConfig.url}/bloom/og.jpg`;
-  return {
-    title: `IshBloom — ${t("title")}`,
-    description: t("description"),
-    alternates: {
-      canonical: url,
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, bloomConfig.url + (l === "en" ? "/" : `/${l}`)]),
-      ),
-    },
-    openGraph: {
-      title: "IshBloom",
+  return withSocial(
+    "bloom",
+    {
+      title: `IshBloom — ${t("title")}`,
       description: t("description"),
-      url,
-      siteName: "IshBloom",
-      images: [{ url: image, width: 1200, height: 630, alt: "IshBloom" }],
+      alternates: {
+        canonical: url,
+        languages: {
+          ...Object.fromEntries(
+            routing.locales.map((l) => [l, bloomConfig.url + (l === "en" ? "/" : `/${l}`)]),
+          ),
+          "x-default": `${bloomConfig.url}/`,
+        },
+      },
+      openGraph: {
+        title: "IshBloom",
+        description: t("description"),
+        url,
+        siteName: "IshBloom",
+        images: [{ url: image, width: 1200, height: 630, alt: "IshBloom" }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "IshBloom",
+        description: t("description"),
+        images: [image],
+      },
     },
-    twitter: {
-      card: "summary_large_image",
-      title: "IshBloom",
-      description: t("description"),
-      images: [image],
-    },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function BloomHome({ params }: { params: Promise<{ locale: string }> }) {

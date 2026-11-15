@@ -5,6 +5,7 @@
  * Exports: generateMetadata, BloomSupport
  */
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { bloomConfig } from "@/lib/bloom";
 
@@ -15,13 +16,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "bloom" });
-  return {
-    title: `IshBloom — ${t("support")}`,
-    description: t("supportIntro"),
-    alternates: {
-      canonical: `${bloomConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+  return withSocial(
+    "bloom",
+    {
+      title: `IshBloom — ${t("support")}`,
+      description: t("supportIntro"),
+      alternates: {
+        canonical: `${bloomConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+      },
     },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function BloomSupport({ params }: { params: Promise<{ locale: string }> }) {
