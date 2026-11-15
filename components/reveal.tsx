@@ -15,10 +15,9 @@
  * bundle never loads — so slow connections never see blank sections.
  *
  * `immediate` is for content that is already in the viewport on load (the
- * hero). The scroll variant server-renders at opacity-0 and only becomes
- * visible once the bundle has downloaded, hydrated and the observer has
- * fired — which makes an above-the-fold heading an LCP candidate gated on
- * JavaScript. `immediate` instead paints at full opacity and animates
+ * hero, page headings). When scripts run, the scroll variant hides content
+ * until hydration and the observer fire, which would gate an above-the-fold
+ * heading on JavaScript. `immediate` paints at full opacity and animates
  * transform only, via CSS, so first paint is complete and LCP is unaffected.
  * Use it for anything above the fold; use the default everywhere else.
  *
