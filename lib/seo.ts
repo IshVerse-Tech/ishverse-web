@@ -58,7 +58,9 @@ const PRESETS: Record<ProductKey, Preset> = {
   rize: {
     siteName: rizeConfig.name,
     origin: rizeConfig.url,
-    image: { url: `${rizeConfig.url}/api/og/rize`, width: 1200, height: 630 },
+    // Served from the company host: rize.ishverse.com forwards /api/* to the
+    // IshRize app (next.config.ts), so the image would 404 there.
+    image: { url: `${siteConfig.url}/api/og/rize`, width: 1200, height: 630 },
     card: "summary_large_image",
   },
 };
