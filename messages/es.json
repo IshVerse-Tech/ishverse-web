@@ -440,15 +440,15 @@
       "ctaIshverse": "Conocer IshVerse"
     },
     "footer": {
-      "groupProduct": "Product",
-      "groupCompany": "Company",
+      "groupProduct": "Producto",
+      "groupCompany": "Empresa",
       "linkPricing": "Precios",
       "linkChangelog": "Novedades",
       "linkCaseStudy": "Caso de éxito",
-      "linkPrivacy": "Privacy",
-      "linkTerms": "Terms",
-      "linkSupport": "Support",
-      "rights": "All rights reserved."
+      "linkPrivacy": "Privacidad",
+      "linkTerms": "Términos",
+      "linkSupport": "Soporte",
+      "rights": "Todos los derechos reservados."
     },
     "pricing": {
       "eyebrow": "Precios",
@@ -534,19 +534,29 @@
       "quoteOrg": "Universidad de Ghana, Departamento de Matemáticas"
     },
     "support": {
-      "title": "Get in touch",
-      "description": "Have a question, need help, or want to report an issue? Fill out the form below and we will get back to you within 24 hours.",
-      "labelName": "Name",
-      "labelEmail": "Email",
-      "labelMessage": "Message",
-      "placeholderName": "Your name",
-      "placeholderEmail": "you@example.com",
-      "placeholderMessage": "Describe what you need help with...",
-      "submit": "Send message",
-      "sending": "Sending...",
-      "successTitle": "Message sent",
-      "successBody": "We received your message and will respond within 24 hours.",
-      "sendAnother": "Send another message"
+      "title": "Contacta con nosotros",
+      "metaTitle": "Soporte",
+      "description": "¿Tienes una pregunta, necesitas ayuda o quieres informar de un problema? Rellena el formulario y te responderemos en un plazo de 24 horas.",
+      "labelName": "Nombre",
+      "labelEmail": "Correo electrónico",
+      "labelMessage": "Mensaje",
+      "placeholderName": "Tu nombre",
+      "placeholderEmail": "tu@ejemplo.com",
+      "placeholderMessage": "Describe en qué necesitas ayuda...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "successTitle": "Mensaje enviado",
+      "successBody": "Hemos recibido tu mensaje y te responderemos en un plazo de 24 horas.",
+      "sendAnother": "Enviar otro mensaje",
+      "errors": {
+        "name_required": "Introduce tu nombre.",
+        "email_invalid": "Introduce un correo electrónico válido.",
+        "message_short": "Escribe al menos 10 caracteres.",
+        "invalid_json": "Algo salió mal. Inténtalo de nuevo.",
+        "unavailable": "El formulario de contacto no está disponible en este momento. Escribe a support@ishverse.com.",
+        "send_failed": "No se pudo enviar tu mensaje. Inténtalo de nuevo o escribe a support@ishverse.com.",
+        "generic": "Algo salió mal. Inténtalo de nuevo o escribe a support@ishverse.com."
+      }
     }
   },
   "bloom": {

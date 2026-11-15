@@ -6,30 +6,40 @@
  * route forwards the submission to support@ishverse.com via Resend.
  *
  * Exports:
- *   generateMetadata — SEO metadata
+ *   generateMetadata — localized SEO metadata (per-locale canonical)
  *   default          — page component
  */
 
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RizeSiteHeader } from "@/components/rize/site-header";
 import { RizeSiteFooter } from "@/components/rize/site-footer";
 import { RizeSupportForm } from "@/components/rize/sections/support-form";
 import { rizeConfig } from "@/lib/rize";
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "rize.support" });
   return {
-    title: `Support — ${rizeConfig.name}`,
-    description:
-      "Get help with IshRize. Submit a support request and our team will respond within 24 hours.",
-    alternates: { canonical: `${rizeConfig.url}/support` },
+    title: `${t("metaTitle")} — ${rizeConfig.name}`,
+    description: t("description"),
+    alternates: {
+      canonical: `${rizeConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+    },
   };
 }
 
-export default function RizeSupportPage() {
+export default async function RizeSupportPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <RizeSiteHeader />
-      <main className="mx-auto max-w-2xl px-5 py-20 sm:px-8">
+      <main id="main" className="mx-auto max-w-2xl px-5 py-20 sm:px-8">
         <RizeSupportForm />
       </main>
       <RizeSiteFooter />

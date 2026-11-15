@@ -3,7 +3,8 @@
  * Context: See AGENTS.md — client component for the /support page.
  *
  * Name + email + message form that posts to /api/support. Validates
- * client-side, shows inline status, and resets on success.
+ * client-side, shows inline status, and resets on success. Server errors are
+ * shown in the visitor's language via the response `code`.
  *
  * Exports:
  *   RizeSupportForm — client component
@@ -39,13 +40,15 @@ export function RizeSupportForm() {
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || "Something went wrong");
+        throw new Error(typeof body.code === "string" ? body.code : "generic");
       }
 
       setStatus("sent");
       form.reset();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong");
+      // Network failures (TypeError) and unknown codes fall back to "generic".
+      const code = err instanceof Error ? err.message : "generic";
+      setError(t.has(`errors.${code}`) ? t(`errors.${code}`) : t("errors.generic"));
       setStatus("error");
     }
   }

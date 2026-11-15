@@ -7,6 +7,9 @@
  * lib/support-email.ts, which escapes all visitor input. Rate-limited by
  * Resend's own limits.
  *
+ * Each error response carries an English `error` and a stable `code`; the
+ * support form shows a translated message for the code.
+ *
  * Exports:
  *   POST — route handler
  */
@@ -22,23 +25,32 @@ export async function POST(request: Request) {
   try {
     ({ name, email, message } = await request.json());
   } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid JSON body", code: "invalid_json" }, { status: 400 });
   }
 
   if (typeof name !== "string" || name.trim().length < 1) {
-    return NextResponse.json({ error: "Name is required" }, { status: 400 });
+    return NextResponse.json({ error: "Name is required", code: "name_required" }, { status: 400 });
   }
   if (typeof email !== "string" || !EMAIL_RE.test(email)) {
-    return NextResponse.json({ error: "A valid email is required" }, { status: 400 });
+    return NextResponse.json(
+      { error: "A valid email is required", code: "email_invalid" },
+      { status: 400 },
+    );
   }
   if (typeof message !== "string" || message.trim().length < 10) {
-    return NextResponse.json({ error: "Message must be at least 10 characters" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Message must be at least 10 characters", code: "message_short" },
+      { status: 400 },
+    );
   }
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("RESEND_API_KEY not configured");
-    return NextResponse.json({ error: "Email service not configured" }, { status: 503 });
+    return NextResponse.json(
+      { error: "Email service not configured", code: "unavailable" },
+      { status: 503 },
+    );
   }
 
   const resend = new Resend(apiKey);
@@ -56,12 +68,18 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return NextResponse.json({ error: "Failed to send message" }, { status: 502 });
+      return NextResponse.json(
+        { error: "Failed to send message", code: "send_failed" },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Support email exception:", err);
-    return NextResponse.json({ error: "Failed to send message" }, { status: 502 });
+    return NextResponse.json(
+      { error: "Failed to send message", code: "send_failed" },
+      { status: 502 },
+    );
   }
 }

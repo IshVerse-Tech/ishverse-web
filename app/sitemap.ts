@@ -5,7 +5,7 @@
  * One sitemap for the company site and every product subdomain (the same
  * file is served on each host; middleware skips paths with a dot). Localized
  * pages list their es/fr/pt alternates; pages whose canonical URL is
- * locale-free (legal, Gospel and Rize pages) are listed once.
+ * locale-free (legal pages, Gospel, and Rize except support) are listed once.
  * Daily verse pages (/gospel/verse/[date]) are unbounded and not listed.
  *
  * Exports:
@@ -96,7 +96,7 @@ const ENTRIES: Entry[] = [
     path: "/support",
     changeFrequency: "monthly",
     priority: 0.5,
-    localized: false,
+    localized: true,
   },
 
   {
