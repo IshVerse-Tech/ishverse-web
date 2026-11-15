@@ -18,6 +18,7 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { GospelSiteHeader } from "@/components/gospel/site-header";
@@ -154,31 +155,35 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; date: string }>;
 }): Promise<Metadata> {
-  const { date } = await params;
+  const { locale, date } = await params;
   const verse = verseForDate(date);
   if (!verse) return { title: "Not Found" };
 
   const title = `${verse.ref} — IshGospel Verse of the Day`;
   const description = verse.text.slice(0, 160);
 
-  return {
-    title,
-    description,
-    openGraph: {
-      type: "article",
+  return withSocial(
+    "gospel",
+    {
       title,
       description,
-      url: `${gospelConfig.url}/verse/${date}`,
-      siteName: gospelConfig.name,
-      images: [{ url: "/api/og/gospel", width: 1200, height: 630, alt: title }],
+      openGraph: {
+        type: "article",
+        title,
+        description,
+        url: `${gospelConfig.url}/verse/${date}`,
+        siteName: gospelConfig.name,
+        images: [{ url: "/api/og/gospel", width: 1200, height: 630, alt: title }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: ["/api/og/gospel"],
+      },
     },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: ["/api/og/gospel"],
-    },
-  };
+    { locale: locale, type: "article" },
+  );
 }
 
 // ─── Page ─────────────────────────────────────────────────────

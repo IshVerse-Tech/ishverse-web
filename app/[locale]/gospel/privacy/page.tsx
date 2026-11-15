@@ -12,15 +12,16 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { GospelLegalPage, H2, P, UL } from "@/components/gospel/legal-prose";
 import { gospelConfig } from "@/lib/gospel";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocial("gospel", {
   title: "Privacy Policy — IshGospel",
   description: "How IshGospel collects, uses, and protects your information.",
   alternates: { canonical: `${gospelConfig.url}/privacy` },
-};
+});
 
 const UPDATED = "July 5, 2026";
 const SUPPORT = "support@ishverse.com";

@@ -9,6 +9,7 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RizeSiteHeader } from "@/components/rize/site-header";
 import { RizeSiteFooter } from "@/components/rize/site-footer";
@@ -32,21 +33,25 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "rize.caseStudy" });
 
-  return {
-    title: `${t("eyebrow")} — ${rizeConfig.name}`,
-    description: t("sub"),
-    alternates: { canonical: `${rizeConfig.url}/case-study` },
-    icons: { icon: "/ishrize-logo.png" },
-    openGraph: {
-      type: "article",
-      title: t("heading"),
+  return withSocial(
+    "rize",
+    {
+      title: `${t("eyebrow")} — ${rizeConfig.name}`,
       description: t("sub"),
-      url: `${rizeConfig.url}/case-study`,
-      siteName: rizeConfig.name,
-      locale,
-      images: [{ url: "/api/og/rize", width: 1200, height: 630 }],
+      alternates: { canonical: `${rizeConfig.url}/case-study` },
+      icons: { icon: "/ishrize-logo.png" },
+      openGraph: {
+        type: "article",
+        title: t("heading"),
+        description: t("sub"),
+        url: `${rizeConfig.url}/case-study`,
+        siteName: rizeConfig.name,
+        locale,
+        images: [{ url: "/api/og/rize", width: 1200, height: 630 }],
+      },
     },
-  };
+    { locale: locale, type: "article" },
+  );
 }
 
 export default async function RizeCaseStudyPage({
