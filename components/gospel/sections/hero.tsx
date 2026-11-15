@@ -70,19 +70,19 @@ export function GospelHero() {
           </div>
         </div>
 
+        {/* Lazy, not eager: this block is hidden below lg and only one theme
+            variant is ever visible, so lazy loading skips the hidden ones. */}
         <div className="hidden justify-center lg:flex">
           <div className="relative">
             <div aria-hidden className="absolute -inset-10 rounded-full bg-accent/15 blur-3xl" />
             <PhoneFrame
               src="/gospel/home-light.png"
               alt={t("homeAlt")}
-              eager
               className="relative dark:hidden"
             />
             <PhoneFrame
               src="/gospel/home-dark.png"
               alt={t("homeAlt")}
-              eager
               className="relative hidden dark:block"
             />
           </div>
