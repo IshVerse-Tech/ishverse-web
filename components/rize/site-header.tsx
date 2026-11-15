@@ -40,7 +40,10 @@ export function RizeSiteHeader() {
           <RizeLogo />
         </ProductLink>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-5 whitespace-nowrap lg:flex xl:gap-7"
+          aria-label="Primary"
+        >
           {links.map((l) => (
             <ProductLink
               key={l.href}
@@ -67,10 +70,10 @@ export function RizeSiteHeader() {
           </a>
           <a
             href={`mailto:${rizeConfig.contact}?subject=IshRize%20Demo`}
-            className="inline-flex items-center gap-2 rounded-[10px] bg-fg px-4 py-2.5 text-[13px] font-medium text-bg transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-[10px] bg-fg px-4 py-2.5 text-[13px] font-medium text-bg transition-opacity hover:opacity-90 whitespace-nowrap"
           >
-            <span className="hidden sm:inline">{t("nav.requestDemo")}</span>
-            <span className="sm:hidden">{t("nav.requestDemoShort")}</span>
+            <span className="hidden xl:inline">{t("nav.requestDemo")}</span>
+            <span className="xl:hidden">{t("nav.requestDemoShort")}</span>
           </a>
         </div>
         <MobileMenu until="lg" label={common("menu")}>
