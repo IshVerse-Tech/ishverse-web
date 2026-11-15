@@ -5,12 +5,16 @@
  *
  * Exports:
  *   GospelSiteHeader — server component (switcher + toggle are client islands)
+ *
+ * Also used on the about, legal and verse pages, so section links go through
+ * ProductLink: they keep the locale and open the IshGospel home at the section.
  */
 
 import { MobileMenu } from "../mobile-menu";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Smartphone } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { ProductLink } from "../product-link";
+import { companyHref } from "@/lib/site";
 import { GospelLogo } from "./logo";
 import { ThemeToggle } from "../theme-toggle";
 import { LanguageSwitcher } from "../language-switcher";
@@ -19,30 +23,33 @@ import { gospelConfig } from "@/lib/gospel";
 export function GospelSiteHeader() {
   const t = useTranslations("gospel");
   const common = useTranslations("company.nav");
+  const locale = useLocale();
 
   const links = [
-    { href: "#features", label: t("nav.features") },
-    { href: "#pillars", label: t("nav.pillars") },
-    { href: "#pricing", label: t("nav.pricing") },
-    { href: "#waitlist", label: t("footer.linkDownload") },
+    { href: "/#features", label: t("nav.features") },
+    { href: "/#pillars", label: t("nav.pillars") },
+    { href: "/#pricing", label: t("nav.pricing") },
+    { href: "/#waitlist", label: t("footer.linkDownload") },
   ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-divider bg-bg/70 backdrop-blur-md">
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8">
-        <Link href="/" aria-label={gospelConfig.name}>
+        <ProductLink product="gospel" className="inline-flex">
+          <span className="sr-only">{gospelConfig.name}</span>
           <GospelLogo />
-        </Link>
+        </ProductLink>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
           {links.map((l) => (
-            <a
+            <ProductLink
               key={l.href}
-              href={l.href}
+              product="gospel"
+              path={l.href}
               className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
             >
               {l.label}
-            </a>
+            </ProductLink>
           ))}
         </nav>
 
@@ -51,23 +58,24 @@ export function GospelSiteHeader() {
             <LanguageSwitcher />
           </div>
           <ThemeToggle />
-          <a
-            href="#waitlist"
+          <ProductLink
+            product="gospel"
+            path="/#waitlist"
             className="inline-flex items-center gap-2 rounded-[10px] bg-fg px-4 py-2.5 text-[13px] font-medium text-bg transition-opacity hover:opacity-90"
           >
             <Smartphone className="h-4 w-4" aria-hidden />
             <span className="hidden sm:inline">{t("nav.getApp")}</span>
             <span className="sm:hidden">{t("nav.getAppShort")}</span>
-          </a>
+          </ProductLink>
         </div>
         <MobileMenu label={common("menu")}>
           <nav className="grid gap-2" aria-label={common("menu")}>
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="py-3">
+              <ProductLink key={link.href} product="gospel" path={link.href} className="py-3">
                 {link.label}
-              </a>
+              </ProductLink>
             ))}
-            <a href="https://ishverse.com/#products" className="py-3">
+            <a href={companyHref(locale, "#products")} className="py-3">
               {common("explore")}
             </a>
             <a href="mailto:support@ishverse.com" className="break-words py-3">

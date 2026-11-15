@@ -18,7 +18,7 @@ const subscribe = () => () => {};
 const getServerSnapshot = () => "";
 const getSnapshot = () => window.location.hostname;
 
-export type ProductId = "workout" | "bloom" | "rize";
+export type ProductId = "workout" | "bloom" | "rize" | "gospel";
 
 export function ProductLink({
   product,
