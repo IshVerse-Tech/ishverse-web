@@ -14,15 +14,16 @@
  */
 
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { setRequestLocale } from "next-intl/server";
 import { LegalPage, H2, P, UL } from "@/components/legal/prose";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocial("company", {
   title: "Privacy Policy",
   description: "How IshVerse collects, uses, and protects your information.",
   alternates: { canonical: "/privacy" },
-};
+});
 
 const UPDATED = "July 2, 2026";
 

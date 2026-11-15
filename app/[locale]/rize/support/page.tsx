@@ -9,6 +9,7 @@
  *   default          — RizeSupportPage
  */
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RizeSiteHeader } from "@/components/rize/site-header";
 import { RizeSiteFooter } from "@/components/rize/site-footer";
@@ -21,13 +22,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "rize.support" });
-  return {
-    title: `${t("eyebrow")} — ${rizeConfig.name}`,
-    description: t("intro"),
-    alternates: {
-      canonical: `${rizeConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+  return withSocial(
+    "rize",
+    {
+      title: `${t("eyebrow")} — ${rizeConfig.name}`,
+      description: t("intro"),
+      alternates: {
+        canonical: `${rizeConfig.url}${locale === "en" ? "" : `/${locale}`}/support`,
+      },
     },
-  };
+    { locale: locale },
+  );
 }
 
 export default async function RizeSupportPage({ params }: { params: Promise<{ locale: string }> }) {

@@ -6,14 +6,15 @@
  * Exports: metadata — stable privacy URL and SEO; BloomPrivacy — policy page.
  */
 import type { Metadata } from "next";
+import { withSocial } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSocial("bloom", {
   title: "IshBloom privacy policy — app, ads and privacy choices",
   description:
     "How IshBloom handles local game data, Google AdMob ads, consent, Game Center, reminders, website analytics and privacy requests.",
   alternates: { canonical: "https://bloom.ishverse.com/privacy" },
-};
+});
 
 export default function BloomPrivacy() {
   return (
