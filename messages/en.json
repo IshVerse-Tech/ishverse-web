@@ -493,7 +493,13 @@
     "changelog": {
       "eyebrow": "Changelog",
       "heading": "What's new in IshRize",
-      "sub": "A timeline of releases, improvements, and fixes."
+      "sub": "A timeline of releases, improvements, and fixes.",
+      "englishNote": "Release notes are published in English.",
+      "types": {
+        "added": "Added",
+        "improved": "Improved",
+        "fixed": "Fixed"
+      }
     },
     "caseStudy": {
       "eyebrow": "Case study",
