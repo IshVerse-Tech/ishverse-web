@@ -7,7 +7,19 @@
 "use client";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
-export function MobileMenu({ label, children }: { label: string; children: ReactNode }) {
+// Literal class names so Tailwind generates both variants.
+const HIDE_FROM = { md: "md:hidden", lg: "lg:hidden" } as const;
+
+export function MobileMenu({
+  label,
+  children,
+  until = "md",
+}: {
+  label: string;
+  children: ReactNode;
+  /** Breakpoint from which the full header replaces this menu (default md, 768px). */
+  until?: keyof typeof HIDE_FROM;
+}) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -30,7 +42,7 @@ export function MobileMenu({ label, children }: { label: string; children: React
     };
   }, [open]);
   return (
-    <div ref={root} className="md:hidden">
+    <div ref={root} className={HIDE_FROM[until]}>
       <button
         ref={trigger}
         type="button"

@@ -100,6 +100,19 @@ body {
   }
 }
 
+/* Above-the-fold entrance (see components/reveal.tsx, `immediate` mode).
+   Deliberately animates transform only — never opacity — so the element is
+   fully painted on the first frame and the LCP candidate is not gated on
+   JavaScript. The scroll-triggered variant may fade, this one may not. */
+@keyframes reveal-rise {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /* Product-page keyboard focus: keep the shared brand ring visible on all links. */
 .workout-site :is(a, button, summary):focus-visible,
 .bloom-site :is(a, button, summary):focus-visible {

@@ -21,12 +21,12 @@ export function SiteHeader() {
         <Link href="/" aria-label={siteConfig.name}>
           <Logo />
         </Link>
-        <nav aria-label={t("menu")} className="hidden items-center gap-6 md:flex">
+        <nav aria-label={t("menu")} className="hidden items-center gap-6 lg:flex">
           <a href="#products">{t("products")}</a>
           <a href="#story">{t("story")}</a>
           <a href="#contact">{t("contact")}</a>
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
           <ThemeToggle />
           <a
@@ -37,7 +37,7 @@ export function SiteHeader() {
             <ArrowDown size={16} aria-hidden />
           </a>
         </div>
-        <MobileMenu label={t("menu")}>
+        <MobileMenu until="lg" label={t("menu")}>
           <nav aria-label={t("products")} className="grid gap-2">
             <a href="#products" className="py-2 font-semibold">
               {t("explore")}
