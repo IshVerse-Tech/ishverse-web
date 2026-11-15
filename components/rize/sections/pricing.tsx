@@ -64,7 +64,9 @@ export function RizePricing() {
               </div>
               <p className="mt-1 text-[13px] text-fg-secondary">{t(`${plan.key}.desc`)}</p>
               <p className="mt-5">
-                <span className="text-4xl font-bold tracking-tight text-fg">{plan.price}</span>
+                <span className="text-4xl font-bold tracking-tight text-fg">
+                  {"isEnterprise" in plan && plan.isEnterprise ? t("custom") : plan.price}
+                </span>
                 {"isEnterprise" in plan && plan.isEnterprise ? null : (
                   <span className="ml-1.5 text-[13px] text-fg-secondary">
                     {plan.foreverPeriod ? t("forever") : t("perMonth")}

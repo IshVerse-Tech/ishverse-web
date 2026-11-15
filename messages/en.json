@@ -487,7 +487,8 @@
         "a3": "We accept all major credit and debit cards. Enterprise customers can pay by invoice.",
         "q4": "Do you offer discounts for education?",
         "a4": "Yes. Accredited educational institutions receive a 20% discount on Pro plans. Contact us for details."
-      }
+      },
+      "custom": "Custom"
     },
     "changelog": {
       "eyebrow": "Changelog",
