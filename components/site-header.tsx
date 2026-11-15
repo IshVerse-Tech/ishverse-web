@@ -18,6 +18,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-divider bg-bg/95 backdrop-blur-md">
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-bg focus:px-4 focus:py-2 focus:ring-2 focus:ring-accent"
+        >
+          {t("skip")}
+        </a>
         <Link href="/" aria-label={siteConfig.name}>
           <Logo />
         </Link>

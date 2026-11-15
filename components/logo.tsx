@@ -53,7 +53,7 @@ export function IshVerseFamilyLink({ label }: { label: string }) {
   return (
     <a
       href={companyHref(locale)}
-      className="inline-flex items-center gap-2 text-sm text-fg-secondary transition-colors hover:text-fg"
+      className="inline-flex min-h-6 items-center gap-2 text-sm text-fg-secondary transition-colors hover:text-fg"
     >
       <IshVerseMark size={20} />
       {label}

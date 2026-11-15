@@ -15,10 +15,12 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();
+  const t = useTranslations("company.nav");
 
   const toggle = () => {
     const isDark = document.documentElement.classList.contains("dark");
@@ -28,7 +30,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label="Toggle theme"
+      aria-label={t("themeToggle")}
       onClick={toggle}
       className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] border border-divider text-fg transition-colors hover:bg-glass-bg"
     >

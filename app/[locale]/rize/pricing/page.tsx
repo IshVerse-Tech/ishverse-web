@@ -48,7 +48,7 @@ export default async function RizePricingPage({ params }: { params: Promise<{ lo
   return (
     <>
       <RizeSiteHeader />
-      <main>
+      <main id="main">
         <RizePricing />
         <RizePricingFaq />
       </main>

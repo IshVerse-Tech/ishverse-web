@@ -61,7 +61,7 @@ export default async function RizeCaseStudyPage({
   return (
     <>
       <RizeSiteHeader />
-      <main>
+      <main id="main">
         {/* Hero */}
         <Section className="py-16 sm:py-24">
           <Reveal immediate>

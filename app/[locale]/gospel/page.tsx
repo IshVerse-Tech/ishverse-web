@@ -64,7 +64,7 @@ export default async function GospelHome({ params }: { params: Promise<{ locale:
   return (
     <>
       <GospelSiteHeader />
-      <main>
+      <main id="main">
         <GospelHero />
         <GospelPillars />
         <GospelShowcase />

@@ -80,7 +80,7 @@ export function WorkoutShell({ children }: { children: ReactNode }) {
           </div>
           <nav
             aria-label={t("footer")}
-            className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:flex sm:flex-wrap sm:gap-6"
+            className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm sm:flex sm:flex-wrap sm:gap-6 [&>a]:inline-flex [&>a]:min-h-6 [&>a]:items-center"
           >
             <ProductLink product="workout" path="/support">
               {t("support")}
