@@ -6,7 +6,8 @@
  * Validates the email, then forwards the signup to the backend (server-side, so
  * the backend URL/CORS never touch the browser). Tags the signup with
  * source "web-landing". Maps backend status: 2xx → ok, 429 → rate limited,
- * 4xx → bad request, anything else → 502.
+ * 4xx → bad request, anything else (including an 8s timeout) → 502. Emails
+ * longer than 254 characters are rejected before forwarding.
  *
  * Exports:
  *   POST — route handler
@@ -16,6 +17,9 @@ import { NextResponse } from "next/server";
 import { apiBaseUrl } from "@/lib/gospel";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// RFC 5321 limit; also keeps oversized payloads away from the backend.
+const MAX_EMAIL_LENGTH = 254;
+const UPSTREAM_TIMEOUT_MS = 8000;
 
 export async function POST(request: Request) {
   let email: unknown;
@@ -25,7 +29,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  if (typeof email !== "string" || !EMAIL_RE.test(email)) {
+  if (typeof email !== "string" || email.length > MAX_EMAIL_LENGTH || !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "A valid email is required" }, { status: 400 });
   }
 
@@ -34,6 +38,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, source: "web-landing" }),
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
 
     if (res.ok) return NextResponse.json({ ok: true });
