@@ -53,11 +53,13 @@ const nextConfig: NextConfig = {
           has: [{ type: "host", value: "rize.ishverse.com" }],
           destination: "https://ish-rize-web.vercel.app/app/:path*",
         },
-        // Browser-side fetch calls use /api/* (no /app prefix) — proxy those too.
+        // Browser-side fetch calls use /api/* (no /app prefix) — proxy those too,
+        // except /api/support: the rize.ishverse.com/support form posts there and
+        // it is this site's own route (app/api/support). The IshRize app has none.
         {
-          source: "/api/:path*",
+          source: "/api/:path((?!support(?:/|$)).*)",
           has: [{ type: "host", value: "rize.ishverse.com" }],
-          destination: "https://ish-rize-web.vercel.app/app/api/:path*",
+          destination: "https://ish-rize-web.vercel.app/app/api/:path",
         },
       ],
     };
