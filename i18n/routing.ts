@@ -17,6 +17,8 @@ export const routing = defineRouting({
   locales: ["en", "es", "fr", "pt"],
   defaultLocale: "en",
   localePrefix: "as-needed",
+  // Only ever sent over HTTPS; it stores the language, nothing sensitive.
+  localeCookie: { sameSite: "lax", secure: true },
 });
 
 export const locales = routing.locales;
