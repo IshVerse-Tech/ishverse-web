@@ -75,3 +75,12 @@ export const siteConfig = {
     },
   ] as Product[],
 } as const;
+
+/**
+ * The company site in the visitor's language, optionally at a section:
+ * companyHref("pt", "#products") → "https://ishverse.com/pt#products".
+ * Product sites use it so "all products" links do not drop the locale.
+ */
+export function companyHref(locale: string, hash = ""): string {
+  return `${siteConfig.url}${locale === "en" ? "/" : `/${locale}`}${hash}`;
+}

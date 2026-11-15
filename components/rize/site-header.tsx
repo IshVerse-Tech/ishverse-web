@@ -11,7 +11,8 @@
  */
 
 import { MobileMenu } from "../mobile-menu";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { companyHref } from "@/lib/site";
 import { LogIn } from "lucide-react";
 import { ProductLink } from "../product-link";
 import { RizeLogo } from "./logo";
@@ -22,6 +23,7 @@ import { rizeConfig } from "@/lib/rize";
 export function RizeSiteHeader() {
   const t = useTranslations("rize");
   const common = useTranslations("company.nav");
+  const locale = useLocale();
 
   const links = [
     { href: "/#features", label: t("nav.features") },
@@ -79,7 +81,7 @@ export function RizeSiteHeader() {
                 {link.label}
               </ProductLink>
             ))}
-            <a href="https://ishverse.com/#products" className="py-3">
+            <a href={companyHref(locale, "#products")} className="py-3">
               {common("explore")}
             </a>
             <a href="mailto:support@ishverse.com" className="break-words py-3">

@@ -8,7 +8,8 @@
  *   RizeFinalCta — server component
  */
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { companyHref } from "@/lib/site";
 import { ArrowRight, Mail } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Reveal } from "../../reveal";
@@ -16,6 +17,7 @@ import { rizeConfig } from "@/lib/rize";
 
 export function RizeFinalCta() {
   const t = useTranslations("rize.finalCta");
+  const locale = useLocale();
 
   return (
     <Section className="py-20 sm:py-28">
@@ -37,7 +39,7 @@ export function RizeFinalCta() {
               {t("ctaDemo")}
             </a>
             <a
-              href="https://ishverse.com"
+              href={companyHref(locale)}
               className="inline-flex w-full items-center justify-center gap-2 rounded-[10px] border border-divider px-5 py-3 text-sm font-medium text-fg transition-colors hover:bg-glass-bg sm:w-auto"
             >
               {t("ctaIshverse")}
