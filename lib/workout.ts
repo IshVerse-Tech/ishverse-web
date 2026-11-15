@@ -1,6 +1,6 @@
 /**
  * Module: workoutConfig
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * Product links and availability; no public App Store release yet.
  * Exports: workoutConfig
  */

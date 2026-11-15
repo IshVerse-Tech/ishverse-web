@@ -11,16 +11,15 @@
  *   Product    — the shape of one ecosystem product entry
  */
 
-/**
- * `id` keys this product's copy in the message catalogs (`company.products`
- * uses `<id>Domain` / `<id>Line`). The domain and one-liner deliberately do
- * NOT live here — they are per-locale strings and belong in `messages/`.
- */
+/** `id` keys this product's copy in `company.products` (`<id>Domain`, …). */
 export type Product = {
-  id: string;
+  id: "gospel" | "rize" | "workout" | "bloom";
   name: string;
   wordmark: { strong: string; light: string };
+  domain: string;
+  oneLiner: string;
   href: string;
+  path: string;
   status: "live" | "soon";
 };
 
@@ -31,35 +30,47 @@ export const siteConfig = {
   description:
     "IshVerse builds discipline systems — one for each domain of life. A man, in command of his world.",
   url: "https://ishverse.com",
-  contactEmail: "contact@ishverse.com",
+  contactEmail: "support@ishverse.com",
   supportEmail: "support@ishverse.com",
   products: [
     {
       id: "gospel",
       name: "IshGospel",
       wordmark: { strong: "ISH", light: "GOSPEL" },
+      domain: "Spiritual discipline",
+      oneLiner: "A structured system for spiritual formation.",
       href: "https://gospel.ishverse.com",
+      path: "/gospel",
       status: "live",
     },
     {
       id: "rize",
       name: "IshRize",
       wordmark: { strong: "ISH", light: "RIZE" },
+      domain: "Scheduling & attendance",
+      oneLiner: "Live, clash-free timetables and QR attendance for institutions.",
       href: "https://rize.ishverse.com",
+      path: "/rize",
       status: "live",
     },
     {
       id: "workout",
       name: "ISH Workout",
       wordmark: { strong: "ISH", light: "WORKOUT" },
+      domain: "Physical discipline",
+      oneLiner: "A daily system for movement, fitness, and personal habits.",
       href: "https://workout.ishverse.com",
+      path: "/workout",
       status: "soon",
     },
     {
       id: "bloom",
       name: "IshBloom",
       wordmark: { strong: "ISH", light: "BLOOM" },
+      domain: "Calm puzzle play",
+      oneLiner: "A hexagonal puzzle game for focus and calm.",
       href: "https://bloom.ishverse.com",
+      path: "/bloom",
       status: "live",
     },
   ] as Product[],

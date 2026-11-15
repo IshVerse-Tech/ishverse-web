@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutLayout
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * Product shell; pages supply their own metadata.
  * Exports: WorkoutLayout
  */

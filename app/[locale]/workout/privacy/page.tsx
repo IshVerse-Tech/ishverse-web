@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutPrivacy
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * English policy for the native iOS app; web app is explicitly outside this scope.
  * Exports: WorkoutPrivacy
  */

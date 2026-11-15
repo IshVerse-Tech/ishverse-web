@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutScreen
- * Context: See DESIGN.md §13 — consistent native screenshot presentation.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — consistent native screenshot presentation.
  * Keeps the full screenshot at its original aspect ratio inside a fitted frame.
  * Exports: WorkoutScreen
  */

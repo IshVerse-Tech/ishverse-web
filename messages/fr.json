@@ -37,8 +37,8 @@
     },
     "formationEngine": {
       "eyebrow": "La différence",
-      "title": "Ce n'est pas une app biblique. C'est un moteur de formation.",
-      "body": "La foi ne grandit pas par hasard : elle se forge, un jour discipliné à la fois. IshGospel vous donne la structure qui transforme l'intention en formation. Sans bruit. Sans gadgets.",
+      "title": "Une pratique quotidienne pour grandir spirituellement.",
+      "body": "Construisez un rythme régulier de lecture, de réflexion et d’action intentionnelle.",
       "not1": "Un fil de contenu à faire défiler",
       "but1": "Un système quotidien à pratiquer",
       "not2": "Points, badges, classements",
@@ -219,42 +219,47 @@
       "q5": "Comment fonctionnent les abonnements ?",
       "a5": "Premium s'achète dans l'app via la facturation de votre store (Google Play ou App Store) et peut y être annulé à tout moment.",
       "q6": "Mon église ou mon groupe peut-il l'utiliser ?",
-      "a6": "Oui. Church Lite et Church Pro ajoutent tableau de bord admin, outils pour responsables et suivi de progression. Écrivez à contact@ishverse.com et nous vous installerons."
+      "a6": "Oui. Church Lite et Church Pro ajoutent tableau de bord admin, outils pour responsables et suivi de progression. Écrivez à support@ishverse.com et nous vous installerons."
     }
   },
   "company": {
     "meta": {
       "title": "Des systèmes pour une croissance intentionnelle.",
-      "description": "IshVerse construit des systèmes de discipline — un pour chaque domaine de la vie. Un homme aux commandes de son monde."
+      "description": "Des outils pour la formation spirituelle, la planification des établissements, l’activité physique quotidienne et le jeu apaisant. Découvrez IshGospel, IshRize, ISH Workout et IshBloom : chacun répond à un domaine de la vie."
     },
     "nav": {
       "products": "Produits",
       "story": "Histoire",
       "contact": "Contact",
-      "explore": "Découvrir {name}"
+      "explore": "Explorer les produits",
+      "menu": "Menu"
     },
     "hero": {
+      "rize": "IshRize",
+      "comingSoon": "bientôt",
+      "live": "Disponible",
       "headline": "Des systèmes pour une croissance intentionnelle.",
-      "sub": "Nous construisons un système de discipline par domaine de la vie : IshRize pour les emplois du temps et la présence à l'université, IshGospel pour la formation spirituelle. Un homme aux commandes de son monde.",
-      "explore": "Découvrir {name}",
-      "live": "disponible maintenant",
-      "comingSoon": "bientôt"
+      "sub": "Des outils pour la formation spirituelle, la planification des établissements, l’activité physique quotidienne et le jeu apaisant. Découvrez IshGospel, IshRize, ISH Workout et IshBloom : chacun répond à un domaine de la vie."
     },
     "products": {
       "eyebrow": "Produits",
-      "heading": "Un système par domaine de vie.",
-      "sub": "La même philosophie. La même rigueur de conception. Des domaines différents.",
+      "heading": "Trouvez le système adapté à votre journée.",
+      "sub": "Quatre produits, quatre vocations. Découvrez leurs fonctionnalités et leur disponibilité actuelle.",
       "visit": "Visiter {name}",
       "live": "Disponible",
       "soon": "Bientôt",
-      "gospelDomain": "Discipline spirituelle",
+      "gospelDomain": "Formation spirituelle",
       "gospelLine": "Un système structuré de formation spirituelle.",
-      "rizeDomain": "Discipline académique",
-      "rizeLine": "Des emplois du temps sans conflit et un suivi de présence, en direct dans chaque département.",
+      "rizeDomain": "Emplois du temps et présence",
+      "rizeLine": "Emplois du temps, détection des conflits et suivi des présences pour les établissements.",
+      "workoutDomain": "Forme et habitudes quotidiennes",
+      "workoutLine": "Un système quotidien pour le mouvement, la forme et les habitudes personnelles.",
+      "gospelAvailability": "Android en premier · iOS prévu",
+      "rizeAvailability": "Plateforme web disponible",
+      "workoutAvailability": "App iOS · sortie en attente",
       "bloomDomain": "Puzzle apaisant",
       "bloomLine": "Un jeu de puzzle hexagonal pour la concentration et le calme.",
-      "workoutDomain": "Forme et habitudes quotidiennes",
-      "workoutLine": "Un système quotidien pour le mouvement, la forme et les habitudes personnelles."
+      "bloomAvailability": "Application iOS · disponible sur l’App Store"
     },
     "philosophy": {
       "eyebrow": "Le nom",

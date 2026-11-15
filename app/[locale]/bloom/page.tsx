@@ -1,6 +1,6 @@
 /**
  * Module: BloomHome
- * Context: See DESIGN.md §13 — product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages.
  * Localized marketing page, canonical on the Bloom subdomain.
  * Exports: generateMetadata, BloomHome
  */

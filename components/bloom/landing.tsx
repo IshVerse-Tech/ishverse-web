@@ -1,6 +1,6 @@
 /**
  * Module: BloomLanding
- * Context: See DESIGN.md §13 — product pages. Same section rhythm as the
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages. Same section rhythm as the
  * Workout page (hero → features → how it plays → privacy/FAQ → CTA) so every
  * IshVerse product reads as part of one family.
  * Real App Store screens alongside localized, feature-accurate copy.

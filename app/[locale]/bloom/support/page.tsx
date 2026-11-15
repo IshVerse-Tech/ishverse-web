@@ -1,6 +1,6 @@
 /**
  * Module: BloomSupport
- * Context: See DESIGN.md §13 — product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages.
  * Localized help and contact details for IshBloom players.
  * Exports: generateMetadata, BloomSupport
  */

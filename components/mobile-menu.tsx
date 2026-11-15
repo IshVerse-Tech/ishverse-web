@@ -1,6 +1,6 @@
 /**
  * Module: MobileMenu
- * Context: See DESIGN.md §14 — compact mobile navigation.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Mobile navigation) — compact mobile navigation.
  * A labeled disclosure with Escape, outside-click, and link-close behavior.
  * Exports: MobileMenu
  */

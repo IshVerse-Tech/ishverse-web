@@ -1,6 +1,6 @@
 /**
  * Module: ProductLink
- * Context: See DESIGN.md §13 — product pages served on their own subdomains.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages served on their own subdomains.
  * Keeps local previews navigable (/workout/support) and product-subdomain
  * links clean (workout.ishverse.com/support), preserving the active locale.
  * Exports: ProductLink

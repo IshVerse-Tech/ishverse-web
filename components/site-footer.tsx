@@ -10,6 +10,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
+import { ProductDestination } from "./product-destination";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
@@ -28,22 +29,17 @@ export function SiteFooter() {
         <div>
           <p className="text-[13px] font-medium text-fg">{t("footer.products")}</p>
           <ul className="mt-3 space-y-2">
-            {siteConfig.products.map((p) =>
-              p.status === "live" ? (
-                <li key={p.name}>
-                  <a
-                    href={p.href}
-                    className="text-[13px] text-fg-secondary transition-colors hover:text-fg"
-                  >
-                    {p.name}
-                  </a>
-                </li>
-              ) : (
-                <li key={p.name} className="text-[13px] text-fg-secondary">
-                  {p.name} <span className="text-gold-text">· {t("footer.soon")}</span>
-                </li>
-              ),
-            )}
+            {siteConfig.products.map((p) => (
+              <li key={p.name}>
+                <ProductDestination
+                  href={p.href}
+                  path={p.path}
+                  className="inline-block py-1 text-sm text-fg-secondary hover:text-fg"
+                >
+                  {p.name}
+                </ProductDestination>
+              </li>
+            ))}
           </ul>
         </div>
 

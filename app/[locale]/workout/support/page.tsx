@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutSupport
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * Localized help and contact details; no support form collects health data.
  * Exports: WorkoutSupport
  */

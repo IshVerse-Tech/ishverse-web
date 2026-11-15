@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutLanding
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * Real native app screens alongside localized, feature-accurate copy.
  * Exports: WorkoutLanding
  */

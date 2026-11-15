@@ -1,6 +1,6 @@
 /**
  * Module: bloomConfig
- * Context: See DESIGN.md §13 — product pages (IshBloom).
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages (IshBloom).
  * Product links and availability. Version 1.0 is public on the US App Store.
  * Exports: bloomConfig
  */

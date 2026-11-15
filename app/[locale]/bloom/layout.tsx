@@ -1,6 +1,6 @@
 /**
  * Module: BloomLayout
- * Context: See DESIGN.md §13 — product pages share one shell (see Workout).
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages share one shell (see Workout).
  * Localized product shell with theme + language controls and the IshBloom
  * favicon for every Bloom route; pages supply their own metadata.
  * Exports: metadata, BloomLayout

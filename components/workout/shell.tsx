@@ -1,6 +1,6 @@
 /**
  * Module: WorkoutShell
- * Context: See DESIGN.md §13 — Workout product pages.
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — Workout product pages.
  * Shared product navigation, theme controls, and support links.
  * Exports: WorkoutShell
  */

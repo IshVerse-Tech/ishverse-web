@@ -1,6 +1,6 @@
 /**
  * Module: BloomShell
- * Context: See DESIGN.md §13 — product pages share one shell pattern
+ * Context: See docs/design/DESIGN-SYSTEM.md (Product pages) — product pages share one shell pattern
  * (Workout, Bloom): product mark, nav, language + theme controls, mobile menu,
  * and a footer that links back to the IshVerse parent.
  * Exports: BloomShell

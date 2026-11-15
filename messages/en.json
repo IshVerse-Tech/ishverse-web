@@ -37,8 +37,8 @@
     },
     "formationEngine": {
       "eyebrow": "The difference",
-      "title": "This isn't a Bible app. It's a formation engine.",
-      "body": "Faith doesn't grow by accident — it's formed, one disciplined day at a time. IshGospel gives you the structure that turns intention into formation. No noise. No gimmicks.",
+      "title": "A daily practice for spiritual growth.",
+      "body": "Build a steady rhythm of reading, reflection, and purposeful action.",
       "not1": "A content feed to scroll",
       "but1": "A daily system to practice",
       "not2": "Points, badges, leaderboards",
@@ -219,42 +219,47 @@
       "q5": "How do subscriptions work?",
       "a5": "Premium is purchased inside the app through your store's billing (Google Play or the App Store) and can be cancelled there any time.",
       "q6": "Can my church or small group use it?",
-      "a6": "Yes. Church Lite and Church Pro add an admin dashboard, leader tools, and member progress tracking. Write to contact@ishverse.com and we'll set you up."
+      "a6": "Yes. Church Lite and Church Pro add an admin dashboard, leader tools, and member progress tracking. Write to support@ishverse.com and we'll set you up."
     }
   },
   "company": {
     "meta": {
       "title": "Systems for Intentional Growth.",
-      "description": "IshVerse builds discipline systems — one for each domain of life. A man, in command of his world."
+      "description": "Tools for spiritual formation, institutional scheduling, daily fitness, and calm play. Explore IshGospel, IshRize, ISH Workout, and IshBloom — each built for a different part of life."
     },
     "nav": {
       "products": "Products",
       "story": "Story",
       "contact": "Contact",
-      "explore": "Explore {name}"
+      "explore": "Explore products",
+      "menu": "Menu"
     },
     "hero": {
-      "headline": "Systems for Intentional Growth.",
-      "sub": "We build one discipline system per domain of life — IshRize for university timetabling and attendance, IshGospel for spiritual formation. A man, in command of his world.",
-      "explore": "Explore {name}",
+      "rize": "IshRize",
+      "comingSoon": "coming soon",
       "live": "live now",
-      "comingSoon": "coming soon"
+      "headline": "Systems for Intentional Growth.",
+      "sub": "Tools for spiritual formation, institutional scheduling, daily fitness, and calm play. Explore IshGospel, IshRize, ISH Workout, and IshBloom — each built for a different part of life."
     },
     "products": {
       "eyebrow": "Products",
-      "heading": "One system per domain of life.",
-      "sub": "Same philosophy. Same design rigor. Different domains.",
+      "heading": "Find the system for your day.",
+      "sub": "Four products. Different purposes. Choose a product to explore its features and current availability.",
       "visit": "Visit {name}",
       "live": "Live",
       "soon": "Coming soon",
-      "gospelDomain": "Spiritual discipline",
+      "gospelDomain": "Spiritual formation",
       "gospelLine": "A structured system for spiritual formation.",
-      "rizeDomain": "Academic discipline",
-      "rizeLine": "Clash-free timetables and attendance, live across every department.",
+      "rizeDomain": "Scheduling & attendance",
+      "rizeLine": "Timetables, clash detection, and attendance for institutions.",
+      "workoutDomain": "Fitness & daily habits",
+      "workoutLine": "A daily system for movement, fitness, and personal habits.",
+      "gospelAvailability": "Android first · iOS planned",
+      "rizeAvailability": "Web platform available",
+      "workoutAvailability": "iOS app · release pending",
       "bloomDomain": "Calm puzzle play",
       "bloomLine": "A hexagonal puzzle game for focus and calm.",
-      "workoutDomain": "Fitness & daily habits",
-      "workoutLine": "A daily system for movement, fitness, and personal habits."
+      "bloomAvailability": "iOS app · on the App Store"
     },
     "philosophy": {
       "eyebrow": "The name",

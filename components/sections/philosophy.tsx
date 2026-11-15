@@ -26,12 +26,14 @@ export function Philosophy() {
   return (
     <div id="story" className="dark relative overflow-hidden bg-bg text-fg">
       <NeuralField />
-      <Section className="relative py-24 md:py-32">
+      <Section className="relative py-14 sm:py-24 md:py-32">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-3 max-w-3xl text-4xl font-bold md:text-5xl">{t("heading")}</h2>
+          <h2 className="mt-3 max-w-3xl text-3xl font-bold sm:text-4xl md:text-5xl">
+            {t("heading")}
+          </h2>
         </Reveal>
         <Reveal delay={60}>
           <div className="mt-8 max-w-prose space-y-5 text-base leading-relaxed text-fg-secondary md:text-lg">
