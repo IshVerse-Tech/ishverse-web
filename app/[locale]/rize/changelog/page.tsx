@@ -162,7 +162,7 @@ export default async function RizeChangelogPage({
   return (
     <>
       <RizeSiteHeader />
-      <main>
+      <main id="main">
         <Section className="py-16 sm:py-24">
           <Reveal immediate>
             <div className="mx-auto max-w-xl text-center">

@@ -4,7 +4,7 @@
  *
  * Composes the full company landing page: Hero (VerseGlobe) · Ecosystem ·
  * Philosophy (dark story band) · Principles · Contact, between the shared
- * header and footer.
+ * header and footer, plus Organization structured data (logo for search).
  *
  * Exports:
  *   default — Home page (server component)
@@ -18,6 +18,19 @@ import { Ecosystem } from "@/components/sections/ecosystem";
 import { Philosophy } from "@/components/sections/philosophy";
 import { Principles } from "@/components/sections/principles";
 import { Contact } from "@/components/sections/contact";
+import { siteConfig } from "@/lib/site";
+
+// Organization data so search engines associate the ribbon mark with
+// IshVerse (logo) and list each product site as part of the company.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/brand/ishverse-logo-512.png`,
+  email: siteConfig.supportEmail,
+  sameAs: siteConfig.products.map((p) => p.href),
+};
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -25,8 +38,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       <SiteHeader />
-      <main>
+      <main id="main">
         <Hero />
         <Ecosystem />
         <Philosophy />

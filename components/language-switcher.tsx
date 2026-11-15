@@ -20,7 +20,7 @@
 
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -49,6 +49,7 @@ export function LanguageSwitcher({
   placement = "header",
 }: { placement?: keyof typeof LIST_PLACEMENT } = {}) {
   const locale = useLocale() as Locale;
+  const t = useTranslations("company.nav");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -115,7 +116,7 @@ export function LanguageSwitcher({
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={`Language: ${current.nativeName}`}
+        aria-label={t("language", { name: current.nativeName })}
         className="flex h-9 items-center gap-1.5 rounded-[10px] border border-divider bg-transparent px-2.5 text-[13px] text-fg transition-colors hover:bg-glass-bg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
         <span className="text-base leading-none" aria-hidden>
@@ -143,7 +144,7 @@ export function LanguageSwitcher({
       {open && (
         <ul
           role="listbox"
-          aria-label="Select language"
+          aria-label={t("selectLanguage")}
           className={`absolute z-50 min-w-[168px] overflow-hidden rounded-[12px] border border-divider bg-bg shadow-lg ${LIST_PLACEMENT[placement]}`}
         >
           {LANGUAGES.map((lang) => {

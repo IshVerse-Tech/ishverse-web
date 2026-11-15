@@ -87,7 +87,7 @@ export default async function RizeHome({ params }: { params: Promise<{ locale: s
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <RizeSiteHeader />
-      <main>
+      <main id="main">
         <RizeHero />
         <RizeProblem />
         <RizeHowItWorks />
