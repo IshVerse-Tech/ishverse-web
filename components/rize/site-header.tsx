@@ -68,7 +68,7 @@ export function RizeSiteHeader() {
           </div>
           <ThemeToggle />
           <a
-            href={rizeConfig.app.web}
+            href={rizeConfig.app.login}
             className="hidden items-center gap-1.5 text-[13px] text-fg-secondary transition-colors hover:text-fg sm:inline-flex"
           >
             <LogIn className="h-3.5 w-3.5" aria-hidden />
@@ -97,7 +97,7 @@ export function RizeSiteHeader() {
             </a>
             <div className="mt-2 grid gap-2 sm:grid-cols-2">
               <a
-                href={rizeConfig.app.web}
+                href={rizeConfig.app.login}
                 className="inline-flex min-h-11 items-center justify-center gap-1.5 rounded-xl border border-divider px-4 text-sm"
               >
                 <LogIn className="h-3.5 w-3.5" aria-hidden />
