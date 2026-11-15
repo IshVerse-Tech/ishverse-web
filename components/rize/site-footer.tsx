@@ -28,7 +28,7 @@ export function RizeSiteFooter() {
         { label: t("footer.linkPricing"), href: "/pricing" },
         { label: t("footer.linkChangelog"), href: "/changelog" },
         { label: t("footer.linkCaseStudy"), href: "/case-study" },
-        { label: t("nav.signIn"), href: rizeConfig.app.web },
+        { label: t("nav.signIn"), href: rizeConfig.app.login },
       ],
     },
     {
