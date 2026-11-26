@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = withSocial("bloom", {
   title: "IshBloom privacy policy — app, ads and privacy choices",
   description:
-    "How IshBloom handles local game data, Google AdMob ads, consent, Game Center, reminders, website analytics and privacy requests.",
+    "How IshBloom handles local game data, App Store purchases, Google AdMob ads, consent, Game Center, reminders, website analytics and privacy requests.",
   alternates: { canonical: "https://bloom.ishverse.com/privacy" },
 });
 
@@ -24,7 +24,7 @@ export default function BloomPrivacy() {
       <p className="text-sm text-accent-text">IshBloom · iOS</p>
       <h1 className="mt-4 text-4xl font-bold tracking-tight">Privacy policy</h1>
       <p className="mt-3 text-sm text-fg-secondary">
-        Last updated <time dateTime="2026-11-16">November 16, 2026</time> · This policy is provided
+        Last updated <time dateTime="2026-11-26">November 26, 2026</time> · This policy is provided
         in English.
       </p>
       <div className="mt-9 space-y-8 leading-relaxed">
@@ -35,14 +35,15 @@ export default function BloomPrivacy() {
           <p className="mt-3">
             IshBloom is a hexagonal puzzle game for iPhone and iPad, published by Ishmael Affum
             Kwakye under IshVerse. This policy covers the app, the IshBloom website, and support
-            communications. It explains the advertising features introduced in the 1.1 releases,
-            including version 1.1.0. Version 1.0 does not include the Google advertising and consent
-            SDKs described below.
+            communications. It covers version 1.2.0, which adds optional App Store purchases
+            (IshBloom Plus and Support IshBloom) and Game Center leaderboards and achievements, and
+            the advertising features introduced in the 1.1 releases. Version 1.0 does not include
+            the Google advertising and consent SDKs described below.
           </p>
           <p className="mt-3">
             You do not need an IshVerse account to play. Core gameplay and locally saved progress
-            work without an internet connection. Advertising, Game Center, this website, and email
-            support depend on external services.
+            work without an internet connection. Advertising, App Store purchases, Game Center, this
+            website, and email support depend on external services.
           </p>
           <p className="mt-3">
             In short: your game records stay on your device, the app requests non-personalized ads,
@@ -117,8 +118,17 @@ export default function BloomPrivacy() {
           <p className="mt-3">
             The app stores Marathon high scores, Journey progress, level results, earned and bonus
             stars, unlocked gardens, saved Journey runs, and settings on your device. Settings
-            include sound, music, haptics, and visual effects. These records do not require an
-            IshVerse server or account.
+            include sound, music, haptics, your chosen song and garden theme, and which seasonal
+            themes you have been shown. The app also keeps your IshBloom Plus status, Marathon
+            collectibles, and a count of your Support IshBloom contributions, as described under
+            In-app purchases. These records do not require an IshVerse server or account.
+          </p>
+          <p className="mt-3">
+            To tell you when an update is required, the app asks Apple&#x27;s public App Store
+            lookup service for IshBloom&#x27;s current version. That request contains only the
+            app&#x27;s identifier and your App Store region, and no personal information. Earlier
+            builds also kept Daily Bloom scores and an optional on-device playtest log; both
+            features were removed, and updated versions of the app delete that data from the device.
           </p>
           <p className="mt-3">
             Delete the app to remove its local game records and preferences. Offloading the app may
@@ -148,13 +158,23 @@ export default function BloomPrivacy() {
             and reminder preferences. Optional return and progress reminders use the last recorded
             app activity and unlocked garden. iOS schedules these notifications locally after you
             allow them. There is no remote notification service or push token for IshBloom
-            reminders. Manage them in Settings → Notification or in iOS Settings.
+            reminders. The same permission is used for an occasional notice when a seasonal garden
+            theme becomes available; it is scheduled on the device and only while reminders and
+            Extra reminders are on. Manage them in Settings → Notifications or in iOS Settings.
           </p>
         </section>
         <section aria-labelledby="advertising-through-google-admob">
           <h2 id="advertising-through-google-admob" className="text-xl font-semibold">
             Advertising through Google AdMob
           </h2>
+          <p className="mt-3">
+            <strong>Version 1.2.0 shows no ads.</strong> The Google advertising and consent SDKs
+            remain in the app, but they are not started, so they do not load ads, show consent
+            forms, or collect the information described in this section while ads are paused. A
+            later update is expected to turn ads back on for players without IshBloom Plus; the app
+            never starts the advertising SDK for IshBloom Plus subscribers. The rest of this section
+            describes how ads work when they are on.
+          </p>
           <p className="mt-3">
             IshBloom 1.1 shows Google AdMob banner ads on the modes screen and below the gameplay
             tray where space permits, occasional full-screen interstitials at game transitions, and
@@ -170,11 +190,11 @@ export default function BloomPrivacy() {
           <p className="mt-3">
             Every ad request the app makes asks for non-personalized ads. Google describes these as
             ads that are not based on your past behavior and that use contextual information, such
-            as the app and an approximate location. The app also turns off Google&#x27;s publisher
-            first-party identifier feature and the Mobile Ads SDK&#x27;s own coarse-location
-            collection, limits ads to Google&#x27;s general-audience content rating, and does not
-            ask for access to Location Services. Even so, Google can infer an approximate region
-            from your network connection.
+            as the app and an approximate location. The app also asks Google to apply its child age
+            treatment to every ad request, turns off Google&#x27;s publisher first-party identifier
+            feature and the Mobile Ads SDK&#x27;s own coarse-location collection, limits ads to
+            Google&#x27;s general-audience content rating, and does not ask for access to Location
+            Services. Even so, Google can infer an approximate region from your network connection.
           </p>
           <p className="mt-3">
             Non-personalized ads still involve some data. Google may process the information listed
@@ -218,10 +238,12 @@ export default function BloomPrivacy() {
           </p>
           <p className="mt-3">
             Separately, Google&#x27;s User Messaging Platform checks which privacy messages apply in
-            your region when the app starts. Where required, a consent form can appear on the modes
-            screen or when you choose a rewarded ad. The app checks Google&#x27;s current permission
-            to request ads before loading them. This Google consent form is not Apple&#x27;s
-            tracking permission, and accepting it does not allow tracking.
+            your region when the app starts. The app tells it that players may be under the age of
+            consent, which can change which messages and choices Google shows. Where required, a
+            consent form can appear on the modes screen or when you choose a rewarded ad. The app
+            checks Google&#x27;s current permission to request ads before loading them. This Google
+            consent form is not Apple&#x27;s tracking permission, and accepting it does not allow
+            tracking.
           </p>
           <p className="mt-3">
             Where Google provides privacy options for your region, you can reopen the form in
@@ -238,21 +260,48 @@ export default function BloomPrivacy() {
             game&#x27;s offline functionality.
           </p>
         </section>
+        <section aria-labelledby="in-app-purchases">
+          <h2 id="in-app-purchases" className="text-xl font-semibold">
+            In-app purchases
+          </h2>
+          <p className="mt-3">
+            IshBloom Plus (an optional auto-renewable subscription) and Support IshBloom (optional
+            contributions) are sold through Apple&#x27;s App Store. Apple handles payment, billing,
+            receipts, refunds, and subscription management under its own terms and policies;
+            IshVerse does not receive your payment card or Apple Account details.
+          </p>
+          <p className="mt-3">
+            The app uses Apple&#x27;s StoreKit to check which purchases are valid on your device. It
+            stores the result on the device: whether IshBloom Plus is active and when it renews or
+            ends, and a local record of your Support IshBloom contributions (product and Apple
+            transaction identifiers) so your collection can show how many cards you have. These
+            records are not sent to IshVerse. On iOS 18 and later, Apple&#x27;s purchase history
+            lets the app restore your contribution count after a reinstall. Manage or cancel a
+            subscription in your Apple Account settings.
+          </p>
+        </section>
         <section aria-labelledby="apple-game-center">
           <h2 id="apple-game-center" className="text-xl font-semibold">
             Apple Game Center
           </h2>
           <p className="mt-3">
             Game Center is optional. When the app opens, it may ask Apple to authenticate your Game
-            Center session or show Apple&#x27;s sign-in interface. You can play without signing in.
-            When authenticated, the app reads your display name and authentication status to show
-            your Game Center connection in Settings. It can open Apple&#x27;s Game Center dashboard.
+            Center session or show Apple&#x27;s sign-in interface. You can play without signing in,
+            and gameplay never depends on it.
           </p>
           <p className="mt-3">
-            Apple may process your Game Center account, the games you play, and game activity under
-            its own settings and policies. The current IshBloom integration does not upload your
-            local Marathon scores or Journey progress to a leaderboard. Review your Game Center
-            settings on your device and{" "}
+            When you are signed in, the app sends your best Marathon score to the IshBloom Marathon
+            leaderboard and your progress toward IshBloom&#x27;s 13 achievements (Marathon score
+            milestones, Journey levels completed, and gems found) to Apple&#x27;s Game Center. Your
+            Game Center name, score, and achievements may be visible to other players according to
+            your Game Center settings. The app keeps a note on the device of what it last sent for
+            each Game Center player so it does not send the same progress twice. Settings → Game
+            Center opens Apple&#x27;s leaderboard and achievement screens.
+          </p>
+          <p className="mt-3">
+            Apple processes your Game Center account, scores, achievements, and game activity under
+            its own settings and policies; IshVerse does not run a leaderboard server. Review your
+            Game Center settings on your device and{" "}
             <a
               className={linkClass}
               href="https://www.apple.com/legal/privacy/data/en/game-center/"
@@ -289,11 +338,11 @@ export default function BloomPrivacy() {
           </h2>
           <p className="mt-3">
             IshVerse uses the services described here for different purposes: Google provides
-            advertising and consent services; Apple provides Game Center and device services; Vercel
-            hosts the website and provides website traffic analytics where enabled. These services
-            process information under their own policies. This does not mean IshVerse has access to
-            all information those providers hold. IshVerse does not give information from the app to
-            data brokers.
+            advertising and consent services; Apple provides App Store purchases, Game Center, and
+            device services; Vercel hosts the website and provides website traffic analytics where
+            enabled. These services process information under their own policies. This does not mean
+            IshVerse has access to all information those providers hold. IshVerse does not give
+            information from the app to data brokers.
           </p>
           <p className="mt-3">
             When you email support or report an ad, IshVerse uses the information you send to
@@ -334,11 +383,16 @@ export default function BloomPrivacy() {
             registration and does not ask players for their name, email address, or date of birth.
           </p>
           <p className="mt-3">
-            Because the app does not ask for age, it uses the same advertising settings for every
-            player: non-personalized ad requests, ads limited to Google&#x27;s general-audience
-            content rating, and no request for tracking permission. When the app is online,
-            Google&#x27;s advertising and consent services can still process the technical
-            information described in this policy. Playing offline avoids advertising.
+            Because the app does not ask for age, it treats every player as possibly a child and
+            uses the same advertising settings for everyone: every ad request asks Google for its
+            child age treatment and for non-personalized ads, ads are limited to Google&#x27;s
+            general-audience content rating, Google&#x27;s consent service is told that players may
+            be under the age of consent, and the app does not ask for tracking permission. Google
+            describes its child treatment as turning off personalized advertising and remarketing
+            and limiting the ads and ad technology used for those requests; IshVerse does not
+            control or audit how Google applies it. When the app is online, Google&#x27;s
+            advertising and consent services can still process the technical information described
+            in this policy. Playing offline avoids advertising. IshBloom 1.2.0 shows no ads.
           </p>
           <p className="mt-3">
             Parents and guardians should review the current App Store age rating, device controls,
